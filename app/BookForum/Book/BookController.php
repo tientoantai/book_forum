@@ -13,5 +13,8 @@ use App\Http\Controllers\Controller;
 
 class BookController extends Controller
 {
+  public function listBook()
+  {
 
+  }
 }
