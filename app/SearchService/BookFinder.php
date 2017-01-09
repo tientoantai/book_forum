@@ -1,9 +1,10 @@
 <?php
+namespace App\SearchService;
 
 class BookFinder
 {
 	public function find(BookFindingCondition $condition)
 	{
-		$condition->getQuery();
+		return $condition->getQuery();
 	}
 }

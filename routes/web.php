@@ -14,3 +14,11 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/search', 'SearchingController@searchPage')
+		->name('searchs.page')
+;
+
+Route::get('/search/find', 'SearchingController@find')
+		->name('searchs.find')
+;
