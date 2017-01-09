@@ -15,6 +15,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
 Route::get('/search', 'SearchingController@searchPage')
 		->name('searchs.page')
 ;
@@ -22,3 +23,12 @@ Route::get('/search', 'SearchingController@searchPage')
 Route::get('/search/find', 'SearchingController@find')
 		->name('searchs.find')
 ;
+
+Route::get('/books', 'BookController@listBook');
+Route::get('/delete/{id}', 'BookController@delete');
+Route::get('/detail/{id}', 'BookController@detail');
+Route::get('/insert', 'BookController@insertform');
+Route::post('/insert', 'BookController@insert');
+Route::get('/update/{id}', 'BookController@updateform');
+Route::get('/update/{id}', 'BookController@update');
+
