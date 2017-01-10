@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\BookForum\Book;
 
 class BookController extends Controller
 {
@@ -12,7 +13,7 @@ class BookController extends Controller
     public function delete($id)
     {
         $book = Book::where('id', '=', $id)->delete();
-        return redirect('/books')
+        return redirect('/books');
     }
     public function detail($id)
     {
@@ -33,11 +34,10 @@ class BookController extends Controller
         $book->image = request('image');
         $book->save();
         return redirect('/books');
-
     }
     public  function updateform($id)
     {
-        $book = Book:where('id', '=', $id);
+        $book = Book::where('id', '=', $id);
         return view('updatebook')->with('book', $book);
     }
     public function update($id)
