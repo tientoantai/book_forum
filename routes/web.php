@@ -21,3 +21,4 @@ Route::get('/insert', 'BookController@insertform');
 Route::post('/insert', 'BookController@insert');
 Route::get('/update/{id}', 'BookController@updateform');
 Route::get('/update/{id}', 'BookController@update');
+Route::get('/logout','LogoutController@logout');

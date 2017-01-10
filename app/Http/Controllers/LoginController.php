@@ -24,7 +24,7 @@ class LoginController extends Controller
     public function login(Request $request)
     {
         $credential = $this->authenticator->authenticate($request->get('username'), $request->get('password'));
-        dd($credential);
+        //dd($credential);
         if($credential instanceof LoginFailMessage)
         {
             //todo
