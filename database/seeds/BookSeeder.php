@@ -11,6 +11,7 @@ class BookSeeder extends Seeder
      */
     public function run()
     {
+        DB::table('books')->truncate();
     	DB::table('books')->insert([
             'title'     => 'History',
             'author'    => 'L',

@@ -11,10 +11,6 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-<<<<<<< HEAD
-        $this->call(BookSeeder2::class);
-=======
         $this->call(BookSeeder::class);
->>>>>>> dev
     }
 }
