@@ -24,6 +24,14 @@ Route::get('/search/find', 'SearchingController@find')
 		->name('searchs.find')
 ;
 
+Route::get('/upload', 'UploadingController@index')
+		->name('uploads.index')
+		
+;
+Route::post('/upload/store', 'UploadingController@store')
+		->name('uploads.store')->middleware('validator.image')
+;
+
 Route::get('/books', 'BookController@listBook');
 Route::get('/delete/{id}', 'BookController@delete');
 Route::get('/detail/{id}', 'BookController@detail');
