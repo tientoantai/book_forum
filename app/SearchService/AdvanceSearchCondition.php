@@ -64,13 +64,11 @@ class AdvanceSearchCondition implements BookFindingCondition
 		});
 
 		$searchQuery->where(function ($query) {
-			$term = explode(" ", $this->getPublisher());
-			if (count($term) > 0) {
-			   foreach($term as $item) {
-			      $query->orWhere('publisher','like','%'.$item.'%');
-			   }
+			foreach($this->getPublisher() as $publisher){
+				$query->orwhere('publisher',$publisher);
 			}
 		});
+
 		$listBook = $searchQuery->get();
 
 		return $listBook;

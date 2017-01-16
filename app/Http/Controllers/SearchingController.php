@@ -6,38 +6,32 @@ use Illuminate\Http\Request;
 use App\SearchService\QuickSearchCondition;
 use App\SearchService\AdvanceSearchCondition;
 use App\SearchService\BookFinder;
+use App\BookForum\Book\Book;
 
 class SearchingController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function searchPage()
+    protected $bookFinder;
+
+    public function __construct(BookFinder $bookFinder)
     {
-        return view('search');
+        $this->bookFinder = $bookFinder;
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function find(Request $request)
+    public function advanceSearch(Request $request)
     {
-        //quick search
-        $QuickSearchCondition = new QuickSearchCondition();
-        $QuickSearchCondition->setKeyword($request->all()['q']);
+        $condition  = $request->get('advanceCondition');
+        $bookResult = $this->bookFinder->find($condition);
 
-        //advance search
-        $AdvanceSearchCondition = new AdvanceSearchCondition();
-        $AdvanceSearchCondition->setAuthor($request->all()['q']);
-        $AdvanceSearchCondition->setAuthor($request->all()['q']);
+        return view('shop-ui-filter-grid')
+                ->with('books', $bookResult);
+    }
 
-        $BookFinder = new BookFinder();
-        dd($BookFinder->find($AdvanceSearchCondition));
+    public function quickSearch(Request $request)
+    {
+        $condition  = $request->get('quickCondition');
+        $bookResult = $this->bookFinder->find($condition);
 
+        return view('shop-ui-filter-grid')
+                ->with('books', $bookResult);
     }
 }

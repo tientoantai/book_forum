@@ -16,12 +16,12 @@ class UploadingController extends Controller
 	public function store(Request $request)
 	{
 		$uniqueFilename = new UniqueFilename();
-		$uploadedFile = $request->file('image');
-		$uploader = new Uploader($uniqueFilename);
-		$uploader->setFiledir('uploads/');
+		$uploader 		= new Uploader($uniqueFilename);
+
+		$uploadedFile 	= $request->file('image');
+		$uploader       ->setFiledir('uploads/');
 		$uniqueFilename = $uploader->upload($uploadedFile);
-		$file->move($destination_path, $filename);
-		$filepath = "uploads/".$uniqueFilename;
+		$filepath       = "uploads/".$uniqueFilename;
 
 		return view('uploads.show')
 				->with('image',$filepath);

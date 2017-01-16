@@ -18,28 +18,28 @@
 	<link rel='stylesheet' type='text/css' href='//fonts.googleapis.com/css?family=Open+Sans:400,300,600&amp;subset=cyrillic,latin'>
 
 	<!-- CSS Global Compulsory -->
-	<link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
-	<link rel="stylesheet" href="assets/css/shop.style.css">
+	<link rel="stylesheet" href="{{asset('plugins/bootstrap/css/bootstrap.min.css')}}">
+	<link rel="stylesheet" href="{{asset('css/shop.style.css')}}">
 
 	<!-- CSS Header and Footer -->
-	<link rel="stylesheet" href="assets/css/headers/header-v5.css">
-	<link rel="stylesheet" href="assets/css/footers/footer-v4.css">
+	<link rel="stylesheet" href="{{asset('css/headers/header-v5.css')}}">
+	<link rel="stylesheet" href="{{asset('css/footers/footer-v4.css')}}">
 
 	<!-- CSS Implementing Plugins -->
-	<link rel="stylesheet" href="assets/plugins/animate.css">
-	<link rel="stylesheet" href="assets/plugins/line-icons/line-icons.css">
-	<link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.min.css">
-	<link rel="stylesheet" href="assets/plugins/jquery-steps/css/custom-jquery.steps.css">
-	<link rel="stylesheet" href="assets/plugins/scrollbar/css/jquery.mCustomScrollbar.css">
+	<link rel="stylesheet" href="{{asset('plugins/animate.css')}}">
+	<link rel="stylesheet" href="{{asset('plugins/line-icons/line-icons.css')}}">
+	<link rel="stylesheet" href="{{asset('plugins/font-awesome/css/font-awesome.min.css')}}">
+	<link rel="stylesheet" href="{{asset('plugins/jquery-steps/css/custom-jquery.steps.css')}}">
+	<link rel="stylesheet" href="{{asset('plugins/scrollbar/css/jquery.mCustomScrollbar.css')}}">
 
 	<!-- Style Switcher -->
-	<link rel="stylesheet" href="assets/css/plugins/style-switcher.css">
+	<link rel="stylesheet" href="{{asset('css/plugins/style-switcher.css')}}">
 
 	<!-- CSS Theme -->
-	<link rel="stylesheet" href="assets/css/theme-colors/default.css" id="style_color">
+	<link rel="stylesheet" href="{{asset('css/theme-colors/default.css')}}" id="style_color">
 
 	<!-- CSS Customization -->
-	<link rel="stylesheet" href="assets/css/custom.css">
+	<link rel="stylesheet" href="{{asset('css/custom.css')}}">
 
 </head>
 <body class="header-fixed">
@@ -87,8 +87,8 @@
 						<div class="col-sm-6">
 							<ul class="list-inline right-topbar pull-right">
 								<li><a href="#">Account</a></li>
-								<li><a href="shop-ui-add-to-cart.html">Wishlist (0)</a></li>
-								<li><a href="shop-ui-login.html">Login</a> | <a href="shop-ui-register.html">Register</a></li>
+								<li><a href="{{route('shop-ui-add-to-cart')}}">Wishlist (0)</a></li>
+								<li><a href="{{route('shop-ui-login')}}">Login</a> | <a href="{{route('shop-ui-register')}}">Register</a></li>
 								<li><i class="search fa fa-search search-button"></i></li>
 							</ul>
 						</div>
@@ -108,8 +108,8 @@
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
 						</button>
-						<a class="navbar-brand" href="index.html">
-							<img id="logo-header" src="assets/img/logo.png" alt="Logo">
+						<a class="navbar-brand" href="{{route('index')}}">
+							<img id="logo-header" src="{{asset('img/logo.png')}}" alt="Logo">
 						</a>
 					</div>
 
@@ -120,7 +120,7 @@
 						<div class="badge-open">
 							<ul class="list-unstyled mCustomScrollbar" data-mcs-theme="minimal-dark">
 								<li>
-									<img src="assets/img/thumb/05.jpg" alt="">
+									<img src="{{asset('img/thumb/05.jpg')}}" alt="">
 									<button type="button" class="close">×</button>
 									<div class="overflow-h">
 										<span>Black Glasses</span>
@@ -128,7 +128,7 @@
 									</div>
 								</li>
 								<li>
-									<img src="assets/img/thumb/02.jpg" alt="">
+									<img src="{{asset('img/thumb/02.jpg')}}" alt="">
 									<button type="button" class="close">×</button>
 									<div class="overflow-h">
 										<span>Black Glasses</span>
@@ -136,7 +136,7 @@
 									</div>
 								</li>
 								<li>
-									<img src="assets/img/thumb/03.jpg" alt="">
+									<img src="{{asset('img/thumb/03.jpg')}}" alt="">
 									<button type="button" class="close">×</button>
 									<div class="overflow-h">
 										<span>Black Glasses</span>
@@ -151,10 +151,10 @@
 								</div>
 								<div class="row">
 									<div class="col-xs-6">
-										<a href="shop-ui-inner.html" class="btn-u btn-brd btn-brd-hover btn-u-sea-shop btn-block">View Cart</a>
+										<a href="{{route('shop-ui-inner')}}" class="btn-u btn-brd btn-brd-hover btn-u-sea-shop btn-block">View Cart</a>
 									</div>
 									<div class="col-xs-6">
-										<a href="shop-ui-add-to-cart.html" class="btn-u btn-u-sea-shop btn-block">Checkout</a>
+										<a href="{{route('shop-ui-add-to-cart')}}" class="btn-u btn-u-sea-shop btn-block">Checkout</a>
 									</div>
 								</div>
 							</div>
@@ -172,13 +172,13 @@
 									Pages
 								</a>
 								<ul class="dropdown-menu">
-									<li><a href="index.html">Shop UI</a></li>
-									<li><a href="shop-ui-inner.html">Product Page</a></li>
-									<li><a href="shop-ui-filter-grid.html">Filter Grid Page</a></li>
-									<li><a href="shop-ui-filter-list.html">Filter List Page</a></li>
-									<li class="active"><a href="shop-ui-add-to-cart.html">Checkout</a></li>
-									<li><a href="shop-ui-login.html">Login</a></li>
-									<li><a href="shop-ui-register.html">Register</a></li>
+									<li><a href="{{route('index')}}">Shop UI</a></li>
+									<li><a href="{{route('shop-ui-inner')}}">Product Page</a></li>
+									<li><a href="{{route('shop-ui-filter-grid')}}">Filter Grid Page</a></li>
+									<li><a href="{{route('shop-ui-filter-list')}}">Filter List Page</a></li>
+									<li class="active"><a href="{{route('shop-ui-add-to-cart')}}">Checkout</a></li>
+									<li><a href="{{route('shop-ui-login')}}">Login</a></li>
+									<li><a href="{{route('shop-ui-register')}}">Register</a></li>
 								</ul>
 							</li>
 							<!-- End Pages -->
@@ -224,13 +224,13 @@
 														<button type="button" class="btn-u btn-u-dark">Read More</button>
 													</div>
 													<div class="col-md-3 col-sm-4 col-xs-4 md-margin-bottom-30">
-														<a href="#"><img class="product-offers img-responsive" src="assets/img/blog/01.jpg" alt=""></a>
+														<a href="#"><img class="product-offers img-responsive" src="{{asset('img/blog/01.jpg')}}" alt=""></a>
 													</div>
 													<div class="col-md-3 col-sm-4 col-xs-4 sm-margin-bottom-30">
-														<a href="#"><img class="product-offers img-responsive" src="assets/img/blog/02.jpg" alt=""></a>
+														<a href="#"><img class="product-offers img-responsive" src="{{asset('img/blog/02.jpg')}}" alt=""></a>
 													</div>
 													<div class="col-md-3 col-sm-4 col-xs-4">
-														<a href="#"><img class="product-offers img-responsive" src="assets/img/blog/03.jpg" alt=""></a>
+														<a href="#"><img class="product-offers img-responsive" src="{{asset('img/blog/03.jpg')}}" alt=""></a>
 													</div>
 												</div><!--/end row-->
 											</div><!--/end container-->
@@ -397,7 +397,7 @@
 							<!-- End Clothes -->
 
 							<!-- Main Demo -->
-							<li><a href="../index.html">Main Demo</a></li>
+							<li><a href="{{route('index')}}">Main Demo</a></li>
 							<!-- Main Demo -->
 						</ul>
 						<!-- End Nav Menu -->
@@ -414,7 +414,7 @@
 				<span class="page-name">Check Out</span>
 				<h1>Maecenas <span class="shop-green">enim</span> sapien</h1>
 				<ul class="breadcrumb-v4-in">
-					<li><a href="index.html">Home</a></li>
+					<li><a href="{{route('index')}}">Home</a></li>
 					<li><a href="">Product</a></li>
 					<li class="active">Shopping Cart</li>
 				</ul>
@@ -448,7 +448,7 @@
 									<tbody>
 										<tr>
 											<td class="product-in-table">
-												<img class="img-responsive" src="assets/img/thumb/08.jpg" alt="">
+												<img class="img-responsive" src="{{asset('img/thumb/08.jpg')}}" alt="">
 												<div class="product-it-in">
 													<h3>Double-Breasted</h3>
 													<span>Sed aliquam tincidunt tempus</span>
@@ -467,7 +467,7 @@
 										</tr>
 										<tr>
 											<td class="product-in-table">
-												<img class="img-responsive" src="assets/img/thumb/07.jpg" alt="">
+												<img class="img-responsive" src="{{asset('img/thumb/07.jpg')}}" alt="">
 												<div class="product-it-in">
 													<h3>Vivamus ligula</h3>
 													<span>Sed aliquam tincidunt tempus</span>
@@ -486,7 +486,7 @@
 										</tr>
 										<tr>
 											<td class="product-in-table">
-												<img class="img-responsive" src="assets/img/thumb/06.jpg" alt="">
+												<img class="img-responsive" src="{{asset('img/thumb/06.jpg')}}" alt="">
 												<div class="product-it-in">
 													<h3>Vivamus ligula</h3>
 													<span>Sed aliquam tincidunt tempus</span>
@@ -505,7 +505,7 @@
 										</tr>
 										<tr>
 											<td class="product-in-table">
-												<img class="img-responsive" src="assets/img/thumb/09.jpg" alt="">
+												<img class="img-responsive" src="{{asset('img/thumb/09.jpg')}}" alt="">
 												<div class="product-it-in">
 													<h3>Vivamus ligula</h3>
 													<span>Sed aliquam tincidunt tempus</span>
@@ -816,7 +816,7 @@
 					<div class="row">
 						<!-- About -->
 						<div class="col-md-4 md-margin-bottom-40">
-							<a href="index.html"><img class="footer-logo" src="assets/img/logo-2.png" alt=""></a>
+							<a href="{{route('index')}}"><img class="footer-logo" src="{{asset('img/logo-2.png')}}" alt=""></a>
 							<p>About Unify dolor sit amet, consectetur adipiscing elit. Maecenas eget nisl id libero tincidunt sodales.</p>
 							<br>
 							<ul class="list-unstyled address-list margin-bottom-20">
@@ -991,23 +991,23 @@
 	<!-- End Wait Block -->
 
 	<!-- JS Global Compulsory -->
-	<script src="assets/plugins/jquery/jquery.min.js"></script>
-	<script src="assets/plugins/jquery/jquery-migrate.min.js"></script>
-	<script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+	<script src="{{asset('plugins/jquery/jquery.min.js')}}"></script>
+	<script src="{{asset('plugins/jquery/jquery-migrate.min.js')}}"></script>
+	<script src="{{asset('plugins/bootstrap/js/bootstrap.min.js')}}"></script>
 	<!-- JS Implementing Plugins -->
-	<script src="assets/plugins/back-to-top.js"></script>
-	<script src="assets/plugins/smoothScroll.js"></script>
-	<script src="assets/plugins/jquery-steps/build/jquery.steps.js"></script>
-	<script src="assets/plugins/scrollbar/js/jquery.mCustomScrollbar.concat.min.js"></script>
-	<script src="assets/plugins/sky-forms-pro/skyforms/js/jquery.validate.min.js"></script>
+	<script src="{{asset('plugins/back-to-top.js')}}"></script>
+	<script src="{{asset('plugins/smoothScroll.js')}}"></script>
+	<script src="{{asset('plugins/jquery-steps/build/jquery.steps.js')}}"></script>
+	<script src="{{asset('plugins/scrollbar/js/jquery.mCustomScrollbar.concat.min.js')}}"></script>
+	<script src="{{asset('plugins/sky-forms-pro/skyforms/js/jquery.validate.min.js')}}"></script>
 	<!-- JS Customization -->
-	<script src="assets/js/custom.js"></script>
+	<script src="{{asset('js/custom.js')}}"></script>
 	<!-- JS Page Level -->
-	<script src="assets/js/shop.app.js"></script>
-	<script src="assets/js/forms/page_login.js"></script>
-	<script src="assets/js/plugins/stepWizard.js"></script>
-	<script src="assets/js/forms/product-quantity.js"></script>
-	<script src="assets/js/plugins/style-switcher.js"></script>
+	<script src="{{asset('js/shop.app.js')}}"></script>
+	<script src="{{asset('js/forms/page_login.js')}}"></script>
+	<script src="{{asset('js/plugins/stepWizard.js')}}"></script>
+	<script src="{{asset('js/forms/product-quantity.js')}}"></script>
+	<script src="{{asset('js/plugins/style-switcher.js')}}"></script>
 	<script>
 		jQuery(document).ready(function() {
 			App.init();
@@ -1019,12 +1019,12 @@
 	</script>
 
 <!--[if lt IE 9]>
-	<script src="assets/plugins/respond.js"></script>
-	<script src="assets/plugins/html5shiv.js"></script>
-	<script src="assets/plugins/sky-forms-pro/skyforms/js/sky-forms-ie8.js"></script>
+	<script src="{{asset('plugins/respond.js')}}"></script>
+	<script src="{{asset('plugins/html5shiv.js')}}"></script>
+	<script src="{{asset('plugins/sky-forms-pro/skyforms/js/sky-forms-ie8.js')}}"></script>
 	<![endif]-->
 <!--[if lt IE 10]>
-	<script src="assets/plugins/sky-forms-pro/skyforms/js/jquery.placeholder.min.js"></script>
+	<script src="{{asset('plugins/sky-forms-pro/skyforms/js/jquery.placeholder.min.js')}}"></script>
 	<![endif]-->
 
 </body>

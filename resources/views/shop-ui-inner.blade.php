@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
 <!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
@@ -18,32 +19,32 @@
 	<link rel='stylesheet' type='text/css' href='//fonts.googleapis.com/css?family=Open+Sans:400,300,600&amp;subset=cyrillic,latin'>
 
 	<!-- CSS Global Compulsory -->
-	<link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
-	<link rel="stylesheet" href="assets/css/shop.style.css">
+	<link rel="stylesheet" href="{{asset('plugins/bootstrap/css/bootstrap.min.css')}}">
+	<link rel="stylesheet" href="{{asset('css/shop.style.css')}}">
 
 	<!-- CSS Header and Footer -->
-	<link rel="stylesheet" href="assets/css/headers/header-v5.css">
-	<link rel="stylesheet" href="assets/css/footers/footer-v4.css">
+	<link rel="stylesheet" href="{{asset('css/headers/header-v5.css')}}">
+	<link rel="stylesheet" href="{{asset('css/footers/footer-v4.css')}}">
 
 	<!-- CSS Implementing Plugins -->
-	<link rel="stylesheet" href="assets/plugins/animate.css">
-	<link rel="stylesheet" href="assets/plugins/line-icons/line-icons.css">
-	<link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.min.css">
-	<link rel="stylesheet" href="assets/plugins/scrollbar/css/jquery.mCustomScrollbar.css">
-	<link rel="stylesheet" href="assets/plugins/owl-carousel/owl-carousel/owl.carousel.css">
-	<link rel="stylesheet" href="assets/plugins/sky-forms-pro/skyforms/css/sky-forms.css">
-	<link rel="stylesheet" href="assets/plugins/sky-forms-pro/skyforms/custom/custom-sky-forms.css">
-	<link rel="stylesheet" href="assets/plugins/master-slider/masterslider/style/masterslider.css">
-	<link rel='stylesheet' href="assets/plugins/master-slider/masterslider/skins/default/style.css">
+	<link rel="stylesheet" href="{{asset('plugins/animate.css')}}">
+	<link rel="stylesheet" href="{{asset('plugins/line-icons/line-icons.css')}}">
+	<link rel="stylesheet" href="{{asset('plugins/font-awesome/css/font-awesome.min.css')}}">
+	<link rel="stylesheet" href="{{asset('plugins/scrollbar/css/jquery.mCustomScrollbar.css')}}">
+	<link rel="stylesheet" href="{{asset('plugins/owl-carousel/owl-carousel/owl.carousel.css')}}">
+	<link rel="stylesheet" href="{{asset('plugins/sky-forms-pro/skyforms/css/sky-forms.css')}}">
+	<link rel="stylesheet" href="{{asset('plugins/sky-forms-pro/skyforms/custom/custom-sky-forms.css')}}">
+	<link rel="stylesheet" href="{{asset('plugins/master-slider/masterslider/style/masterslider.css')}}">
+	<link rel='stylesheet' href="{{asset('plugins/master-slider/masterslider/skins/default/style.css')}}">
 
 	<!-- Style Switcher -->
-	<link rel="stylesheet" href="assets/css/plugins/style-switcher.css">
+	<link rel="stylesheet" href="{{asset('css/plugins/style-switcher.css')}}">
 
 	<!-- CSS Theme -->
-	<link rel="stylesheet" href="assets/css/theme-colors/default.css" id="style_color">
+	<link rel="stylesheet" href="{{asset('css/theme-colors/default.css')}}" id="style_color">
 
 	<!-- CSS Customization -->
-	<link rel="stylesheet" href="assets/css/custom.css">
+	<link rel="stylesheet" href="{{asset('css/custom.css')}}">
 </head>
 
 <body class="header-fixed">
@@ -91,8 +92,8 @@
 						<div class="col-sm-6">
 							<ul class="list-inline right-topbar pull-right">
 								<li><a href="#">Account</a></li>
-								<li><a href="shop-ui-add-to-cart.html">Wishlist (0)</a></li>
-								<li><a href="shop-ui-login.html">Login</a> | <a href="shop-ui-register.html">Register</a></li>
+								<li><a href="{{route('shop-ui-add-to-cart')}}">Wishlist (0)</a></li>
+								<li><a href="{{route('shop-ui-login')}}">Login</a> | <a href="{{route('shop-ui-register')}}">Register</a></li>
 								<li><i class="search fa fa-search search-button"></i></li>
 							</ul>
 						</div>
@@ -112,8 +113,8 @@
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
 						</button>
-						<a class="navbar-brand" href="index.html">
-							<img id="logo-header" src="assets/img/logo.png" alt="Logo">
+						<a class="navbar-brand" href="index')}}">
+							<img id="logo-header" src="{{asset('img/logo.png')}}" alt="Logo">
 						</a>
 					</div>
 
@@ -124,7 +125,7 @@
 						<div class="badge-open">
 							<ul class="list-unstyled mCustomScrollbar" data-mcs-theme="minimal-dark">
 								<li>
-									<img src="assets/img/thumb/05.jpg" alt="">
+									<img src="{{asset('img/thumb/05.jpg')}}" alt="">
 									<button type="button" class="close">×</button>
 									<div class="overflow-h">
 										<span>Black Glasses</span>
@@ -132,7 +133,7 @@
 									</div>
 								</li>
 								<li>
-									<img src="assets/img/thumb/02.jpg" alt="">
+									<img src="{{asset('img/thumb/02.jpg')}}" alt="">
 									<button type="button" class="close">×</button>
 									<div class="overflow-h">
 										<span>Black Glasses</span>
@@ -140,7 +141,7 @@
 									</div>
 								</li>
 								<li>
-									<img src="assets/img/thumb/03.jpg" alt="">
+									<img src="{{asset('img/thumb/03.jpg')}}" alt="">
 									<button type="button" class="close">×</button>
 									<div class="overflow-h">
 										<span>Black Glasses</span>
@@ -155,10 +156,10 @@
 								</div>
 								<div class="row">
 									<div class="col-xs-6">
-										<a href="shop-ui-inner.html" class="btn-u btn-brd btn-brd-hover btn-u-sea-shop btn-block">View Cart</a>
+										<a href="{{route('shop-ui-inner')}}" class="btn-u btn-brd btn-brd-hover btn-u-sea-shop btn-block">View Cart</a>
 									</div>
 									<div class="col-xs-6">
-										<a href="shop-ui-add-to-cart.html" class="btn-u btn-u-sea-shop btn-block">Checkout</a>
+										<a href="{{route('shop-ui-add-to-cart')}}" class="btn-u btn-u-sea-shop btn-block">Checkout</a>
 									</div>
 								</div>
 							</div>
@@ -176,13 +177,13 @@
 									Pages
 								</a>
 								<ul class="dropdown-menu">
-									<li><a href="index.html">Shop UI</a></li>
-									<li class="active"><a href="shop-ui-inner.html">Product Page</a></li>
-									<li><a href="shop-ui-filter-grid.html">Filter Grid Page</a></li>
-									<li><a href="shop-ui-filter-list.html">Filter List Page</a></li>
-									<li><a href="shop-ui-add-to-cart.html">Checkout</a></li>
-									<li><a href="shop-ui-login.html">Login</a></li>
-									<li><a href="shop-ui-register.html">Register</a></li>
+									<li><a href="index')}}">Shop UI</a></li>
+									<li class="active"><a href="{{route('shop-ui-inner')}}">Product Page</a></li>
+									<li><a href="{{route('shop-ui-filter-grid')}}">Filter Grid Page</a></li>
+									<li><a href="{{route('shop-ui-filter-list')}}">Filter List Page</a></li>
+									<li><a href="{{route('shop-ui-add-to-cart')}}">Checkout</a></li>
+									<li><a href="{{route('shop-ui-login')}}">Login</a></li>
+									<li><a href="{{route('shop-ui-register')}}">Register</a></li>
 								</ul>
 							</li>
 							<!-- End Pages -->
@@ -228,13 +229,13 @@
 														<button type="button" class="btn-u btn-u-dark">Read More</button>
 													</div>
 													<div class="col-md-3 col-sm-4 col-xs-4 md-margin-bottom-30">
-														<a href="#"><img class="product-offers img-responsive" src="assets/img/blog/01.jpg" alt=""></a>
+														<a href="#"><img class="product-offers img-responsive" src="{{asset('img/blog/01.jpg')}}" alt=""></a>
 													</div>
 													<div class="col-md-3 col-sm-4 col-xs-4 sm-margin-bottom-30">
-														<a href="#"><img class="product-offers img-responsive" src="assets/img/blog/02.jpg" alt=""></a>
+														<a href="#"><img class="product-offers img-responsive" src="{{asset('img/blog/02.jpg')}}" alt=""></a>
 													</div>
 													<div class="col-md-3 col-sm-4 col-xs-4">
-														<a href="#"><img class="product-offers img-responsive" src="assets/img/blog/03.jpg" alt=""></a>
+														<a href="#"><img class="product-offers img-responsive" src="{{asset('img/blog/03.jpg')}}" alt=""></a>
 													</div>
 												</div><!--/end row-->
 											</div><!--/end container-->
@@ -401,7 +402,7 @@
 							<!-- End Clothes -->
 
 							<!-- Main Demo -->
-							<li><a href="../index.html">Main Demo</a></li>
+							<li><a href="{{route('index')}}">Main Demo</a></li>
 							<!-- Main Demo -->
 						</ul>
 						<!-- End Nav Menu -->
@@ -417,7 +418,7 @@
 			<!-- Breadcrumbs v5 -->
 			<div class="container">
 				<ul class="breadcrumb-v5">
-					<li><a href="index.html"><i class="fa fa-home"></i></a></li>
+					<li><a href="{{route('index')}}"><i class="fa fa-home"></i></a></li>
 					<li><a href="#">Products</a></li>
 					<li class="active">New</li>
 				</ul>
@@ -431,16 +432,16 @@
 							<!-- Master Slider -->
 							<div class="master-slider ms-skin-default" id="masterslider">
 								<div class="ms-slide">
-									<img class="ms-brd" src="assets/img/blank.gif" data-src="assets/img/blog/28.jpg" alt="lorem ipsum dolor sit">
-									<img class="ms-thumb" src="assets/img/blog/28-thumb.jpg" alt="thumb">
+									<img class="ms-brd" src="{{asset('img/blank.gif')}}" data-src="{{asset('img/blog/28.jpg')}}" alt="lorem ipsum dolor sit">
+									<img class="ms-thumb" src="{{asset('img/blog/28-thumb.jpg')}}" alt="thumb">
 								</div>
 								<div class="ms-slide">
-									<img src="assets/img/blank.gif" data-src="assets/img/blog/29.jpg" alt="lorem ipsum dolor sit">
-									<img class="ms-thumb" src="assets/img/blog/29-thumb.jpg" alt="thumb">
+									<img src="{{asset('img/blank.gif')}}" data-src="img/blog/29.jpg" alt="lorem ipsum dolor sit">
+									<img class="ms-thumb" src="{{asset('img/blog/29-thumb.jpg')}}" alt="thumb">
 								</div>
 								<div class="ms-slide">
-									<img src="assets/img/blank.gif" data-src="assets/img/blog/30.jpg" alt="lorem ipsum dolor sit">
-									<img class="ms-thumb" src="assets/img/blog/30-thumb.jpg" alt="thumb">
+									<img src="{{asset('img/blank.gif')}}" data-src="img/blog/30.jpg" alt="lorem ipsum dolor sit">
+									<img class="ms-thumb" src="{{asset('img/blog/30-thumb.jpg')}}" alt="thumb">
 								</div>
 							</div>
 							<!-- End Master Slider -->
@@ -627,7 +628,7 @@
 					<div class="tab-pane fade" id="reviews">
 						<div class="product-comment margin-bottom-40">
 							<div class="product-comment-in">
-								<img class="product-comment-img rounded-x" src="assets/img/team/01.jpg" alt="">
+								<img class="product-comment-img rounded-x" src="{{asset('img/team/01.jpg')}}" alt="">
 								<div class="product-comment-dtl">
 									<h4>Mickel <small>22 days ago</small></h4>
 									<p>I like the green colour, it's very likeable and reminds me of Hollister. A little loose though but I am very skinny</p>
@@ -647,7 +648,7 @@
 							</div>
 						</div>
 						<h3 class="heading-md margin-bottom-30">Add a review</h3>
-						<form action="assets/php/demo-contacts-process.php" method="post" id="sky-form3" class="sky-form sky-changes-4">
+						<form action="{{asset('php/demo-contacts-process.php')}}" method="post" id="sky-form3" class="sky-form sky-changes-4">
 							<fieldset>
 								<div class="margin-bottom-30">
 									<label class="label-v2">Name</label>
@@ -710,7 +711,7 @@
 
 				<ul class="list-inline owl-slider-v4">
 					<li class="item">
-						<a href="#"><img class="img-responsive" src="assets/img/thumb/09.jpg" alt=""></a>
+						<a href="#"><img class="img-responsive" src="{{asset('img/thumb/09.jpg')}}" alt=""></a>
 						<div class="product-description-v2">
 							<div class="margin-bottom-5">
 								<h4 class="title-price"><a href="#">Double-breasted</a></h4>
@@ -726,7 +727,7 @@
 						</div>
 					</li>
 					<li class="item">
-						<a href="#"><img class="img-responsive" src="assets/img/thumb/07.jpg" alt=""></a>
+						<a href="#"><img class="img-responsive" src="{{asset('img/thumb/07.jpg')}}" alt=""></a>
 						<div class="product-description-v2">
 							<div class="margin-bottom-5">
 								<h4 class="title-price"><a href="#">Double-breasted</a></h4>
@@ -743,7 +744,7 @@
 						</div>
 					</li>
 					<li class="item">
-						<a href="#"><img class="img-responsive" src="assets/img/thumb/08.jpg" alt=""></a>
+						<a href="#"><img class="img-responsive" src="{{asset('img/thumb/08.jpg')}}" alt=""></a>
 						<div class="product-description-v2">
 							<div class="margin-bottom-5">
 								<h4 class="title-price"><a href="#">Double-breasted</a></h4>
@@ -759,7 +760,7 @@
 						</div>
 					</li>
 					<li class="item">
-						<a href="#"><img class="img-responsive" src="assets/img/thumb/06.jpg" alt=""></a>
+						<a href="#"><img class="img-responsive" src="{{asset('img/thumb/06.jpg')}}" alt=""></a>
 						<div class="product-description-v2">
 							<div class="margin-bottom-5">
 								<h4 class="title-price"><a href="#">Double-breasted</a></h4>
@@ -775,7 +776,7 @@
 						</div>
 					</li>
 					<li class="item">
-						<a href="#"><img class="img-responsive" src="assets/img/thumb/04.jpg" alt=""></a>
+						<a href="#"><img class="img-responsive" src="{{asset('img/thumb/04.jpg')}}" alt=""></a>
 						<div class="product-description-v2">
 							<div class="margin-bottom-5">
 								<h4 class="title-price"><a href="#">Double-breasted</a></h4>
@@ -791,7 +792,7 @@
 						</div>
 					</li>
 					<li class="item">
-						<a href="#"><img class="img-responsive" src="assets/img/thumb/03.jpg" alt=""></a>
+						<a href="#"><img class="img-responsive" src="{{asset('img/thumb/03.jpg')}}" alt=""></a>
 						<div class="product-description-v2">
 							<div class="margin-bottom-5">
 								<h4 class="title-price"><a href="#">Double-breasted</a></h4>
@@ -838,7 +839,7 @@
 					<div class="row">
 						<!-- About -->
 						<div class="col-md-4 md-margin-bottom-40">
-							<a href="index.html"><img class="footer-logo" src="assets/img/logo-2.png" alt=""></a>
+							<a href="index')}}"><img class="footer-logo" src="{{asset('img/logo-2.png')}}" alt=""></a>
 							<p>About Unify dolor sit amet, consectetur adipiscing elit. Maecenas eget nisl id libero tincidunt sodales.</p>
 							<br>
 							<ul class="list-unstyled address-list margin-bottom-20">
@@ -1018,9 +1019,9 @@
 	</script>
 
 <!--[if lt IE 9]>
-	<script src="assets/plugins/respond.js"></script>
-	<script src="assets/plugins/html5shiv.js"></script>
-	<script src="assets/js/plugins/placeholder-IE-fixes.js"></script>
+	<script src="{{asset('plugins/respond.js"></script>
+	<script src="{{asset('plugins/html5shiv.js"></script>
+	<script src="{{asset('js/plugins/placeholder-IE-fixes.js"></script>
 	<![endif]-->
 
 </body>

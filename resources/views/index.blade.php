@@ -18,26 +18,26 @@
 	<link rel='stylesheet' type='text/css' href='//fonts.googleapis.com/css?family=Open+Sans:400,300,600,800&amp;subset=cyrillic,latin'>
 
 	<!-- CSS Global Compulsory -->
-	<link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
-	<link rel="stylesheet" href="assets/css/shop.style.css">
+	<link rel="stylesheet" href="{{asset('plugins/bootstrap/css/bootstrap.min.css')}}">
+	<link rel="stylesheet" href="{{asset('css/shop.style.css')}}">
 
 	<!-- CSS Header and Footer -->
-	<link rel="stylesheet" href="assets/css/headers/header-v5.css">
-	<link rel="stylesheet" href="assets/css/footers/footer-v4.css">
+	<link rel="stylesheet" href="{{asset('css/headers/header-v5.css')}}">
+	<link rel="stylesheet" href="{{asset('css/footers/footer-v4.css')}}">
 
 	<!-- CSS Implementing Plugins -->
-	<link rel="stylesheet" href="assets/plugins/animate.css">
-	<link rel="stylesheet" href="assets/plugins/line-icons/line-icons.css">
-	<link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.min.css">
-	<link rel="stylesheet" href="assets/plugins/scrollbar/css/jquery.mCustomScrollbar.css">
-	<link rel="stylesheet" href="assets/plugins/owl-carousel/owl-carousel/owl.carousel.css">
-	<link rel="stylesheet" href="assets/plugins/revolution-slider/rs-plugin/css/settings.css">
+	<link rel="stylesheet" href="{{asset('plugins/animate.css')}}">
+	<link rel="stylesheet" href="{{asset('plugins/line-icons/line-icons.css')}}">
+	<link rel="stylesheet" href="{{asset('plugins/font-awesome/css/font-awesome.min.css')}}">
+	<link rel="stylesheet" href="{{asset('plugins/scrollbar/css/jquery.mCustomScrollbar.css')}}">
+	<link rel="stylesheet" href="{{asset('plugins/owl-carousel/owl-carousel/owl.carousel.css')}}">
+	<link rel="stylesheet" href="{{asset('plugins/revolution-slider/rs-plugin/css/settings.css')}}">
 
 	<!-- CSS Theme -->
-	<link rel="stylesheet" href="assets/css/theme-colors/default.css" id="style_color">
+	<link rel="stylesheet" href="{{asset('css/theme-colors/default.css')}}" id="style_color">
 
 	<!-- CSS Customization -->
-	<link rel="stylesheet" href="assets/css/custom.css">
+	<link rel="stylesheet" href="{{asset('css/custom.css')}}">
 </head>
 
 <body class="header-fixed">
@@ -61,8 +61,8 @@
 						<div class="col-sm-6">
 							<ul class="list-inline right-topbar pull-right">
 								<li><a href="#">Account</a></li>
-								<li><a href="shop-ui-add-to-cart.html">Wishlist (0)</a></li>
-								<li><a href="shop-ui-login.html">Login</a> | <a href="shop-ui-register.html">Register</a></li>
+								<li><a href="{{route('shop-ui-add-to-cart')}}">Wishlist (0)</a></li>
+								<li><a href="{{route('shop-ui-login')}}">Login</a> | <a href="{{route('shop-ui-register')}}">Register</a></li>
 								<li><i class="search fa fa-search search-button"></i></li>
 							</ul>
 						</div>
@@ -82,8 +82,8 @@
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
 						</button>
-						<a class="navbar-brand" href="index.html">
-							<img id="logo-header" src="assets/img/logo.png" alt="Logo">
+						<a class="navbar-brand" href="{{route('index')}}">
+							<img id="logo-header" src="{{asset('img/logo.png')}}" alt="Logo">
 						</a>
 					</div>
 
@@ -94,7 +94,7 @@
 						<div class="badge-open">
 							<ul class="list-unstyled mCustomScrollbar" data-mcs-theme="minimal-dark">
 								<li>
-									<img src="assets/img/thumb/05.jpg" alt="">
+									<img src="{{asset('img/thumb/05.jpg')}}" alt="">
 									<button type="button" class="close">×</button>
 									<div class="overflow-h">
 										<span>Black Glasses</span>
@@ -102,7 +102,7 @@
 									</div>
 								</li>
 								<li>
-									<img src="assets/img/thumb/02.jpg" alt="">
+									<img src="{{asset('img/thumb/02.jpg')}}" alt="">
 									<button type="button" class="close">×</button>
 									<div class="overflow-h">
 										<span>Black Glasses</span>
@@ -110,7 +110,7 @@
 									</div>
 								</li>
 								<li>
-									<img src="assets/img/thumb/03.jpg" alt="">
+									<img src="{{asset('img/thumb/03.jpg')}}" alt="">
 									<button type="button" class="close">×</button>
 									<div class="overflow-h">
 										<span>Black Glasses</span>
@@ -125,10 +125,10 @@
 								</div>
 								<div class="row">
 									<div class="col-xs-6">
-										<a href="shop-ui-inner.html" class="btn-u btn-brd btn-brd-hover btn-u-sea-shop btn-block">View Cart</a>
+										<a href="{{route('shop-ui-inner')}}" class="btn-u btn-brd btn-brd-hover btn-u-sea-shop btn-block">View Cart</a>
 									</div>
 									<div class="col-xs-6">
-										<a href="shop-ui-add-to-cart.html" class="btn-u btn-u-sea-shop btn-block">Checkout</a>
+										<a href="{{route('shop-ui-add-to-cart')}}" class="btn-u btn-u-sea-shop btn-block">Checkout</a>
 									</div>
 								</div>
 							</div>
@@ -146,13 +146,13 @@
 									Pages
 								</a>
 								<ul class="dropdown-menu">
-									<li class="active"><a href="index.html">Shop UI</a></li>
-									<li><a href="shop-ui-inner.html">Product Page</a></li>
-									<li><a href="shop-ui-filter-grid.html">Filter Grid Page</a></li>
-									<li><a href="shop-ui-filter-list.html">Filter List Page</a></li>
-									<li><a href="shop-ui-add-to-cart.html">Checkout</a></li>
-									<li><a href="shop-ui-login.html">Login</a></li>
-									<li><a href="shop-ui-register.html">Register</a></li>
+									<li class="active"><a href="{{route('index')}}">Shop UI</a></li>
+									<li><a href="{{route('shop-ui-inner')}}">Product Page</a></li>
+									<li><a href="{{route('shop-ui-filter-grid')}}">Filter Grid Page</a></li>
+									<li><a href="{{route('shop-ui-filter-list')}}">Filter List Page</a></li>
+									<li><a href="{{route('shop-ui-add-to-cart')}}">Checkout</a></li>
+									<li><a href="{{route('shop-ui-login')}}">Login</a></li>
+									<li><a href="{{route('shop-ui-register')}}">Register</a></li>
 								</ul>
 							</li>
 							<!-- End Pages -->
@@ -198,13 +198,13 @@
 														<button type="button" class="btn-u btn-u-dark">Read More</button>
 													</div>
 													<div class="col-md-3 col-sm-4 col-xs-4 md-margin-bottom-30">
-														<a href="#"><img class="product-offers img-responsive" src="assets/img/blog/01.jpg" alt=""></a>
+														<a href="#"><img class="product-offers img-responsive" src="{{asset('img/blog/01.jpg')}}" alt=""></a>
 													</div>
 													<div class="col-md-3 col-sm-4 col-xs-4 sm-margin-bottom-30">
-														<a href="#"><img class="product-offers img-responsive" src="assets/img/blog/02.jpg" alt=""></a>
+														<a href="#"><img class="product-offers img-responsive" src="{{asset('img/blog/02.jpg')}}" alt=""></a>
 													</div>
 													<div class="col-md-3 col-sm-4 col-xs-4">
-														<a href="#"><img class="product-offers img-responsive" src="assets/img/blog/03.jpg" alt=""></a>
+														<a href="#"><img class="product-offers img-responsive" src="{{asset('img/blog/03.jpg')}}" alt=""></a>
 													</div>
 												</div><!--/end row-->
 											</div><!--/end container-->
@@ -371,7 +371,7 @@
 							<!-- End Clothes -->
 
 							<!-- Main Demo -->
-							<li><a href="../index.html">Main Demo</a></li>
+							<li><a href="../{{route('index')}}">Main Demo</a></li>
 							<!-- Main Demo -->
 						</ul>
 						<!-- End Nav Menu -->
@@ -389,7 +389,7 @@
 					<!-- SLIDE -->
 					<li class="revolution-mch-1" data-transition="fade" data-slotamount="5" data-masterspeed="1000" data-title="Slide 1">
 						<!-- MAIN IMAGE -->
-						<img src="assets/img/1.jpg"  alt="darkblurbg"  data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat">
+						<img src="{{asset('img/1.jpg')}}"  alt="darkblurbg"  data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat">
 
 						<div class="tp-caption revolution-ch1 sft start"
 						data-x="center"
@@ -425,7 +425,7 @@
 			<!-- SLIDE -->
 			<li class="revolution-mch-1" data-transition="fade" data-slotamount="5" data-masterspeed="1000" data-title="Slide 2">
 				<!-- MAIN IMAGE -->
-				<img src="assets/img/5.jpg"  alt="darkblurbg"  data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat">
+				<img src="{{asset('img/5.jpg')}}"  alt="darkblurbg"  data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat">
 
 				<div class="tp-caption revolution-ch3 sft start"
 				data-x="center"
@@ -475,7 +475,7 @@
 <!-- SLIDE -->
 <li class="revolution-mch-1" data-transition="fade" data-slotamount="5" data-masterspeed="1000" data-title="Slide 3">
 	<!-- MAIN IMAGE -->
-	<img src="assets/img/3.jpg"  alt="darkblurbg"  data-bgfit="cover" data-bgposition="right top" data-bgrepeat="no-repeat">
+	<img src="{{asset('img/3.jpg')}}"  alt="darkblurbg"  data-bgfit="cover" data-bgposition="right top" data-bgrepeat="no-repeat">
 
 	<div class="tp-caption revolution-ch3 sft start"
 	data-x="right"
@@ -525,7 +525,7 @@ style="z-index: 6">
 <!-- SLIDE -->
 <li class="revolution-mch-1" data-transition="fade" data-slotamount="5" data-masterspeed="1000" data-title="Slide 4">
 	<!-- MAIN IMAGE -->
-	<img src="assets/img/2.jpg"  alt="darkblurbg"  data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat">
+	<img src="{{asset('img/2.jpg')}}"  alt="darkblurbg"  data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat">
 
 	<div class="tp-caption revolution-ch1 sft start"
 	data-x="center"
@@ -575,7 +575,7 @@ style="z-index: 6">
 <!-- SLIDE -->
 <li class="revolution-mch-1" data-transition="fade" data-slotamount="5" data-masterspeed="1000" data-title="Slide 5">
 	<!-- MAIN IMAGE -->
-	<img src="assets/img/4.jpg"  alt="darkblurbg"  data-bgfit="cover" data-bgposition="right top" data-bgrepeat="no-repeat">
+	<img src="{{asset('img/4.jpg')}}"  alt="darkblurbg"  data-bgfit="cover" data-bgposition="right top" data-bgrepeat="no-repeat">
 
 	<div class="tp-caption revolution-ch5 sft start"
 	data-x="right"
@@ -645,14 +645,14 @@ style="z-index: 6">
 		<ul class="list-inline owl-slider">
 			<li class="item">
 				<div class="product-img">
-					<a href="shop-ui-inner.html"><img class="full-width img-responsive" src="assets/img/blog/09.jpg" alt=""></a>
-					<a class="product-review" href="shop-ui-inner.html">Quick review</a>
+					<a href="{{route('shop-ui-inner')}}"><img class="full-width img-responsive" src="{{asset('img/blog/09.jpg')}}" alt=""></a>
+					<a class="product-review" href="{{route('shop-ui-inner')}}">Quick review</a>
 					<a class="add-to-cart" href="#"><i class="fa fa-shopping-cart"></i>Add to cart</a>
 				</div>
 				<div class="product-description product-description-brd">
 					<div class="overflow-h margin-bottom-5">
 						<div class="pull-left">
-							<h4 class="title-price"><a href="shop-ui-inner.html">Double-breasted</a></h4>
+							<h4 class="title-price"><a href="{{route('shop-ui-inner')}}">Double-breasted</a></h4>
 							<span class="gender text-uppercase">Men</span>
 							<span class="gender">Suits - Blazers</span>
 						</div>
@@ -672,14 +672,14 @@ style="z-index: 6">
 			</li>
 			<li class="item">
 				<div class="product-img">
-					<a href="shop-ui-inner.html"><img class="full-width img-responsive" src="assets/img/blog/26.jpg" alt=""></a>
-					<a class="product-review" href="shop-ui-inner.html">Quick review</a>
+					<a href="{{route('shop-ui-inner')}}"><img class="full-width img-responsive" src="{{asset('img/blog/26.jpg')}}" alt=""></a>
+					<a class="product-review" href="{{route('shop-ui-inner')}}">Quick review</a>
 					<a class="add-to-cart" href="#"><i class="fa fa-shopping-cart"></i>Add to cart</a>
 				</div>
 				<div class="product-description product-description-brd">
 					<div class="overflow-h margin-bottom-5">
 						<div class="pull-left">
-							<h4 class="title-price"><a href="shop-ui-inner.html">Double-breasted</a></h4>
+							<h4 class="title-price"><a href="{{route('shop-ui-inner')}}">Double-breasted</a></h4>
 							<span class="gender text-uppercase">Women</span>
 							<span class="gender">Suits - Blazers</span>
 						</div>
@@ -700,15 +700,15 @@ style="z-index: 6">
 			</li>
 			<li class="item">
 				<div class="product-img">
-					<a href="shop-ui-inner.html"><img class="full-width img-responsive" src="assets/img/blog/11.jpg" alt=""></a>
-					<a class="product-review" href="shop-ui-inner.html">Quick review</a>
+					<a href="{{route('shop-ui-inner')}}"><img class="full-width img-responsive" src="{{asset('img/blog/11.jpg')}}" alt=""></a>
+					<a class="product-review" href="{{route('shop-ui-inner')}}">Quick review</a>
 					<a class="add-to-cart" href="#"><i class="fa fa-shopping-cart"></i>Add to cart</a>
 					<div class="shop-rgba-red rgba-banner">Out of stock</div>
 				</div>
 				<div class="product-description product-description-brd">
 					<div class="overflow-h margin-bottom-5">
 						<div class="pull-left">
-							<h4 class="title-price"><a href="shop-ui-inner.html">Double-breasted</a></h4>
+							<h4 class="title-price"><a href="{{route('shop-ui-inner')}}">Double-breasted</a></h4>
 							<span class="gender text-uppercase">Men</span>
 							<span class="gender">Suits - Blazers</span>
 						</div>
@@ -728,15 +728,15 @@ style="z-index: 6">
 			</li>
 			<li class="item">
 				<div class="product-img">
-					<a href="shop-ui-inner.html"><img class="full-width img-responsive" src="assets/img/blog/12.jpg" alt=""></a>
-					<a class="product-review" href="shop-ui-inner.html">Quick review</a>
+					<a href="{{route('shop-ui-inner')}}"><img class="full-width img-responsive" src="{{asset('img/blog/12.jpg')}}" alt=""></a>
+					<a class="product-review" href="{{route('shop-ui-inner')}}">Quick review</a>
 					<a class="add-to-cart" href="#"><i class="fa fa-shopping-cart"></i>Add to cart</a>
 					<div class="shop-rgba-dark-green rgba-banner">New</div>
 				</div>
 				<div class="product-description product-description-brd">
 					<div class="overflow-h margin-bottom-5">
 						<div class="pull-left">
-							<h4 class="title-price"><a href="shop-ui-inner.html">Double-breasted</a></h4>
+							<h4 class="title-price"><a href="{{route('shop-ui-inner')}}">Double-breasted</a></h4>
 							<span class="gender text-uppercase">Women</span>
 							<span class="gender">Suits - Blazers</span>
 						</div>
@@ -756,14 +756,14 @@ style="z-index: 6">
 			</li>
 			<li class="item">
 				<div class="product-img">
-					<a href="shop-ui-inner.html"><img class="full-width img-responsive" src="assets/img/blog/10.jpg" alt=""></a>
-					<a class="product-review" href="shop-ui-inner.html">Quick review</a>
+					<a href="{{route('shop-ui-inner')}}"><img class="full-width img-responsive" src="{{asset('img/blog/10.jpg')}}" alt=""></a>
+					<a class="product-review" href="{{route('shop-ui-inner')}}">Quick review</a>
 					<a class="add-to-cart" href="#"><i class="fa fa-shopping-cart"></i>Add to cart</a>
 				</div>
 				<div class="product-description product-description-brd">
 					<div class="overflow-h margin-bottom-5">
 						<div class="pull-left">
-							<h4 class="title-price"><a href="shop-ui-inner.html">Double-breasted</a></h4>
+							<h4 class="title-price"><a href="{{route('shop-ui-inner')}}">Double-breasted</a></h4>
 							<span class="gender text-uppercase">Women</span>
 							<span class="gender">Suits - Blazers</span>
 						</div>
@@ -783,15 +783,15 @@ style="z-index: 6">
 			</li>
 			<li class="item">
 				<div class="product-img">
-					<a href="shop-ui-inner.html"><img class="full-width img-responsive" src="assets/img/blog/11.jpg" alt=""></a>
-					<a class="product-review" href="shop-ui-inner.html">Quick review</a>
+					<a href="{{route('shop-ui-inner')}}"><img class="full-width img-responsive" src="{{asset('img/blog/11.jpg')}}" alt=""></a>
+					<a class="product-review" href="{{route('shop-ui-inner')}}">Quick review</a>
 					<a class="add-to-cart" href="#"><i class="fa fa-shopping-cart"></i>Add to cart</a>
 					<div class="shop-rgba-red rgba-banner">Out of stock</div>
 				</div>
 				<div class="product-description product-description-brd">
 					<div class="overflow-h margin-bottom-5">
 						<div class="pull-left">
-							<h4 class="title-price"><a href="shop-ui-inner.html">Double-breasted</a></h4>
+							<h4 class="title-price"><a href="{{route('shop-ui-inner')}}">Double-breasted</a></h4>
 							<span class="gender text-uppercase">Men</span>
 							<span class="gender">Suits - Blazers</span>
 						</div>
@@ -821,14 +821,14 @@ style="z-index: 6">
 	<div class="row illustration-v2">
 		<div class="col-md-3 col-sm-6 md-margin-bottom-30">
 			<div class="product-img">
-				<a href="shop-ui-inner.html"><img class="full-width img-responsive" src="assets/img/blog/25.jpg" alt=""></a>
-				<a class="product-review" href="shop-ui-inner.html">Quick review</a>
+				<a href="{{route('shop-ui-inner')}}"><img class="full-width img-responsive" src="{{asset('img/blog/25.jpg')}}" alt=""></a>
+				<a class="product-review" href="{{route('shop-ui-inner')}}">Quick review</a>
 				<a class="add-to-cart" href="#"><i class="fa fa-shopping-cart"></i>Add to cart</a>
 			</div>
 			<div class="product-description product-description-brd">
 				<div class="overflow-h margin-bottom-5">
 					<div class="pull-left">
-						<h4 class="title-price"><a href="shop-ui-inner.html">Double-breasted</a></h4>
+						<h4 class="title-price"><a href="{{route('shop-ui-inner')}}">Double-breasted</a></h4>
 						<span class="gender text-uppercase">Woman</span>
 						<span class="gender">Suits - Blazers</span>
 					</div>
@@ -848,14 +848,14 @@ style="z-index: 6">
 		</div>
 		<div class="col-md-3 col-sm-6 md-margin-bottom-30">
 			<div class="product-img">
-				<a href="shop-ui-inner.html"><img class="full-width img-responsive" src="assets/img/blog/09.jpg" alt=""></a>
-				<a class="product-review" href="shop-ui-inner.html">Quick review</a>
+				<a href="{{route('shop-ui-inner')}}"><img class="full-width img-responsive" src="{{asset('img/blog/09.jpg')}}" alt=""></a>
+				<a class="product-review" href="{{route('shop-ui-inner')}}">Quick review</a>
 				<a class="add-to-cart" href="#"><i class="fa fa-shopping-cart"></i>Add to cart</a>
 			</div>
 			<div class="product-description product-description-brd">
 				<div class="overflow-h margin-bottom-5">
 					<div class="pull-left">
-						<h4 class="title-price"><a href="shop-ui-inner.html">Double-breasted</a></h4>
+						<h4 class="title-price"><a href="{{route('shop-ui-inner')}}">Double-breasted</a></h4>
 						<span class="gender text-uppercase">Men</span>
 						<span class="gender">Suits - Blazers</span>
 					</div>
@@ -876,15 +876,15 @@ style="z-index: 6">
 		</div>
 		<div class="col-md-3 col-sm-6 md-margin-bottom-30">
 			<div class="product-img">
-				<a href="shop-ui-inner.html"><img class="full-width img-responsive" src="assets/img/blog/10.jpg" alt=""></a>
-				<a class="product-review" href="shop-ui-inner.html">Quick review</a>
+				<a href="{{route('shop-ui-inner')}}"><img class="full-width img-responsive" src="{{asset('img/blog/10.jpg')}}" alt=""></a>
+				<a class="product-review" href="{{route('shop-ui-inner')}}">Quick review</a>
 				<a class="add-to-cart" href="#"><i class="fa fa-shopping-cart"></i>Add to cart</a>
 				<div class="shop-rgba-red rgba-banner">Out of stock</div>
 			</div>
 			<div class="product-description product-description-brd">
 				<div class="overflow-h margin-bottom-5">
 					<div class="pull-left">
-						<h4 class="title-price"><a href="shop-ui-inner.html">Double-breasted</a></h4>
+						<h4 class="title-price"><a href="{{route('shop-ui-inner')}}">Double-breasted</a></h4>
 						<span class="gender text-uppercase">Women</span>
 						<span class="gender">Suits - Blazers</span>
 					</div>
@@ -904,15 +904,15 @@ style="z-index: 6">
 		</div>
 		<div class="col-md-3 col-sm-6 md-margin-bottom-30">
 			<div class="product-img">
-				<a href="shop-ui-inner.html"><img class="full-width img-responsive" src="assets/img/blog/11.jpg" alt=""></a>
-				<a class="product-review" href="shop-ui-inner.html">Quick review</a>
+				<a href="{{route('shop-ui-inner')}}"><img class="full-width img-responsive" src="{{asset('img/blog/11.jpg')}}" alt=""></a>
+				<a class="product-review" href="{{route('shop-ui-inner')}}">Quick review</a>
 				<a class="add-to-cart" href="#"><i class="fa fa-shopping-cart"></i>Add to cart</a>
 				<div class="shop-rgba-dark-green rgba-banner">New</div>
 			</div>
 			<div class="product-description product-description-brd">
 				<div class="overflow-h margin-bottom-5">
 					<div class="pull-left">
-						<h4 class="title-price"><a href="shop-ui-inner.html">Double-breasted</a></h4>
+						<h4 class="title-price"><a href="{{route('shop-ui-inner')}}">Double-breasted</a></h4>
 						<span class="gender text-uppercase">Men</span>
 						<span class="gender">Suits - Blazers</span>
 					</div>
@@ -1002,40 +1002,40 @@ style="z-index: 6">
 
 		<ul class="list-inline owl-slider-v2">
 			<li class="item first-child">
-				<img src="assets/img/clients/07.png" alt="">
+				<img src="{{asset('img/clients/07.png')}}" alt="">
 			</li>
 			<li class="item">
-				<img src="assets/img/clients/08.png" alt="">
+				<img src="{{asset('img/clients/08.png')}}" alt="">
 			</li>
 			<li class="item">
-				<img src="assets/img/clients/10.png" alt="">
+				<img src="{{asset('img/clients/10.png')}}" alt="">
 			</li>
 			<li class="item">
-				<img src="assets/img/clients/11.png" alt="">
+				<img src="{{asset('img/clients/11.png')}}" alt="">
 			</li>
 			<li class="item">
-				<img src="assets/img/clients/09.png" alt="">
+				<img src="{{asset('img/clients/09.png')}}" alt="">
 			</li>
 			<li class="item">
-				<img src="assets/img/clients/12.png" alt="">
+				<img src="{{asset('img/clients/12.png')}}" alt="">
 			</li>
 			<li class="item">
-				<img src="assets/img/clients/07.png" alt="">
+				<img src="{{asset('img/clients/07.png')}}" alt="">
 			</li>
 			<li class="item">
-				<img src="assets/img/clients/08.png" alt="">
+				<img src="{{asset('img/clients/08.png')}}" alt="">
 			</li>
 			<li class="item">
-				<img src="assets/img/clients/09.png" alt="">
+				<img src="{{asset('img/clients/09.png')}}" alt="">
 			</li>
 			<li class="item">
-				<img src="assets/img/clients/10.png" alt="">
+				<img src="{{asset('img/clients/10.png')}}" alt="">
 			</li>
 			<li class="item">
-				<img src="assets/img/clients/11.png" alt="">
+				<img src="{{asset('img/clients/11.png')}}" alt="">
 			</li>
 			<li class="item">
-				<img src="assets/img/clients/12.png" alt="">
+				<img src="{{asset('img/clients/12.png')}}" alt="">
 			</li>
 		</ul><!--/end owl-carousel-->
 	</div>
@@ -1048,7 +1048,7 @@ style="z-index: 6">
 				<div class="row">
 					<!-- About -->
 					<div class="col-md-4 md-margin-bottom-40">
-						<a href="index.html"><img class="footer-logo" src="assets/img/logo-2.png" alt=""></a>
+						<a href="{{route('index')}}"><img class="footer-logo" src="{{asset('img/logo-2.png')}}" alt=""></a>
 						<p>About Unify dolor sit amet, consectetur adipiscing elit. Maecenas eget nisl id libero tincidunt sodales.</p>
 						<br>
 						<ul class="list-unstyled address-list margin-bottom-20">
@@ -1196,24 +1196,24 @@ style="z-index: 6">
 </div><!--/wrapper-->
 
 <!-- JS Global Compulsory -->
-<script src="assets/plugins/jquery/jquery.min.js"></script>
-<script src="assets/plugins/jquery/jquery-migrate.min.js"></script>
-<script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+<script src="{{asset('plugins/jquery/jquery.min.js')}}"></script>
+<script src="{{asset('plugins/jquery/jquery-migrate.min.js')}}"></script>
+<script src="{{asset('plugins/bootstrap/js/bootstrap.min.js')}}"></script>
 <!-- JS Implementing Plugins -->
-<script src="assets/plugins/back-to-top.js"></script>
-<script src="assets/plugins/smoothScroll.js"></script>
-<script src="assets/plugins/jquery.parallax.js"></script>
-<script src="assets/plugins/owl-carousel/owl-carousel/owl.carousel.js"></script>
-<script src="assets/plugins/scrollbar/js/jquery.mCustomScrollbar.concat.min.js"></script>
-<script src="assets/plugins/revolution-slider/rs-plugin/js/jquery.themepunch.tools.min.js"></script>
-<script src="assets/plugins/revolution-slider/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
+<script src="{{asset('plugins/back-to-top.js')}}"></script>
+<script src="{{asset('plugins/smoothScroll.js')}}"></script>
+<script src="{{asset('plugins/jquery.parallax.js')}}"></script>
+<script src="{{asset('plugins/owl-carousel/owl-carousel/owl.carousel.js')}}"></script>
+<script src="{{asset('plugins/scrollbar/js/jquery.mCustomScrollbar.concat.min.js')}}"></script>
+<script src="{{asset('plugins/revolution-slider/rs-plugin/js/jquery.themepunch.tools.min.js')}}"></script>
+<script src="{{asset('plugins/revolution-slider/rs-plugin/js/jquery.themepunch.revolution.min.js')}}"></script>
 <!-- JS Customization -->
-<script src="assets/js/custom.js"></script>
+<script src="{{asset('js/custom.js')}}"></script>
 <!-- JS Page Level -->
-<script src="assets/js/shop.app.js"></script>
-<script src="assets/js/plugins/owl-carousel.js"></script>
-<script src="assets/js/plugins/revolution-slider.js"></script>
-<script src="assets/js/plugins/style-switcher.js"></script>
+<script src="{{asset('js/shop.app.js')}}"></script>
+<script src="{{asset('js/plugins/owl-carousel.js')}}"></script>
+<script src="{{asset('js/plugins/revolution-slider.js')}}"></script>
+<script src="{{asset('js/plugins/style-switcher.js')}}"></script>
 <script>
 	jQuery(document).ready(function() {
 		App.init();
@@ -1225,9 +1225,9 @@ style="z-index: 6">
 	});
 </script>
 <!--[if lt IE 9]>
-	<script src="assets/plugins/respond.js"></script>
-	<script src="assets/plugins/html5shiv.js"></script>
-	<script src="assets/js/plugins/placeholder-IE-fixes.js"></script>
+	<script src="{{asset('plugins/respond.js')}}"></script>
+	<script src="{{asset('plugins/html5shiv.js')}}"></script>
+	<script src="{{asset('js/plugins/placeholder-IE-fixes.js')}}"></script>
 	<![endif]-->
 
 </body>

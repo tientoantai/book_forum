@@ -20,6 +20,7 @@ class ImageValidator
         $validator = Validator::make($request->all(), [
             'image'=> 'required|image|max:10000'
         ]);
+        
         if($validator->fails()){
            dd($validator->errors());
         }
