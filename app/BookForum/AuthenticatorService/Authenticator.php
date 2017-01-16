@@ -30,6 +30,7 @@ class Authenticator implements Authcontract
     public function authenticate($name, $password)
     {
         $foundCredential = $this->credential->where('username', '=', $name)->first();
+       // dd($foundCredential);
         if( ! $foundCredential)
         {
             return new LoginFailMessage('Username is incorrect');
