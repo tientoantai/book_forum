@@ -8,6 +8,6 @@ class UniqueFilename
 {
 	public function generator()
 	{
-		return Uuid::generate()->string;
+		return Uuid::generate()->toString;
 	}
 }

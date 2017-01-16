@@ -22,7 +22,7 @@ class Uploader
 	{
 		$uniqueFilename = $this->uniqueFilename->generator() . '.'
 								.$uploadedFile->getClientOriginalExtension();
-		$uploadedFile->move($this->filedir, $uniqueFilename);	
+		$uploadedFile   ->move($this->filedir, $uniqueFilename);	
 
 		return $uniqueFilename;				
 	}
