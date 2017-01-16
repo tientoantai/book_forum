@@ -14,18 +14,13 @@
 Route::get('/', function () {
     return view('welcome');
 });
-
-
 Route::get('/books', 'BookController@listBook');
 Route::get('/delete/{id}', 'BookController@delete');
 Route::get('/detail/{id}', 'BookController@detail');
 Route::get('/insert', 'BookController@insertform');
 Route::post('/insert', 'BookController@insert');
 Route::get('/update/{id}', 'BookController@updateform');
-Route::post('/update/{id}', 'BookController@update');
+Route::get('/update/{id}', 'BookController@update');
 Route::get('/login','LoginController@formlogin');
 Route::post('/login','LoginController@login');
 Route::get('/logout','LogoutController@logout');
-
-
-Route::get('/test', 'BookController@listbookhome');
