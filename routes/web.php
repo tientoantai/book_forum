@@ -79,8 +79,7 @@ Route::get('/advanceSearch', 'SearchingController@advanceSearch')
 		->name('searchs.advanceSearch')
 		->middleware('create.condition')
 ;
-<<<<<<< HEAD
-=======
+
 
 Route::get('/publisher', 'PublisherController@index')
 		->name('publishers.publisher-list')
@@ -90,16 +89,20 @@ Route::get('/publisher/add', 'PublisherController@add')
 		->name('publishers.publisher-add')
 ;
 
-		
-
->>>>>>> publisher
 Route::get('/books', 'BookController@listBook');
 Route::get('/delete/{id}', 'BookController@delete');
 Route::get('/detail/{id}', 'BookController@detail');
 Route::get('/insert', 'BookController@insertform');
-Route::post('/insert', 'BookController@insert');
+Route::post('/insert', 'BookController@insert')
+		->name('books.insert')
+		->middleware('create.image')
+;
+
 Route::get('/update/{id}', 'BookController@updateform');
-Route::get('/update/{id}', 'BookController@update');
+Route::post('/update/{id}', 'BookController@update')
+		->name('books.update')
+		->middleware('create.image')
+;
 Route::get('/login','LoginController@formlogin');
 Route::post('/login','LoginController@login');
 Route::get('/logout','LogoutController@logout');

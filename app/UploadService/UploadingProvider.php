@@ -1,19 +1,19 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\UploadService;
 
 use Illuminate\Http\Request;
 use App\UploadService\Uploader;
 use App\UploadService\UniqueFilename;
 
-class UploadingController extends Controller
+class UploadingProvider
 {
-	public function index()
-	{
-		return view('uploads.index');
-	}
+	// public function index()
+	// {
+	// 	return view('insert');
+	// }
 
-	public function store(Request $request)
+	public function providerFile(Request $request)
 	{
 		$uniqueFilename = new UniqueFilename();
 		$uploader 		= new Uploader($uniqueFilename);
@@ -23,7 +23,6 @@ class UploadingController extends Controller
 		$uniqueFilename = $uploader->upload($uploadedFile);
 		$filepath       = "uploads/".$uniqueFilename;
 
-		return view('uploads.show')
-				->with('image',$filepath);
+		return $filepath;
 	}
 }

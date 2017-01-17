@@ -3,7 +3,7 @@
 <!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
 <!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
 <head>
-	<title>Shop UI | Unify - Responsive Website Template</title>
+	<title>Book Store</title>
 
 	<!-- Meta -->
 	<meta charset="utf-8">
@@ -143,7 +143,7 @@
 							<!-- Pages -->
 							<li class="dropdown active">
 								<a href="javascript:void(0);" class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown">
-									Pages
+									Books
 								</a>
 								<ul class="dropdown-menu">
 									<li class="active"><a href="{{route('index')}}">Shop UI</a></li>

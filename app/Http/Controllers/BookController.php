@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\BookForum\Book\Book;
 use Illuminate\Support\Facades\Session;
 
+
 class BookController extends Controller
 {
     public function listBook(){
@@ -38,12 +39,13 @@ class BookController extends Controller
         $book->price = request('price');
         $book->publisher = request('publisher');
         $book->title = request('title');
-        $book->image = request('image');
+        $book->genre = request('genre');
+        $book->image = request()->get('image');;
         if($book->image){
             $book->save();
             return redirect('/books');
         }else{
-            $book->image = 'https://www.pinterest.com/pin/391742867571469416/';
+            $book->image = 'uploads/68315530-dc84-11e6-af04-7935bcbd61fd.jpg';
             $book->save();
             return redirect('/books');
         }
@@ -57,19 +59,18 @@ class BookController extends Controller
     public function update($id)
     {
         $book = Book::where('id', '=', $id)->first();
-        //dd($book);
         $book->author = request('author');
         $book->price = request('price');
         $book->publisher = request('publisher');
         $book->title = request('title');
-        $book->image = request('image');
-
+        $book->genre = request('genre');
+        $book->image = request()->get('image');
 
         if($book->image){
             $book->save();
             return redirect('/books');
         }else{
-            $book->image = 'https://www.pinterest.com/pin/391742867571469416/';
+            $book->image = 'uploads/68315530-dc84-11e6-af04-7935bcbd61fd.jpg';
             $book->save();
             return redirect('/books');
         }
