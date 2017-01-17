@@ -16,7 +16,7 @@ class BookController extends Controller
     }
     public function listbookhome()
     {
-        return view('home')->with('booklist', Book::all());
+        return view('index')->with('booklist', Book::all());
     }
     public function delete($id)
     {

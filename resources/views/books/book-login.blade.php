@@ -3,7 +3,7 @@
 <!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
 <!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
 <head>
-	<title>Product List | Unify - Responsive Website Template</title>
+	<title>Login | Unify - Responsive Website Template</title>
 
 	<!-- Meta -->
 	<meta charset="utf-8">
@@ -29,8 +29,10 @@
 	<link rel="stylesheet" href="{{asset('plugins/animate.css')}}">
 	<link rel="stylesheet" href="{{asset('plugins/line-icons/line-icons.css')}}">
 	<link rel="stylesheet" href="{{asset('plugins/font-awesome/css/font-awesome.min.css')}}">
-	<link rel="stylesheet" href="{{asset('plugins/noUiSlider/jquery.nouislider.min.css')}}">
 	<link rel="stylesheet" href="{{asset('plugins/scrollbar/css/jquery.mCustomScrollbar.css')}}">
+
+	<!-- CSS Page Style -->
+	<link rel="stylesheet" href="{{asset('css/pages/log-reg-v3.css')}}">
 
 	<!-- Style Switcher -->
 	<link rel="stylesheet" href="{{asset('css/plugins/style-switcher.css')}}">
@@ -108,7 +110,7 @@
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
 						</button>
-						<a class="navbar-brand" href="index')}}">
+						<a class="navbar-brand" href="{{route('index')}}">
 							<img id="logo-header" src="{{asset('img/logo.png')}}" alt="Logo">
 						</a>
 					</div>
@@ -172,12 +174,12 @@
 									Pages
 								</a>
 								<ul class="dropdown-menu">
-									<li><a href="index')}}">Shop UI</a></li>
+									<li><a href="{{route('index')}}">Shop UI</a></li>
 									<li><a href="{{route('book-inner')}}">Product Page</a></li>
 									<li><a href="{{route('book-filter-grid')}}">Filter Grid Page</a></li>
-									<li class="active"><a href="{{route('book-filter-list')}}">Filter List Page</a></li>
+									<li><a href="{{route('book-filter-list')}}">Filter List Page</a></li>
 									<li><a href="{{route('book-add-to-cart')}}">Checkout</a></li>
-									<li><a href="{{route('book-login')}}">Login</a></li>
+									<li class="active"><a href="{{route('book-login')}}">Login</a></li>
 									<li><a href="{{route('book-register')}}">Register</a></li>
 								</ul>
 							</li>
@@ -411,518 +413,102 @@
 		<!--=== Breadcrumbs v4 ===-->
 		<div class="breadcrumbs-v4">
 			<div class="container">
-				<span class="page-name">Product Filter Page</span>
+				<span class="page-name">Log In</span>
 				<h1>Maecenas <span class="shop-green">enim</span> sapien</h1>
 				<ul class="breadcrumb-v4-in">
-					<li><a href="index')}}">Home</a></li>
+					<li><a href="{{route('index')}}">Home</a></li>
 					<li><a href="">Product</a></li>
-					<li class="active">Product Filter Page</li>
+					<li class="active">Log In</li>
 				</ul>
 			</div><!--/end container-->
 		</div>
 		<!--=== End Breadcrumbs v4 ===-->
 
-		<!--=== Content Part ===-->
-		<div class="content container">
-			<div class="row">
-				<div class="col-md-3 filter-by-block md-margin-bottom-60">
-					<h1>Filter By</h1>
-					<div class="panel-group" id="accordion">
-						<div class="panel panel-default">
-							<div class="panel-heading">
-								<h2 class="panel-title">
-									<a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
-										Brands
-										<i class="fa fa-angle-down"></i>
-									</a>
-								</h2>
-							</div>
-							<div id="collapseOne" class="panel-collapse collapse in">
-								<div class="panel-body">
-									<ul class="list-unstyled checkbox-list">
-										<li>
-											<label class="checkbox">
-												<input type="checkbox" name="checkbox" checked />
-												<i></i>
-												Calvin Klein
-												<small><a href="#">(23)</a></small>
-											</label>
-										</li>
-										<li>
-											<label class="checkbox">
-												<input type="checkbox" name="checkbox" checked />
-												<i></i>
-												Gucci
-												<small><a href="#">(4)</a></small>
-											</label>
-										</li>
-										<li>
-											<label class="checkbox">
-												<input type="checkbox" name="checkbox" />
-												<i></i>
-												Adidas
-												<small><a href="#">(11)</a></small>
-											</label>
-										</li>
-										<li>
-											<label class="checkbox">
-												<input type="checkbox" name="checkbox" />
-												<i></i>
-												Puma
-												<small><a href="#">(3)</a></small>
-											</label>
-										</li>
-										<li>
-											<label class="checkbox">
-												<input type="checkbox" name="checkbox" />
-												<i></i>
-												Zara
-												<small><a href="#">(87)</a></small>
-											</label>
-										</li>
-									</ul>
-								</div>
+		<!--=== Login ===-->
+		<div class="log-reg-v3 content-md">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-7 md-margin-bottom-50">
+						<h2 class="welcome-title">Welcome to Unify</h2>
+						<p>Suspendisse et tincidunt ipsum, et dignissim urna. Vestibulum nisl tortor, gravida at magna et, suscipit vehicula massa.</p><br>
+						<div class="info-block-v2">
+							<i class="icon icon-layers"></i>
+							<div class="info-block-in">
+								<h3>Pellentesque vulputate</h3>
+								<p>Vestibulum non ex volutpat, sodales diam sit amet, semper nunc. Integer sed nibh commodo, tincidunt nisi.</p>
 							</div>
 						</div>
-					</div><!--/end panel group-->
-
-					<div class="panel-group" id="accordion-v2">
-						<div class="panel panel-default">
-							<div class="panel-heading">
-								<h2 class="panel-title">
-									<a data-toggle="collapse" data-parent="#accordion-v2" href="#collapseTwo">
-										Categories
-										<i class="fa fa-angle-down"></i>
-									</a>
-								</h2>
-							</div>
-							<div id="collapseTwo" class="panel-collapse collapse in">
-								<div class="panel-body">
-									<ul class="list-unstyled checkbox-list">
-										<li>
-											<label class="checkbox">
-												<input type="checkbox" name="checkbox" checked />
-												<i></i>
-												Clothes
-												<small><a href="#">(23)</a></small>
-											</label>
-										</li>
-										<li>
-											<label class="checkbox">
-												<input type="checkbox" name="checkbox" checked />
-												<i></i>
-												Glasses
-												<small><a href="#">(4)</a></small>
-											</label>
-										</li>
-										<li>
-											<label class="checkbox">
-												<input type="checkbox" name="checkbox" />
-												<i></i>
-												Shoes
-												<small><a href="#">(11)</a></small>
-											</label>
-										</li>
-									</ul>
-								</div>
+						<div class="info-block-v2">
+							<i class="icon icon-settings"></i>
+							<div class="info-block-in">
+								<h3>Curabitur tincidunt</h3>
+								<p>Vestibulum non ex volutpat, sodales diam sit amet, semper nunc. Integer sed nibh commodo, tincidunt nisi.</p>
 							</div>
 						</div>
-					</div><!--/end panel group-->
-
-					<div class="panel-group" id="accordion-v3">
-						<div class="panel panel-default">
-							<div class="panel-heading">
-								<h2 class="panel-title">
-									<a data-toggle="collapse" data-parent="#accordion-v3" href="#collapseThree">
-										Size
-										<i class="fa fa-angle-down"></i>
-									</a>
-								</h2>
-							</div>
-							<div id="collapseThree" class="panel-collapse collapse in">
-								<div class="panel-body">
-									<ul class="list-unstyled checkbox-list">
-										<li>
-											<label class="checkbox">
-												<input type="checkbox" name="checkbox" />
-												<i></i>
-												S
-												<small><a href="#">(23)</a></small>
-											</label>
-										</li>
-										<li>
-											<label class="checkbox">
-												<input type="checkbox" name="checkbox" checked />
-												<i></i>
-												M
-												<small><a href="#">(4)</a></small>
-											</label>
-										</li>
-										<li>
-											<label class="checkbox">
-												<input type="checkbox" name="checkbox" />
-												<i></i>
-												L
-												<small><a href="#">(11)</a></small>
-											</label>
-										</li>
-										<li>
-											<label class="checkbox">
-												<input type="checkbox" name="checkbox" />
-												<i></i>
-												XL
-												<small><a href="#">(3)</a></small>
-											</label>
-										</li>
-									</ul>
-								</div>
+						<div class="info-block-v2">
+							<i class="icon icon-paper-plane"></i>
+							<div class="info-block-in">
+								<h3>Aenean condimentum</h3>
+								<p>Vestibulum non ex volutpat, sodales diam sit amet, semper nunc. Integer sed nibh commodo, tincidunt nisi.</p>
 							</div>
 						</div>
-					</div><!--/end panel group-->
+					</div>
 
-					<div class="panel-group" id="accordion-v4">
-						<div class="panel panel-default">
-							<div class="panel-heading">
-								<h2 class="panel-title">
-									<a data-toggle="collapse" data-parent="#accordion-v4" href="#collapseFour">
-										Price
-										<i class="fa fa-angle-down"></i>
-									</a>
-								</h2>
-							</div>
-							<div id="collapseFour" class="panel-collapse collapse in">
-								<div class="panel-body">
-									<div class="slider-snap"></div>
-									<p class="slider-snap-text">
-										<span class="slider-snap-value-lower"></span>
-										<span class="slider-snap-value-upper"></span>
-									</p>
-								</div>
-							</div>
-						</div>
-					</div><!--/end panel group-->
+					<div class="col-md-5">
+						<form id="sky-form1" class="log-reg-block sky-form">
+							<h2>Log in to your account</h2>
 
-					<div class="panel-group" id="accordion-v5">
-						<div class="panel panel-default">
-							<div class="panel-heading">
-								<h2 class="panel-title">
-									<a data-toggle="collapse" data-parent="#accordion-v5" href="#collapseFive">
-										Color
-										<i class="fa fa-angle-down"></i>
-									</a>
-								</h2>
-							</div>
-							<div id="collapseFive" class="panel-collapse collapse in">
-								<div class="panel-body">
-									<ul class="list-inline product-color-list">
-										<li><a href="#"><img src="{{asset('img/colors/01.jpg')}}" alt=""></a></li>
-										<li><a href="#"><img src="{{asset('img/colors/02.jpg')}}" alt=""></a></li>
-										<li><a href="#"><img src="{{asset('img/colors/03.jpg')}}" alt=""></a></li>
-										<li><a href="#"><img src="{{asset('img/colors/04.jpg')}}" alt=""></a></li>
-										<li><a href="#"><img src="{{asset('img/colors/05.jpg')}}" alt=""></a></li>
-										<li><a href="#"><img src="{{asset('img/colors/06.jpg')}}" alt=""></a></li>
-										<li><a href="#"><img src="{{asset('img/colors/07.jpg')}}" alt=""></a></li>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</div><!--/end panel group-->
-
-					<div class="panel-group margin-bottom-30" id="accordion-v6">
-						<div class="panel panel-default">
-							<div class="panel-heading">
-								<h2 class="panel-title">
-									<a data-toggle="collapse" data-parent="#accordion-v6" href="#collapseSix">
-										Rating
-										<i class="fa fa-angle-down"></i>
-									</a>
-								</h2>
-							</div>
-							<div id="collapseSix" class="panel-collapse collapse in">
-								<div class="panel-body">
-									<div class="stars-ratings stars-ratings-label">
-										<input type="radio" name="stars-rating" id="stars-rating-5">
-										<label for="stars-rating-5"><i class="fa fa-star"></i></label>
-										<input type="radio" name="stars-rating" id="stars-rating-4">
-										<label for="stars-rating-4"><i class="fa fa-star"></i></label>
-										<input type="radio" name="stars-rating" id="stars-rating-3">
-										<label for="stars-rating-3"><i class="fa fa-star"></i></label>
-										<input type="radio" name="stars-rating" id="stars-rating-2">
-										<label for="stars-rating-2"><i class="fa fa-star"></i></label>
-										<input type="radio" name="stars-rating" id="stars-rating-1">
-										<label for="stars-rating-1"><i class="fa fa-star"></i></label>
+							<section>
+								<label class="input login-input">
+									<div class="input-group">
+										<span class="input-group-addon"><i class="fa fa-user"></i></span>
+										<input type="email" placeholder="Email Address" name="email" class="form-control">
 									</div>
+								</label>
+							</section>
+							<section>
+								<label class="input login-input no-border-top">
+									<div class="input-group">
+										<span class="input-group-addon"><i class="fa fa-lock"></i></span>
+										<input type="password" placeholder="Password" name="password" class="form-control">
+									</div>
+								</label>
+							</section>
+							<div class="row margin-bottom-5">
+								<div class="col-xs-6">
+									<label class="checkbox">
+										<input type="checkbox" name="checkbox"/>
+										<i></i>
+										Remember me
+									</label>
+								</div>
+								<div class="col-xs-6 text-right">
+									<a href="#">Forget your Password?</a>
 								</div>
 							</div>
-						</div>
-					</div><!--/end panel group-->
-					<button type="button" class="btn-u btn-brd btn-brd-hover btn-u-lg btn-u-sea-shop btn-block">Reset</button>
-				</div>
+							<button class="btn-u btn-u-sea-shop btn-block margin-bottom-20" type="submit">Log in</button>
 
-				<div class="col-md-9">
-					<div class="row margin-bottom-5">
-						<div class="col-sm-4 result-category">
-							<h2>Men</h2>
-							<small class="shop-bg-red badge-results">45 Results</small>
-						</div>
-						<div class="col-sm-8">
-							<ul class="list-inline clear-both">
-								<li class="grid-list-icons">
-									<a href="{{route('book-filter-list')}}"><i class="fa fa-th-list"></i></a>
-									<a href="{{route('book-filter-grid')}}"><i class="fa fa-th"></i></a>
-								</li>
-								<li class="sort-list-btn">
-									<h3>Sort By :</h3>
-									<div class="btn-group">
-										<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-											Popularity <span class="caret"></span>
-										</button>
-										<ul class="dropdown-menu" role="menu">
-											<li><a href="#">All</a></li>
-											<li><a href="#">Best Sales</a></li>
-											<li><a href="#">Top Last Week Sales</a></li>
-											<li><a href="#">New Arrived</a></li>
-										</ul>
-									</div>
-								</li>
-								<li class="sort-list-btn">
-									<h3>Show :</h3>
-									<div class="btn-group">
-										<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-											20 <span class="caret"></span>
-										</button>
-										<ul class="dropdown-menu" role="menu">
-											<li><a href="#">All</a></li>
-											<li><a href="#">10</a></li>
-											<li><a href="#">5</a></li>
-											<li><a href="#">3</a></li>
-										</ul>
-									</div>
-								</li>
-							</ul>
-						</div>
-					</div><!--/end result category-->
+							<div class="border-wings">
+								<span>or</span>
+							</div>
 
-					<div class="filter-results">
-						<div class="list-product-description product-description-brd margin-bottom-30">
-							<div class="row">
-								<div class="col-sm-4">
-									<a href="{{route('book-inner')}}"><img class="img-responsive sm-margin-bottom-20" src="{{asset('img/blog/16.jpg')}}" alt=""></a>
+							<div class="row columns-space-removes">
+								<div class="col-lg-6 margin-bottom-10">
+									<button type="button" class="btn-u btn-u-md btn-u-fb btn-block"><i class="fa fa-facebook"></i> Facebook Log In</button>
 								</div>
-								<div class="col-sm-8 product-description">
-									<div class="overflow-h margin-bottom-5">
-										<ul class="list-inline overflow-h">
-											<li><h4 class="title-price"><a href="{{route('book-inner')}}">Double-breasted</a></h4></li>
-											<li><span class="gender text-uppercase">Men</span></li>
-											<li class="pull-right">
-												<ul class="list-inline product-ratings">
-													<li><i class="rating-selected fa fa-star"></i></li>
-													<li><i class="rating-selected fa fa-star"></i></li>
-													<li><i class="rating-selected fa fa-star"></i></li>
-													<li><i class="rating fa fa-star"></i></li>
-													<li><i class="rating fa fa-star"></i></li>
-												</ul>
-											</li>
-										</ul>
-										<div class="margin-bottom-10">
-											<span class="title-price margin-right-10">$60.00</span>
-											<span class="title-price line-through">$95.00</span>
-										</div>
-										<p class="margin-bottom-20">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sollicitudin erat nec ornarevolu tpat. Etiam ut felis nec nisl eleifend lobortis. Aenean nibh est, hendrerit non conva.</p>
-										<ul class="list-inline add-to-wishlist margin-bottom-20">
-											<li class="wishlist-in">
-												<i class="fa fa-heart"></i>
-												<a href="#">Add to Wishlist</a>
-											</li>
-											<li class="compare-in">
-												<i class="fa fa-exchange"></i>
-												<a href="#">Add to Compare</a>
-											</li>
-										</ul>
-										<button type="button" class="btn-u btn-u-sea-shop">Add to Cart</button>
-									</div>
+								<div class="col-lg-6">
+									<button type="button" class="btn-u btn-u-md btn-u-tw btn-block"><i class="fa fa-twitter"></i> Twitter Log In</button>
 								</div>
 							</div>
-						</div>
+						</form>
 
-						<div class="list-product-description product-description-brd margin-bottom-30">
-							<div class="row">
-								<div class="col-sm-4">
-									<a href="{{route('book-inner')}}"><img class="img-responsive sm-margin-bottom-20" src="{{asset('img/blog/17.jpg')}}" alt=""></a>
-								</div>
-								<div class="col-sm-8 product-description">
-									<div class="overflow-h margin-bottom-5">
-										<ul class="list-inline overflow-h">
-											<li><h4 class="title-price"><a href="{{route('book-inner')}}">Double-breasted</a></h4></li>
-											<li><span class="gender text-uppercase">Men</span></li>
-											<li class="pull-right">
-												<ul class="list-inline product-ratings">
-													<li><i class="rating-selected fa fa-star"></i></li>
-													<li><i class="rating-selected fa fa-star"></i></li>
-													<li><i class="rating-selected fa fa-star"></i></li>
-													<li><i class="rating fa fa-star"></i></li>
-													<li><i class="rating fa fa-star"></i></li>
-												</ul>
-											</li>
-										</ul>
-										<div class="margin-bottom-10">
-											<span class="title-price margin-right-10">$60.00</span>
-											<span class="title-price line-through">$95.00</span>
-										</div>
-										<p class="margin-bottom-20">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sollicitudin erat nec ornarevolu tpat. Etiam ut felis nec nisl eleifend lobortis. Aenean nibh est, hendrerit non conva.</p>
-										<ul class="list-inline add-to-wishlist margin-bottom-20">
-											<li class="wishlist-in">
-												<i class="fa fa-heart"></i>
-												<a href="#">Add to Wishlist</a>
-											</li>
-											<li class="compare-in">
-												<i class="fa fa-exchange"></i>
-												<a href="#">Add to Compare</a>
-											</li>
-										</ul>
-										<button type="button" class="btn-u btn-u-sea-shop">Add to Cart</button>
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<div class="list-product-description product-description-brd margin-bottom-30">
-							<div class="row">
-								<div class="col-sm-4">
-									<a href="{{route('book-inner')}}"><img class="img-responsive sm-margin-bottom-20" src="{{asset('img/blog/21.jpg')}}" alt=""></a>
-								</div>
-								<div class="col-sm-8 product-description">
-									<div class="overflow-h margin-bottom-5">
-										<ul class="list-inline overflow-h">
-											<li><h4 class="title-price"><a href="{{route('book-inner')}}">Double-breasted</a></h4></li>
-											<li><span class="gender text-uppercase">Men</span></li>
-											<li class="pull-right">
-												<ul class="list-inline product-ratings">
-													<li><i class="rating-selected fa fa-star"></i></li>
-													<li><i class="rating-selected fa fa-star"></i></li>
-													<li><i class="rating-selected fa fa-star"></i></li>
-													<li><i class="rating fa fa-star"></i></li>
-													<li><i class="rating fa fa-star"></i></li>
-												</ul>
-											</li>
-										</ul>
-										<div class="margin-bottom-10">
-											<span class="title-price margin-right-10">$60.00</span>
-											<span class="title-price line-through">$95.00</span>
-										</div>
-										<p class="margin-bottom-20">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sollicitudin erat nec ornarevolu tpat. Etiam ut felis nec nisl eleifend lobortis. Aenean nibh est, hendrerit non conva.</p>
-										<ul class="list-inline add-to-wishlist margin-bottom-20">
-											<li class="wishlist-in">
-												<i class="fa fa-heart"></i>
-												<a href="#">Add to Wishlist</a>
-											</li>
-											<li class="compare-in">
-												<i class="fa fa-exchange"></i>
-												<a href="#">Add to Compare</a>
-											</li>
-										</ul>
-										<button type="button" class="btn-u btn-u-sea-shop">Add to Cart</button>
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<div class="list-product-description product-description-brd margin-bottom-30">
-							<div class="row">
-								<div class="col-sm-4">
-									<a href="{{route('book-inner')}}"><img class="img-responsive sm-margin-bottom-20" src="{{asset('img/blog/22.jpg')}}" alt=""></a>
-								</div>
-								<div class="col-sm-8 product-description">
-									<div class="overflow-h margin-bottom-5">
-										<ul class="list-inline overflow-h">
-											<li><h4 class="title-price"><a href="{{route('book-inner')}}">Double-breasted</a></h4></li>
-											<li><span class="gender text-uppercase">Men</span></li>
-											<li class="pull-right">
-												<ul class="list-inline product-ratings">
-													<li><i class="rating-selected fa fa-star"></i></li>
-													<li><i class="rating-selected fa fa-star"></i></li>
-													<li><i class="rating-selected fa fa-star"></i></li>
-													<li><i class="rating fa fa-star"></i></li>
-													<li><i class="rating fa fa-star"></i></li>
-												</ul>
-											</li>
-										</ul>
-										<div class="margin-bottom-10">
-											<span class="title-price margin-right-10">$60.00</span>
-											<span class="title-price line-through">$95.00</span>
-										</div>
-										<p class="margin-bottom-20">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sollicitudin erat nec ornarevolu tpat. Etiam ut felis nec nisl eleifend lobortis. Aenean nibh est, hendrerit non conva.</p>
-										<ul class="list-inline add-to-wishlist margin-bottom-20">
-											<li class="wishlist-in">
-												<i class="fa fa-heart"></i>
-												<a href="#">Add to Wishlist</a>
-											</li>
-											<li class="compare-in">
-												<i class="fa fa-exchange"></i>
-												<a href="#">Add to Compare</a>
-											</li>
-										</ul>
-										<button type="button" class="btn-u btn-u-sea-shop">Add to Cart</button>
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<div class="list-product-description product-description-brd">
-							<div class="row">
-								<div class="col-sm-4">
-									<a href="{{route('book-inner')}}"><img class="img-responsive sm-margin-bottom-20" src="{{asset('img/blog/23.jpg')}}" alt=""></a>
-								</div>
-								<div class="col-sm-8 product-description">
-									<div class="overflow-h margin-bottom-5">
-										<ul class="list-inline overflow-h">
-											<li><h4 class="title-price"><a href="{{route('book-inner')}}">Double-breasted</a></h4></li>
-											<li><span class="gender text-uppercase">Men</span></li>
-											<li class="pull-right">
-												<ul class="list-inline product-ratings">
-													<li><i class="rating-selected fa fa-star"></i></li>
-													<li><i class="rating-selected fa fa-star"></i></li>
-													<li><i class="rating-selected fa fa-star"></i></li>
-													<li><i class="rating fa fa-star"></i></li>
-													<li><i class="rating fa fa-star"></i></li>
-												</ul>
-											</li>
-										</ul>
-										<div class="margin-bottom-10">
-											<span class="title-price margin-right-10">$60.00</span>
-											<span class="title-price line-through">$95.00</span>
-										</div>
-										<p class="margin-bottom-20">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sollicitudin erat nec ornarevolu tpat. Etiam ut felis nec nisl eleifend lobortis. Aenean nibh est, hendrerit non conva.</p>
-										<ul class="list-inline add-to-wishlist margin-bottom-20">
-											<li class="wishlist-in">
-												<i class="fa fa-heart"></i>
-												<a href="#">Add to Wishlist</a>
-											</li>
-											<li class="compare-in">
-												<i class="fa fa-exchange"></i>
-												<a href="#">Add to Compare</a>
-											</li>
-										</ul>
-										<button type="button" class="btn-u btn-u-sea-shop">Add to Cart</button>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div><!--/end filter resilts-->
-
-					<div class="text-center">
-						<ul class="pagination pagination-v2">
-							<li><a href="#"><i class="fa fa-angle-left"></i></a></li>
-							<li><a href="#">1</a></li>
-							<li class="active"><a href="#">2</a></li>
-							<li><a href="#">3</a></li>
-							<li><a href="#"><i class="fa fa-angle-right"></i></a></li>
-						</ul>
-					</div><!--/end pagination-->
-				</div>
-			</div><!--/end row-->
-		</div><!--/end container-->
-		<!--=== End Content Part ===-->
+						<div class="margin-bottom-20"></div>
+						<p class="text-center">Don't have account yet? Learn more and <a href="{{route('book-register')}}">Sign Up</a></p>
+					</div>
+				</div><!--/end row-->
+			</div><!--/end container-->
+		</div>
+		<!--=== End Login ===-->
 
 		<!--=== Shop Suvbscribe ===-->
 		<div class="shop-subscribe">
@@ -1100,63 +686,61 @@
 
 	<!-- Wait Block -->
 	<div class="g-popup-wrapper">
-		<div class="g-popup g-popup--subscribe2">
-			<div class="g-popup--subscribe2-message">
-				<span class="icon-envelope-letter icon" aria-hidden="true"></span>
-
-				<h3>Subscribe To Our Newsletter</h3>
-				<p>Join our mailing list to receive the latest news &amp;&nbsp;updates from our team.</p>
+		<div class="g-popup g-popup--fb">
+			<div class="g-popup--fb-title">
+				<a target="_blank" href="https://www.facebook.com/htmlstream" class="g-popup--fb__logo"><img alt="facebook" src="{{asset('img/others/fb.png')}}" width="110"></a>
+				<div class="g-popup--fb-message">Click <strong>"Like"</strong><br>to read our blog on Facebook</div>
 			</div>
-			<form action="#" class="sky-form">
-				<div class="row">
-					<section class="col-sm-9">
-						<label class="input">
-							<input type="email" placeholder="Email" class="form-control">
-						</label>
-					</section>
-					<section class="col-sm-3">
-						<label class="input">
-							<button class="btn btn-default" type="button">Subscribe</button>
-						</label>
-					</section>
-				</div>
-			</form>
-
-			<a href="javascript:void(0);" class="g-popup__close g-popup--subscribe2__close"><span class="icon-close" aria-hidden="true"></span></a>
+			<div class="g-popup--fb-widjet">
+				<div id="fb-root"></div>
+				<script>(function(d, s, id) {
+					var js, fjs = d.getElementsByTagName(s)[0];
+					if (d.getElementById(id)) return;
+					js = d.createElement(s); js.id = id;
+					js.src = "//connect.facebook.net/ru_RU/sdk.js')}}#xfbml=1&version=v2.4&appId=118547268248380";
+					fjs.parentNode.insertBefore(js, fjs);
+				}(document, 'script', 'facebook-jssdk'));</script>
+				<div class="fb-like" data-href="https://www.facebook.com/htmlstream/" data-width="270" data-layout="standard" data-action="like" data-show-faces="true" data-share="false"></div>
+			</div>
+			<a href="javascript:void(0);" class="g-popup__close g-popup--fb__close"><span class="icon-close" aria-hidden="true"></span></a>
 		</div>
 	</div>
 	<!-- End Wait Block -->
 
 	<!-- JS Global Compulsory -->
-	<script src="{{asset('plugins/jquery/jquery.min.js"></script>
-	<script src="{{asset('plugins/jquery/jquery-migrate.min.js"></script>
-	<script src="{{asset('plugins/bootstrap/js/bootstrap.min.js"></script>
+	<script src="{{asset('plugins/jquery/jquery.min.js')}}"></script>
+	<script src="{{asset('plugins/jquery/jquery-migrate.min.js')}}"></script>
+	<script src="{{asset('plugins/bootstrap/js/bootstrap.min.js')}}"></script>
 	<!-- JS Implementing Plugins -->
-	<script src="{{asset('plugins/back-to-top.js"></script>
-	<script src="{{asset('plugins/smoothScroll.js"></script>
-	<script src="{{asset('plugins/noUiSlider/jquery.nouislider.all.min.js"></script>
-	<script src="{{asset('plugins/scrollbar/js/jquery.mCustomScrollbar.concat.min.js"></script>
+	<script src="{{asset('plugins/back-to-top.js')}}"></script>
+	<script src="{{asset('plugins/smoothScroll.js')}}"></script>
+	<script src="{{asset('plugins/scrollbar/js/jquery.mCustomScrollbar.concat.min.js')}}"></script>
+	<script src="{{asset('plugins/sky-forms-pro/skyforms/js/jquery.form.min.js')}}"></script>
+	<script src="{{asset('plugins/sky-forms-pro/skyforms/js/jquery.validate.min.js')}}"></script>
 	<!-- JS Customization -->
-	<script src="{{asset('js/custom.js"></script>
+	<script src="{{asset('js/custom.js')}}"></script>
 	<!-- JS Page Level -->
-	<script src="{{asset('js/shop.app.js"></script>
-	<script src="{{asset('js/plugins/mouse-wheel.js"></script>
-	<script src="{{asset('js/plugins/style-switcher.js"></script>
+	<script src="{{asset('js/shop.app.js')}}"></script>
+	<script src="{{asset('js/forms/page_login.js')}}"></script>
+	<script src="{{asset('js/plugins/style-switcher.js')}}"></script>
+	<script src="{{asset('js/forms/page_contact_form.js')}}"></script>
 	<script>
 		jQuery(document).ready(function() {
 			App.init();
+			Login.initLogin();
 			App.initScrollBar();
-			MouseWheel.initMouseWheel();
 			StyleSwitcher.initStyleSwitcher();
+			PageContactForm.initPageContactForm();
 		});
 	</script>
 <!--[if lt IE 9]>
-	<script src="{{asset('plugins/respond.js"></script>
-	<script src="{{asset('plugins/html5shiv.js"></script>
-	<script src="{{asset('js/plugins/placeholder-IE-fixes.js"></script>
+	<script src="{{asset('plugins/respond.js')}}"></script>
+	<script src="{{asset('plugins/html5shiv.js')}}"></script>
+	<script src="{{asset('js/plugins/placeholder-IE-fixes.js')}}"></script>
+	<script src="{{asset('plugins/sky-forms-pro/skyforms/js/sky-forms-ie8.js')}}"></script>
 	<![endif]-->
 <!--[if lt IE 10]>
-	<script src="{{asset('plugins/sky-forms-pro/skyforms/js/jquery.placeholder.min.js"></script>
+	<script src="{{asset('plugins/sky-forms-pro/skyforms/js/jquery.placeholder.min.js')}}"></script>
 	<![endif]-->
 
 </body>

@@ -168,227 +168,15 @@
  					<div class="collapse navbar-collapse navbar-responsive-collapse">
  						<!-- Nav Menu -->
  						<ul class="nav navbar-nav">
- 							<!-- Pages -->
- 							<li class="dropdown active">
- 								<a href="javascript:void(0);" class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown">
- 									Pages
- 								</a>
- 								<ul class="dropdown-menu">
- 									<li><a href="{{route('index')}}">Shop UI</a></li>
- 									<li><a href="{{route('book-inner')}}">Product Page</a></li>
- 									<li class="active"><a href="{{route('book-filter-grid')}}">Filter Grid Page</a></li>
- 									<li><a href="{{route('book-filter-list')}}">Filter List Page</a></li>
- 									<li><a href="{{route('book-add-to-cart')}}">Checkout</a></li>
- 									<li><a href="{{route('book-login')}}">Login</a></li>
- 									<li><a href="{{route('book-register')}}">Register</a></li>
- 								</ul>
- 							</li>
- 							<!-- End Pages -->
-
- 							<!-- Promotion -->
- 							<li class="dropdown">
- 								<a href="javascript:void(0);" class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown">
- 									Promotion
- 								</a>
- 								<ul class="dropdown-menu">
- 									<li class="dropdown-submenu">
- 										<a href="javascript:void(0);">Jeans</a>
- 										<ul class="dropdown-menu">
- 											<li><a href="#">Skinny Jeans</a></li>
- 											<li><a href="#">Bootcut Jeans</a></li>
- 											<li><a href="#">Straight Cut Jeans</a></li>
- 										</ul>
- 									</li>
- 									<li class="dropdown-submenu">
- 										<a href="javascript:void(0);">Shoes</a>
- 										<ul class="dropdown-menu">
- 											<li><a href="#">Sandals</a></li>
- 											<li><a href="#">Heels</a></li>
- 										</ul>
- 									</li>
- 								</ul>
- 							</li>
- 							<!-- End Promotion -->
-
- 							<!-- Gifts -->
- 							<li class="dropdown mega-menu-fullwidth">
- 								<a href="javascript:void(0);" class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown">
- 									Gifts
- 								</a>
- 								<ul class="dropdown-menu">
- 									<li>
- 										<div class="mega-menu-content">
- 											<div class="container">
- 												<div class="row">
- 													<div class="col-md-3 col-sm-12 col-xs-12 md-margin-bottom-30">
- 														<h3 class="mega-menu-heading">Pellentes que nec diam lectus</h3>
- 														<p>Proin pulvinar libero quis auctor pharet ra. Aenean fermentum met us orci, sedf eugiat augue pulvina r vitae. Nulla dolor nisl, molestie nec aliquam vitae, gravida sodals dolor...</p>
- 														<button type="button" class="btn-u btn-u-dark">Read More</button>
- 													</div>
- 													<div class="col-md-3 col-sm-4 col-xs-4 md-margin-bottom-30">
- 														<a href="#"><img class="product-offers img-responsive" src="{{asset('img/blog/01.jpg')}}" alt=""></a>
- 													</div>
- 													<div class="col-md-3 col-sm-4 col-xs-4 sm-margin-bottom-30">
- 														<a href="#"><img class="product-offers img-responsive" src="{{asset('img/blog/02.jpg')}}" alt=""></a>
- 													</div>
- 													<div class="col-md-3 col-sm-4 col-xs-4">
- 														<a href="#"><img class="product-offers img-responsive" src="{{asset('img/blog/03.jpg')}}" alt=""></a>
- 													</div>
- 												</div><!--/end row-->
- 											</div><!--/end container-->
- 										</div><!--/end mega menu content-->
- 									</li>
- 								</ul><!--/end dropdown-menu-->
- 							</li>
- 							<!-- End Gifts -->
-
  							<!-- Books -->
- 							<li class="dropdown mega-menu-fullwidth">
- 								<a href="javascript:void(0);" class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown">
- 									Books
- 								</a>
- 								<ul class="dropdown-menu">
- 									<li>
- 										<div class="mega-menu-content">
- 											<div class="container">
- 												<div class="row">
- 													<div class="col-md-2 col-sm-6">
- 														<h3 class="mega-menu-heading">Clothe</h3>
- 														<ul class="list-unstyled style-list">
- 															<li><a href="#">New in</a></li>
- 															<li><a href="#">Coats &amp; Jackets</a></li>
- 															<li><a href="#">Jeans</a></li>
- 															<li><a href="#">Dresses</a></li>
- 															<li><a href="#">Shorts</a> <span class="label label-danger-shop">New</span></li>
- 															<li><a href="#">Skirts</a></li>
- 															<li><a href="#">T-Shirts</a></li>
- 														</ul>
- 														<h3 class="mega-menu-heading">Shoes</h3>
- 														<ul class="list-unstyled style-list">
- 															<li><a href="#">Boots</a></li>
- 															<li><a href="#">FLats</a></li>
- 															<li><a href="#">Heels</a></li>
- 															<li><a href="#">Sandals</a></li>
- 															<li><a href="#">Sports</a></li>
- 														</ul>
- 													</div>
-
- 													<div class="col-md-2 col-sm-6">
- 														<h3 class="mega-menu-heading">Accessories</h3>
- 														<ul class="list-unstyled style-list">
- 															<li><a href="#">All accessories</a></li>
- 															<li><a href="#">Bags &amp; Purses</a></li>
- 															<li><a href="#">Scarvs &amp; Hats</a></li>
- 															<li><a href="#">Jewellery</a></li>
- 															<li><a href="#">Fragrance &amp; Beauty</a></li>
- 														</ul>
- 														<h3 class="mega-menu-heading">Lingerie</h3>
- 														<ul class="list-unstyled style-list">
- 															<li><a href="#">Linger</a> <span class="label label-danger-shop">New</span></li>
- 															<li><a href="#">Slippers</a></li>
- 														</ul>
- 														<h3 class="mega-menu-heading">Nightwear</h3>
- 														<ul class="list-unstyled style-list">
- 															<li><a href="#">Nightwear</a></li>
- 															<li><a href="#">Socks</a></li>
- 															<li><a href="#">Tights</a></li>
- 														</ul>
- 													</div>
-
- 													<div class="col-md-2 col-sm-6">
- 														<h3 class="mega-menu-heading">Mixed</h3>
- 														<ul class="list-unstyled style-list">
- 															<li><a href="#">New in</a></li>
- 															<li><a href="#">Coats &amp; Jackets</a> <span class="label label-danger-shop">New</span></li>
- 															<li><a href="#">Jeans</a></li>
- 															<li><a href="#">Dresses</a></li>
- 															<li><a href="#">Shorts</a></li>
- 															<li><a href="#">Skirts</a></li>
- 															<li><a href="#">T-shirts</a></li>
- 															<li><a href="#">Boots</a></li>
- 															<li><a href="#">Flats</a></li>
- 															<li><a href="#">Heels</a></li>
- 															<li><a href="#">Sandals</a></li>
- 															<li><a href="#">Sports</a></li>
- 															<li><a href="#">Socks</a></li>
- 															<li><a href="#">Tights</a></li>
- 														</ul>
- 													</div>
-
- 													<div class="col-md-2 col-sm-6">
- 														<h3 class="mega-menu-heading">Clothe</h3>
- 														<ul class="list-unstyled style-list">
- 															<li><a href="#">New in</a></li>
- 															<li><a href="#">Coats &amp; Jackets</a></li>
- 															<li><a href="#">Jeans</a></li>
- 															<li><a href="#">Dresses</a></li>
- 															<li><a href="#">Shorts</a> <span class="label label-danger-shop">New</span></li>
- 															<li><a href="#">Skirts</a></li>
- 															<li><a href="#">T-shirts</a></li>
- 														</ul>
- 														<h3 class="mega-menu-heading">Shoes</h3>
- 														<ul class="list-unstyled style-list">
- 															<li><a href="#">Boots</a></li>
- 															<li><a href="#">Flats</a></li>
- 															<li><a href="#">Heels</a></li>
- 															<li><a href="#">Sandals</a></li>
- 															<li><a href="#">Sports</a></li>
- 														</ul>
- 													</div>
-
- 													<div class="col-md-2 col-sm-6">
- 														<h3 class="mega-menu-heading">Accessories</h3>
- 														<ul class="list-unstyled style-list">
- 															<li><a href="#">All accessories</a></li>
- 															<li><a href="#">Bags &amp; Purses</a></li>
- 															<li><a href="#">Scarvs &amp; Hats</a></li>
- 															<li><a href="#">Jewellery</a></li>
- 															<li><a href="#">Fragrance &amp; Beauty</a></li>
- 														</ul>
- 														<h3 class="mega-menu-heading">Lingerie</h3>
- 														<ul class="list-unstyled style-list">
- 															<li><a href="#">Linger</a> <span class="label label-danger-shop">New</span></li>
- 															<li><a href="#">Slippers</a></li>
- 														</ul>
- 														<h3 class="mega-menu-heading">Nightwear</h3>
- 														<ul class="list-unstyled style-list">
- 															<li><a href="#">Nightwear</a></li>
- 															<li><a href="#">Socks</a></li>
- 															<li><a href="#">Tights</a></li>
- 														</ul>
- 													</div>
-
- 													<div class="col-md-2 col-sm-6">
- 														<h3 class="mega-menu-heading">Mixed</h3>
- 														<ul class="list-unstyled style-list">
- 															<li><a href="#">New in</a></li>
- 															<li><a href="#">Coats &amp; Jackets</a> <span class="label label-danger-shop">New</span></li>
- 															<li><a href="#">Jeans</a></li>
- 															<li><a href="#">Dresses</a></li>
- 															<li><a href="#">Shorts</a></li>
- 															<li><a href="#">Skirts</a></li>
- 															<li><a href="#">T-shirts</a></li>
- 															<li><a href="#">Boots</a></li>
- 															<li><a href="#">Flats</a></li>
- 															<li><a href="#">Heels</a></li>
- 															<li><a href="#">Sandals</a></li>
- 															<li><a href="#">Sports</a></li>
- 															<li><a href="#">Socks</a></li>
- 															<li><a href="#">Tights</a> <span class="label label-danger-shop">New</span></li>
- 														</ul>
- 													</div>
- 												</div><!--/end row-->
- 											</div><!--/end container-->
- 										</div><!--/end mega menu content-->
- 									</li>
- 								</ul><!--/end dropdown-menu-->
+ 							<li class="dropdown active">
+ 								<a href="{{route('book-filter')}}">Books</a>
  							</li>
  							<!-- End Books -->
-
- 							<!-- Clothes -->
+ 							<!-- Publisher -->
  							<li class="dropdown">
  								<a href="javascript:void(0);" class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown" data-delay="1000">
- 									Clothes
+ 									Publisher
  								</a>
  								<ul class="dropdown-menu">
  									<li><a href="#">Jeans</a></li>
@@ -396,11 +184,24 @@
  									<li><a href="#">Shorts</a></li>
  								</ul>
  							</li>
- 							<!-- End Clothes -->
-
- 							<!-- Main Demo -->
- 							<li><a href="{{route('index')}}">Main Demo</a></li>
- 							<!-- Main Demo -->
+ 							<!-- End publisher -->
+ 							<!-- Genre -->
+ 							<li class="dropdown">
+ 								<a href="javascript:void(0);" class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown" data-delay="1000">
+ 									Genre
+ 								</a>
+ 								<ul class="dropdown-menu">
+ 									<li><a href="#">Jeans</a></li>
+ 									<li><a href="#">T-shirts</a></li>
+ 									<li><a href="#">Shorts</a></li>
+ 								</ul>
+ 							</li>
+ 							<!-- End genre -->
+ 							<!-- About Us -->
+	                        <li>
+	                        	<a href="{{route('book-filter')}}">About Us</a>
+	                        </li>
+	                        <!-- End About Us -->
  						</ul>
  						<!-- End Nav Menu -->
  					</div>
@@ -524,8 +325,7 @@
  						<div class="col-sm-12">
  							<ul class="list-inline clear-both">
  								<li class="grid-list-icons">
- 									<a href="{{route('book-filter-list')}}"><i class="fa fa-th-list"></i></a>
- 									<a href="{{route('book-filter-grid')}}"><i class="fa fa-th"></i></a>
+ 									<a href="{{route('book-filter')}}"><i class="fa fa-th"></i></a>
  								</li>
  								<li class="sort-list-btn">
  									<h3>Sort By :</h3>
@@ -573,7 +373,7 @@
  								<div class="product-description product-description-brd margin-bottom-30">
  									<div class="overflow-h margin-bottom-5">
  										<div class="pull-left">
- 											<h4 class="title-price"><a href="{{route('book-inner')}}">{{$book->title}}</a></h4>
+ 											<h4 class="title-price"><a href="{{route('books.detail',['id'=>$book->id])}}">{{$book->title}}</a></h4>
  											<span class="gender text-uppercase">{{$book->publisher}}</span>
  											<span class="gender">{{$book->genre}}</span>
  										</div>

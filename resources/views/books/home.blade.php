@@ -90,6 +90,49 @@
                 <!-- Shopping Cart -->
                 <div class="shop-badge badge-icons pull-right">
                     <a href="#"><i class="fa fa-shopping-cart"></i></a>
+                    <span class="badge badge-sea rounded-x">3</span>
+                    <div class="badge-open">
+                        <ul class="list-unstyled mCustomScrollbar" data-mcs-theme="minimal-dark">
+                            <li>
+                                <img src="{{asset('img/thumb/05.jpg')}}" alt="">
+                                <button type="button" class="close">×</button>
+                                <div class="overflow-h">
+                                    <span>Black Glasses</span>
+                                    <small>1 x $400.00</small>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="{{asset('img/thumb/02.jpg')}}" alt="">
+                                <button type="button" class="close">×</button>
+                                <div class="overflow-h">
+                                    <span>Black Glasses</span>
+                                    <small>1 x $400.00</small>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="{{asset('img/thumb/03.jpg')}}" alt="">
+                                <button type="button" class="close">×</button>
+                                <div class="overflow-h">
+                                    <span>Black Glasses</span>
+                                    <small>1 x $400.00</small>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="subtotal">
+                            <div class="overflow-h margin-bottom-10">
+                                <span>Subtotal</span>
+                                <span class="pull-right subtotal-cost">$1200.00</span>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-6">
+                                    <a href="" class="btn-u btn-brd btn-brd-hover btn-u-sea-shop btn-block">View Cart</a>
+                                </div>
+                                <div class="col-xs-6">
+                                    <a href="shop-ui-add-to-cart.html" class="btn-u btn-u-sea-shop btn-block">Checkout</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <!-- End Shopping Cart -->
 
@@ -388,7 +431,7 @@
     <div class="container content-md">
 
         <div class="heading heading-v1 margin-bottom-20">
-            <h2>Top 20 best sell books</h2>
+            <h2>Featured products</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed odio elit, ultrices vel cursus sed, placerat ut leo. Phasellus in magna erat. Etiam gravida convallis augue non tincidunt. Nunc lobortis dapibus neque quis lacinia. Nam dapibus tellus sit amet odio venenatis</p>
         </div>
 

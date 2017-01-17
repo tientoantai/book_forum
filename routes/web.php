@@ -16,11 +16,6 @@ use App\BookForum\Book\Book;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/index', function () {
-    return view('index');
-})
-		->name('index')
-;
 
 Route::get('/book-add-to-cart', function () {
     return view('book-add-to-cart');
@@ -28,13 +23,13 @@ Route::get('/book-add-to-cart', function () {
 		->name('book-add-to-cart')
 ;
 
-Route::get('/book-filter-grid', function () {
+Route::get('/book-filter', function () {
 	
-    return view('book-filter-grid')
+    return view('book-filter')
     	->with('books', Book::all())
     ;
 })
-		->name('book-filter-grid')
+		->name('book-filter')
 ;
 
 Route::get('/book-filter-list', function () {
@@ -91,11 +86,16 @@ Route::get('/publisher/add', 'PublisherController@add')
 
 Route::get('/books', 'BookController@listBook');
 Route::get('/delete/{id}', 'BookController@delete');
-Route::get('/detail/{id}', 'BookController@detail');
+Route::get('/detail/{id}', 'BookController@detail')
+		->name('books.detail')
+;
 Route::get('/insert', 'BookController@insertform');
 Route::post('/insert', 'BookController@insert')
 		->name('books.insert')
 		->middleware('create.image')
+;
+Route::get('/index','BookController@listbookhome')
+		->name('index')
 ;
 
 Route::get('/update/{id}', 'BookController@updateform');
