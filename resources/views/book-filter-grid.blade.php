@@ -89,8 +89,8 @@
  						<div class="col-sm-6">
  							<ul class="list-inline right-topbar pull-right">
  								<li><a href="#">Account</a></li>
- 								<li><a href="{{route('shop-ui-add-to-cart')}}">Wishlist (0)</a></li>
- 								<li><a href="{{route('shop-ui-login')}}">Login</a> | <a href="{{route('shop-ui-register')}}">Register</a></li>
+ 								<li><a href="{{route('book-add-to-cart')}}">Wishlist (0)</a></li>
+ 								<li><a href="{{route('book-login')}}">Login</a> | <a href="{{route('book-register')}}">Register</a></li>
  								<li><i class="search fa fa-search search-button"></i></li>
  							</ul>
  						</div>
@@ -153,10 +153,10 @@
  								</div>
  								<div class="row">
  									<div class="col-xs-6">
- 										<a href="{{route('shop-ui-inner')}}" class="btn-u btn-brd btn-brd-hover btn-u-sea-shop btn-block">View Cart</a>
+ 										<a href="{{route('book-inner')}}" class="btn-u btn-brd btn-brd-hover btn-u-sea-shop btn-block">View Cart</a>
  									</div>
  									<div class="col-xs-6">
- 										<a href="{{route('shop-ui-add-to-cart')}}" class="btn-u btn-u-sea-shop btn-block">Checkout</a>
+ 										<a href="{{route('book-add-to-cart')}}" class="btn-u btn-u-sea-shop btn-block">Checkout</a>
  									</div>
  								</div>
  							</div>
@@ -175,12 +175,12 @@
  								</a>
  								<ul class="dropdown-menu">
  									<li><a href="{{route('index')}}">Shop UI</a></li>
- 									<li><a href="{{route('shop-ui-inner')}}">Product Page</a></li>
- 									<li class="active"><a href="{{route('shop-ui-filter-grid')}}">Filter Grid Page</a></li>
- 									<li><a href="{{route('shop-ui-filter-list')}}">Filter List Page</a></li>
- 									<li><a href="{{route('shop-ui-add-to-cart')}}">Checkout</a></li>
- 									<li><a href="{{route('shop-ui-login')}}">Login</a></li>
- 									<li><a href="{{route('shop-ui-register')}}">Register</a></li>
+ 									<li><a href="{{route('book-inner')}}">Product Page</a></li>
+ 									<li class="active"><a href="{{route('book-filter-grid')}}">Filter Grid Page</a></li>
+ 									<li><a href="{{route('book-filter-list')}}">Filter List Page</a></li>
+ 									<li><a href="{{route('book-add-to-cart')}}">Checkout</a></li>
+ 									<li><a href="{{route('book-login')}}">Login</a></li>
+ 									<li><a href="{{route('book-register')}}">Register</a></li>
  								</ul>
  							</li>
  							<!-- End Pages -->
@@ -524,8 +524,8 @@
  						<div class="col-sm-12">
  							<ul class="list-inline clear-both">
  								<li class="grid-list-icons">
- 									<a href="{{route('shop-ui-filter-list')}}"><i class="fa fa-th-list"></i></a>
- 									<a href="{{route('shop-ui-filter-grid')}}"><i class="fa fa-th"></i></a>
+ 									<a href="{{route('book-filter-list')}}"><i class="fa fa-th-list"></i></a>
+ 									<a href="{{route('book-filter-grid')}}"><i class="fa fa-th"></i></a>
  								</li>
  								<li class="sort-list-btn">
  									<h3>Sort By :</h3>
@@ -567,13 +567,13 @@
  							<div class="col-md-4">
  								<div class="product-img product-img-brd">
  									<a href="#"><img class="full-width img-responsive" src="{{$book->image}}" alt=""></a>
- 									<a class="product-review" href="{{route('shop-ui-inner')}}">Quick review</a>
+ 									<a class="product-review" href="{{route('book-inner')}}">Quick review</a>
  									<a class="add-to-cart" href="#"><i class="fa fa-shopping-cart"></i>Add to cart</a>
  								</div>
  								<div class="product-description product-description-brd margin-bottom-30">
  									<div class="overflow-h margin-bottom-5">
  										<div class="pull-left">
- 											<h4 class="title-price"><a href="{{route('shop-ui-inner')}}">{{$book->title}}</a></h4>
+ 											<h4 class="title-price"><a href="{{route('book-inner')}}">{{$book->title}}</a></h4>
  											<span class="gender text-uppercase">{{$book->publisher}}</span>
  											<span class="gender">{{$book->genre}}</span>
  										</div>
