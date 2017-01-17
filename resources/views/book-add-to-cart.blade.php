@@ -87,8 +87,8 @@
 						<div class="col-sm-6">
 							<ul class="list-inline right-topbar pull-right">
 								<li><a href="#">Account</a></li>
-								<li><a href="{{route('shop-ui-add-to-cart')}}">Wishlist (0)</a></li>
-								<li><a href="{{route('shop-ui-login')}}">Login</a> | <a href="{{route('shop-ui-register')}}">Register</a></li>
+								<li><a href="{{route('book-add-to-cart')}}">Wishlist (0)</a></li>
+								<li><a href="{{route('book-login')}}">Login</a> | <a href="{{route('book-register')}}">Register</a></li>
 								<li><i class="search fa fa-search search-button"></i></li>
 							</ul>
 						</div>
@@ -151,10 +151,10 @@
 								</div>
 								<div class="row">
 									<div class="col-xs-6">
-										<a href="{{route('shop-ui-inner')}}" class="btn-u btn-brd btn-brd-hover btn-u-sea-shop btn-block">View Cart</a>
+										<a href="{{route('book-inner')}}" class="btn-u btn-brd btn-brd-hover btn-u-sea-shop btn-block">View Cart</a>
 									</div>
 									<div class="col-xs-6">
-										<a href="{{route('shop-ui-add-to-cart')}}" class="btn-u btn-u-sea-shop btn-block">Checkout</a>
+										<a href="{{route('book-add-to-cart')}}" class="btn-u btn-u-sea-shop btn-block">Checkout</a>
 									</div>
 								</div>
 							</div>
@@ -173,12 +173,12 @@
 								</a>
 								<ul class="dropdown-menu">
 									<li><a href="{{route('index')}}">Shop UI</a></li>
-									<li><a href="{{route('shop-ui-inner')}}">Product Page</a></li>
-									<li><a href="{{route('shop-ui-filter-grid')}}">Filter Grid Page</a></li>
-									<li><a href="{{route('shop-ui-filter-list')}}">Filter List Page</a></li>
-									<li class="active"><a href="{{route('shop-ui-add-to-cart')}}">Checkout</a></li>
-									<li><a href="{{route('shop-ui-login')}}">Login</a></li>
-									<li><a href="{{route('shop-ui-register')}}">Register</a></li>
+									<li><a href="{{route('book-inner')}}">Product Page</a></li>
+									<li><a href="{{route('book-filter-grid')}}">Filter Grid Page</a></li>
+									<li><a href="{{route('book-filter-list')}}">Filter List Page</a></li>
+									<li class="active"><a href="{{route('book-add-to-cart')}}">Checkout</a></li>
+									<li><a href="{{route('book-login')}}">Login</a></li>
+									<li><a href="{{route('book-register')}}">Register</a></li>
 								</ul>
 							</li>
 							<!-- End Pages -->

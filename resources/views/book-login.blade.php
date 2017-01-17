@@ -3,7 +3,7 @@
 <!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
 <!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
 <head>
-	<title>Registration | Unify - Responsive Website Template</title>
+	<title>Login | Unify - Responsive Website Template</title>
 
 	<!-- Meta -->
 	<meta charset="utf-8">
@@ -31,7 +31,7 @@
 	<link rel="stylesheet" href="{{asset('plugins/font-awesome/css/font-awesome.min.css')}}">
 	<link rel="stylesheet" href="{{asset('plugins/scrollbar/css/jquery.mCustomScrollbar.css')}}">
 
-	<!-- CSS Page Styles -->
+	<!-- CSS Page Style -->
 	<link rel="stylesheet" href="{{asset('css/pages/log-reg-v3.css')}}">
 
 	<!-- Style Switcher -->
@@ -89,8 +89,8 @@
 						<div class="col-sm-6">
 							<ul class="list-inline right-topbar pull-right">
 								<li><a href="#">Account</a></li>
-								<li><a href="{{route('shop-ui-add-to-cart')}}">Wishlist (0)</a></li>
-								<li><a href="{{route('shop-ui-login')}}">Login</a> | <a href="{{route('shop-ui-register')}}">Register</a></li>
+								<li><a href="{{route('book-add-to-cart')}}">Wishlist (0)</a></li>
+								<li><a href="{{route('book-login')}}">Login</a> | <a href="{{route('book-register')}}">Register</a></li>
 								<li><i class="search fa fa-search search-button"></i></li>
 							</ul>
 						</div>
@@ -110,7 +110,7 @@
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
 						</button>
-						<a class="navbar-brand" href="index')}}">
+						<a class="navbar-brand" href="{{route('index')}}">
 							<img id="logo-header" src="{{asset('img/logo.png')}}" alt="Logo">
 						</a>
 					</div>
@@ -153,10 +153,10 @@
 								</div>
 								<div class="row">
 									<div class="col-xs-6">
-										<a href="{{route('shop-ui-inner')}}" class="btn-u btn-brd btn-brd-hover btn-u-sea-shop btn-block">View Cart</a>
+										<a href="{{route('book-inner')}}" class="btn-u btn-brd btn-brd-hover btn-u-sea-shop btn-block">View Cart</a>
 									</div>
 									<div class="col-xs-6">
-										<a href="{{route('shop-ui-add-to-cart')}}" class="btn-u btn-u-sea-shop btn-block">Checkout</a>
+										<a href="{{route('book-add-to-cart')}}" class="btn-u btn-u-sea-shop btn-block">Checkout</a>
 									</div>
 								</div>
 							</div>
@@ -175,12 +175,12 @@
 								</a>
 								<ul class="dropdown-menu">
 									<li><a href="{{route('index')}}">Shop UI</a></li>
-									<li><a href="{{route('shop-ui-inner')}}">Product Page</a></li>
-									<li><a href="{{route('shop-ui-filter-grid')}}">Filter Grid Page</a></li>
-									<li><a href="{{route('shop-ui-filter-list')}}">Filter List Page</a></li>
-									<li><a href="{{route('shop-ui-add-to-cart')}}">Checkout</a></li>
-									<li><a href="{{route('shop-ui-login')}}">Login</a></li>
-									<li class="active"><a href="{{route('shop-ui-register')}}">Register</a></li>
+									<li><a href="{{route('book-inner')}}">Product Page</a></li>
+									<li><a href="{{route('book-filter-grid')}}">Filter Grid Page</a></li>
+									<li><a href="{{route('book-filter-list')}}">Filter List Page</a></li>
+									<li><a href="{{route('book-add-to-cart')}}">Checkout</a></li>
+									<li class="active"><a href="{{route('book-login')}}">Login</a></li>
+									<li><a href="{{route('book-register')}}">Register</a></li>
 								</ul>
 							</li>
 							<!-- End Pages -->
@@ -416,7 +416,7 @@
 				<span class="page-name">Log In</span>
 				<h1>Maecenas <span class="shop-green">enim</span> sapien</h1>
 				<ul class="breadcrumb-v4-in">
-					<li><a href="index')}}">Home</a></li>
+					<li><a href="{{route('index')}}">Home</a></li>
 					<li><a href="">Product</a></li>
 					<li class="active">Log In</li>
 				</ul>
@@ -424,137 +424,91 @@
 		</div>
 		<!--=== End Breadcrumbs v4 ===-->
 
-		<!--=== Registre ===-->
-		<div class="log-reg-v3 content-md margin-bottom-30">
+		<!--=== Login ===-->
+		<div class="log-reg-v3 content-md">
 			<div class="container">
 				<div class="row">
 					<div class="col-md-7 md-margin-bottom-50">
 						<h2 class="welcome-title">Welcome to Unify</h2>
 						<p>Suspendisse et tincidunt ipsum, et dignissim urna. Vestibulum nisl tortor, gravida at magna et, suscipit vehicula massa.</p><br>
-						<div class="row margin-bottom-50">
-							<div class="col-sm-4 md-margin-bottom-20">
-								<div class="site-statistics">
-									<span>20,039</span>
-									<small>Products</small>
-								</div>
-							</div>
-							<div class="col-sm-4 md-margin-bottom-20">
-								<div class="site-statistics">
-									<span>54,283</span>
-									<small>Reviews</small>
-								</div>
-							</div>
-							<div class="col-sm-4">
-								<div class="site-statistics">
-									<span>376k</span>
-									<small>Sale</small>
-								</div>
+						<div class="info-block-v2">
+							<i class="icon icon-layers"></i>
+							<div class="info-block-in">
+								<h3>Pellentesque vulputate</h3>
+								<p>Vestibulum non ex volutpat, sodales diam sit amet, semper nunc. Integer sed nibh commodo, tincidunt nisi.</p>
 							</div>
 						</div>
-						<div class="members-number">
-							<h3>Join more than <span class="shop-green">13,000</span> members worldwide</h3>
-							<img class="img-responsive" src="{{asset('img/map.png')}}" alt="">
+						<div class="info-block-v2">
+							<i class="icon icon-settings"></i>
+							<div class="info-block-in">
+								<h3>Curabitur tincidunt</h3>
+								<p>Vestibulum non ex volutpat, sodales diam sit amet, semper nunc. Integer sed nibh commodo, tincidunt nisi.</p>
+							</div>
+						</div>
+						<div class="info-block-v2">
+							<i class="icon icon-paper-plane"></i>
+							<div class="info-block-in">
+								<h3>Aenean condimentum</h3>
+								<p>Vestibulum non ex volutpat, sodales diam sit amet, semper nunc. Integer sed nibh commodo, tincidunt nisi.</p>
+							</div>
 						</div>
 					</div>
 
 					<div class="col-md-5">
-						<form id="sky-form4" class="log-reg-block sky-form">
-							<h2>Create New Account</h2>
+						<form id="sky-form1" class="log-reg-block sky-form">
+							<h2>Log in to your account</h2>
 
-							<div class="login-input reg-input">
-								<div class="row">
-									<div class="col-sm-6">
-										<section>
-											<label class="input">
-												<input type="text" name="firstname" placeholder="First name" class="form-control">
-											</label>
-										</section>
+							<section>
+								<label class="input login-input">
+									<div class="input-group">
+										<span class="input-group-addon"><i class="fa fa-user"></i></span>
+										<input type="email" placeholder="Email Address" name="email" class="form-control">
 									</div>
-									<div class="col-sm-6">
-										<section>
-											<label class="input">
-												<input type="text" name="lastname" placeholder="Last name" class="form-control">
-											</label>
-										</section>
-									</div>
-								</div>
-								<label class="select margin-bottom-15">
-									<select name="gender" class="form-control">
-										<option value="0" selected disabled>Gender</option>
-										<option value="1">Male</option>
-										<option value="2">Female</option>
-										<option value="3">Other</option>
-									</select>
 								</label>
-								<div class="row margin-bottom-10">
-									<div class="col-xs-6">
-										<label class="select">
-											<select name="month" class="form-control">
-												<option disabled="" selected="" value="0">Month</option>
-												<option>January</option>
-												<option>February</option>
-												<option>March</option>
-												<option>April</option>
-												<option>May</option>
-												<option>June</option>
-												<option>July</option>
-												<option>August</option>
-												<option>September</option>
-												<option>October</option>
-												<option>November</option>
-												<option>December</option>
-											</select>
-										</label>
+							</section>
+							<section>
+								<label class="input login-input no-border-top">
+									<div class="input-group">
+										<span class="input-group-addon"><i class="fa fa-lock"></i></span>
+										<input type="password" placeholder="Password" name="password" class="form-control">
 									</div>
-									<div class="col-xs-3">
-										<input type="text" name="day" placeholder="Day" class="form-control">
-									</div>
-									<div class="col-xs-3">
-										<input type="text" name="year" placeholder="Year" class="form-control">
-									</div>
+								</label>
+							</section>
+							<div class="row margin-bottom-5">
+								<div class="col-xs-6">
+									<label class="checkbox">
+										<input type="checkbox" name="checkbox"/>
+										<i></i>
+										Remember me
+									</label>
 								</div>
-								<section>
-									<label class="input">
-										<input type="text" name="username" placeholder="Username" class="form-control">
-									</label>
-								</section>
-								<section>
-									<label class="input">
-										<input type="email" name="email" placeholder="Email address" class="form-control">
-									</label>
-								</section>
-								<section>
-									<label class="input">
-										<input type="password" name="password" placeholder="Password" id="password" class="form-control">
-									</label>
-								</section>
-								<section>
-									<label class="input">
-										<input type="password" name="passwordConfirm" placeholder="Confirm password" class="form-control">
-									</label>
-								</section>
+								<div class="col-xs-6 text-right">
+									<a href="#">Forget your Password?</a>
+								</div>
+							</div>
+							<button class="btn-u btn-u-sea-shop btn-block margin-bottom-20" type="submit">Log in</button>
+
+							<div class="border-wings">
+								<span>or</span>
 							</div>
 
-							<label class="checkbox margin-bottom-10">
-								<input type="checkbox" name="checkbox"/>
-								<i></i>
-								Subscribe to our newsletter to get the latest offers
-							</label>
-							<label class="checkbox margin-bottom-20">
-								<input type="checkbox" name="checkbox"/>
-								<i></i>
-								I have read agreed with the <a href="#">terms &amp; conditions</a>
-							</label>
-							<button class="btn-u btn-u-sea-shop btn-block margin-bottom-20" type="submit">Create Account</button>
+							<div class="row columns-space-removes">
+								<div class="col-lg-6 margin-bottom-10">
+									<button type="button" class="btn-u btn-u-md btn-u-fb btn-block"><i class="fa fa-facebook"></i> Facebook Log In</button>
+								</div>
+								<div class="col-lg-6">
+									<button type="button" class="btn-u btn-u-md btn-u-tw btn-block"><i class="fa fa-twitter"></i> Twitter Log In</button>
+								</div>
+							</div>
 						</form>
 
 						<div class="margin-bottom-20"></div>
-						<p class="text-center">Already you have an account? <a href="{{route('shop-ui-login')}}">Sign In</a></p>
+						<p class="text-center">Don't have account yet? Learn more and <a href="{{route('book-register')}}">Sign Up</a></p>
 					</div>
 				</div><!--/end row-->
 			</div><!--/end container-->
 		</div>
-		<!--=== End Registre ===-->
+		<!--=== End Login ===-->
 
 		<!--=== Shop Suvbscribe ===-->
 		<div class="shop-subscribe">
@@ -730,38 +684,63 @@
 		<!--=== End Footer v4 ===-->
 	</div><!--/wrapper-->
 
+	<!-- Wait Block -->
+	<div class="g-popup-wrapper">
+		<div class="g-popup g-popup--fb">
+			<div class="g-popup--fb-title">
+				<a target="_blank" href="https://www.facebook.com/htmlstream" class="g-popup--fb__logo"><img alt="facebook" src="{{asset('img/others/fb.png')}}" width="110"></a>
+				<div class="g-popup--fb-message">Click <strong>"Like"</strong><br>to read our blog on Facebook</div>
+			</div>
+			<div class="g-popup--fb-widjet">
+				<div id="fb-root"></div>
+				<script>(function(d, s, id) {
+					var js, fjs = d.getElementsByTagName(s)[0];
+					if (d.getElementById(id)) return;
+					js = d.createElement(s); js.id = id;
+					js.src = "//connect.facebook.net/ru_RU/sdk.js')}}#xfbml=1&version=v2.4&appId=118547268248380";
+					fjs.parentNode.insertBefore(js, fjs);
+				}(document, 'script', 'facebook-jssdk'));</script>
+				<div class="fb-like" data-href="https://www.facebook.com/htmlstream/" data-width="270" data-layout="standard" data-action="like" data-show-faces="true" data-share="false"></div>
+			</div>
+			<a href="javascript:void(0);" class="g-popup__close g-popup--fb__close"><span class="icon-close" aria-hidden="true"></span></a>
+		</div>
+	</div>
+	<!-- End Wait Block -->
+
 	<!-- JS Global Compulsory -->
-	<script src="{{asset('plugins/jquery/jquery.min.js"></script>
-	<script src="{{asset('plugins/jquery/jquery-migrate.min.js"></script>
-	<script src="{{asset('plugins/bootstrap/js/bootstrap.min.js"></script>
+	<script src="{{asset('plugins/jquery/jquery.min.js')}}"></script>
+	<script src="{{asset('plugins/jquery/jquery-migrate.min.js')}}"></script>
+	<script src="{{asset('plugins/bootstrap/js/bootstrap.min.js')}}"></script>
 	<!-- JS Implementing Plugins -->
-	<script src="{{asset('plugins/back-to-top.js"></script>
-	<script src="{{asset('plugins/smoothScroll.js"></script>
-	<script src="{{asset('plugins/sky-forms-pro/skyforms/js/jquery.validate.min.js"></script>
-	<script src="{{asset('plugins/scrollbar/js/jquery.mCustomScrollbar.concat.min.js"></script>
+	<script src="{{asset('plugins/back-to-top.js')}}"></script>
+	<script src="{{asset('plugins/smoothScroll.js')}}"></script>
+	<script src="{{asset('plugins/scrollbar/js/jquery.mCustomScrollbar.concat.min.js')}}"></script>
+	<script src="{{asset('plugins/sky-forms-pro/skyforms/js/jquery.form.min.js')}}"></script>
+	<script src="{{asset('plugins/sky-forms-pro/skyforms/js/jquery.validate.min.js')}}"></script>
 	<!-- JS Customization -->
-	<script src="{{asset('js/custom.js"></script>
+	<script src="{{asset('js/custom.js')}}"></script>
 	<!-- JS Page Level -->
-	<script src="{{asset('js/shop.app.js"></script>
-	<script src="{{asset('js/plugins/style-switcher.js"></script>
-	<script src="{{asset('js/forms/page_registration.js"></script>
+	<script src="{{asset('js/shop.app.js')}}"></script>
+	<script src="{{asset('js/forms/page_login.js')}}"></script>
+	<script src="{{asset('js/plugins/style-switcher.js')}}"></script>
+	<script src="{{asset('js/forms/page_contact_form.js')}}"></script>
 	<script>
 		jQuery(document).ready(function() {
 			App.init();
+			Login.initLogin();
 			App.initScrollBar();
-			Registration.initRegistration();
 			StyleSwitcher.initStyleSwitcher();
+			PageContactForm.initPageContactForm();
 		});
 	</script>
-
 <!--[if lt IE 9]>
-	<script src="{{asset('plugins/respond.js"></script>
-	<script src="{{asset('plugins/html5shiv.js"></script>
-	<script src="{{asset('js/plugins/placeholder-IE-fixes.js"></script>
-	<script src="{{asset('plugins/sky-forms-pro/skyforms/js/sky-forms-ie8.js"></script>
+	<script src="{{asset('plugins/respond.js')}}"></script>
+	<script src="{{asset('plugins/html5shiv.js')}}"></script>
+	<script src="{{asset('js/plugins/placeholder-IE-fixes.js')}}"></script>
+	<script src="{{asset('plugins/sky-forms-pro/skyforms/js/sky-forms-ie8.js')}}"></script>
 	<![endif]-->
 <!--[if lt IE 10]>
-	<script src="{{asset('plugins/sky-forms-pro/skyforms/js/jquery.placeholder.min.js"></script>
+	<script src="{{asset('plugins/sky-forms-pro/skyforms/js/jquery.placeholder.min.js')}}"></script>
 	<![endif]-->
 
 </body>

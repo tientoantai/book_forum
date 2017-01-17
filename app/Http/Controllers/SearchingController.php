@@ -22,7 +22,7 @@ class SearchingController extends Controller
         $condition  = $request->get('advanceCondition');
         $bookResult = $this->bookFinder->find($condition);
 
-        return view('shop-ui-filter-grid')
+        return view('book-filter-grid')
                 ->with('books', $bookResult);
     }
 
@@ -31,7 +31,7 @@ class SearchingController extends Controller
         $condition  = $request->get('quickCondition');
         $bookResult = $this->bookFinder->find($condition);
 
-        return view('shop-ui-filter-grid')
+        return view('book-filter-grid')
                 ->with('books', $bookResult);
     }
 }
