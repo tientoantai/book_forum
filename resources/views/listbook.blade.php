@@ -476,7 +476,7 @@
                                         <td class="shop-red">{{$book->publisher}}</td>
                                         <td>
                                             <a href="/update/{{$book->id}}" class="btn btn-primary btn-xs"><i class="glyphicon glyphicon-pencil"></i></a>
-                                            <a class="btn btn-danger btn-xs" href="jvascript:void(0)" id="delete"><i class="glyphicon glyphicon-trash"></i></a>
+                                            <a class="btn btn-danger btn-xs" href="jvascript:void(0);" id="delete"><i class="glyphicon glyphicon-trash"></i></a>
                                         </td>
                                     </tr>
                                 @endforeach
