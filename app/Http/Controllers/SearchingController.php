@@ -23,7 +23,11 @@ class SearchingController extends Controller
         $bookResult = $this->bookFinder->find($condition);
 
         return view('book-filter')
-                ->with('books', $bookResult);
+                ->with(['books'=> $bookResult,
+                        'request'=>$request
+                    ])
+                
+        ;
     }
 
     public function quickSearch(Request $request)
@@ -32,6 +36,7 @@ class SearchingController extends Controller
         $bookResult = $this->bookFinder->find($condition);
 
         return view('book-filter')
-                ->with('books', $bookResult);
+                ->with('books', $bookResult)
+        ;
     }
 }

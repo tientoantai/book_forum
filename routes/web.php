@@ -11,6 +11,7 @@
 |
 */
 use App\BookForum\Book\Book;
+use Illuminate\Http\Request;
 
 
 Route::get('/', function () {
@@ -26,34 +27,12 @@ Route::get('/book-add-to-cart', function () {
 Route::get('/book-filter', function () {
 	
     return view('book-filter')
-    	->with('books', Book::all())
+    	->with(['books'  => Book::all(),
+    			'request'=> request()
+    		])
     ;
 })
 		->name('book-filter')
-;
-
-Route::get('/book-filter-list', function () {
-    return view('book-filter-list');
-})
-		->name('book-filter-list')
-;
-
-Route::get('/book-inner', function () {
-    return view('book-inner');
-})
-		->name('book-inner')
-;
-
-Route::get('/book-login', function () {
-    return view('book-login');
-})
-		->name('book-login')
-;
-
-Route::get('/book-register', function () {
-    return view('book-register');
-})
-		->name('book-register')
 ;
 
 Route::get('/upload', 'UploadingController@index')
@@ -92,16 +71,17 @@ Route::get('/detail/{id}', 'BookController@detail')
 Route::get('/insert', 'BookController@insertform');
 Route::post('/insert', 'BookController@insert')
 		->name('books.insert')
-		->middleware('create.image')
+		->middleware('validator.image','create.image')
 ;
-Route::get('/index','BookController@listbookhome')
+
+Route::get('/index','BookController@index')
 		->name('index')
 ;
 
 Route::get('/update/{id}', 'BookController@updateform');
 Route::post('/update/{id}', 'BookController@update')
 		->name('books.update')
-		->middleware('create.image')
+		->middleware('validator.image', 'create.image')
 ;
 Route::get('/login','LoginController@formlogin');
 Route::post('/login','LoginController@login');

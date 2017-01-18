@@ -227,19 +227,13 @@
 
         <div class="container">
             <div class="row">
-                <div class="col-md-6 md-margin-bottom-50">
+                <div class="col-md-4 md-margin-bottom-50">
                     <div class="ms-showcase2-template">
-                        <!-- Master Slider -->
-                        <div class="master-slider ms-skin-default" id="masterslider">
-                            <div class="ms-slide">
-                                <img src="{{$book->image}}">
-                            </div>
-                        </div>
-                        <!-- End Master Slider -->
+                        <img class="full-width img-responsive" src="{{asset($book->image)}}" alt="" style="width:70%">
                     </div>
                 </div>
 
-                <div class="col-md-6">
+                <div class="col-md-8">
                     <div class="shop-product-heading">
                         <h2>{{$book->title}}</h2>
                         <ul class="list-inline shop-product-social">

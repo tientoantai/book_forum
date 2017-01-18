@@ -428,7 +428,7 @@
                         </ul>
                     </div>
                 </li>
-                    @endforeach
+                @endforeach
             </ul>
         </div>
         <!--=== End Illustration v2 ===-->
@@ -467,7 +467,7 @@
                     </ul>
                 </div>
             </div>
-                @endforeach
+            @endforeach
         </div>
         <!--=== End Illustration v2 ===-->
     </div>

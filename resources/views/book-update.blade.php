@@ -457,6 +457,16 @@
                     </div>
                 </div>
 
+                @if (count($errors) > 0)
+                    <div class="col-md-5 alert alert-danger">
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
+
                 <div class="col-md-5">
                     <form id="sky-form4" class="log-reg-block sky-form" method="post" action="{{route('books.update',['id'=> $book->id])}}" enctype="multipart/form-data">
                         <h2>Edit Books</h2>
@@ -489,7 +499,7 @@
                             </section>
                             <section>
                                 <label class="input">
-                                    <img class="img-responsive" src="{{$book->image}}" alt="" style="width:40%">
+                                    <img class="img-responsive" src="{{asset($book->image)}}" alt="" style="width:30%">
                                     <input type="file" name="image" class="btn-u btn-u-sea-shop btn-block margin-bottom-20">
                                 </label>
                             </section>

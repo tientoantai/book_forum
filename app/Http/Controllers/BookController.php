@@ -9,15 +9,17 @@ use Illuminate\Support\Facades\Session;
 
 class BookController extends Controller
 {
-    public function listBook(){
-       // dd(request()->session());
-        //dd(Book::all());
-        return view('listbook')->with('booklist', Book::all());
-    }
-    public function listbookhome()
+    public function index()
     {
         return view('index')->with('booklist', Book::all());
     }
+
+    public function listBook(){
+       // dd(request()->session());
+        //dd(Book::all());
+        return view('book-list')->with('booklist', Book::all());
+    }
+    
     public function delete($id)
     {
         $book = Book::where('id', '=', $id)->delete();
@@ -26,11 +28,11 @@ class BookController extends Controller
     public function detail($id)
     {
         $book = Book::where('id', '=', $id)->first();
-        return view('detail')->with('book', $book);
+        return view('book-detail')->with('book', $book);
     }
     public function insertform()
     {
-        return view('insert');
+        return view('book-insert');
     }
     public  function insert()
     {
@@ -54,7 +56,7 @@ class BookController extends Controller
     public  function updateform($id)
     {
         $book = Book::where('id', '=', $id)->first();
-        return view('update')->with('book', $book);
+        return view('book-update')->with('book', $book);
     }
     public function update($id)
     {
