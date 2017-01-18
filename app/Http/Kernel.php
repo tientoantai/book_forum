@@ -56,5 +56,6 @@ class Kernel extends HttpKernel
         'user' => \App\Http\Middleware\CheckUser::class,
         'validator.image' => \App\Http\Middleware\ImageValidator::class,
         'create.condition' => \App\Http\Middleware\CreateCondition::class,
+        'create.image' => \App\Http\Middleware\CreateImage::class,
     ];
 }

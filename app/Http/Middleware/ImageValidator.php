@@ -22,7 +22,10 @@ class ImageValidator
         ]);
         
         if($validator->fails()){
-           dd($validator->errors());
+
+            return back()
+                    ->withErrors($validator->errors())
+                    ->withInput();
         }
 
         return $next($request);

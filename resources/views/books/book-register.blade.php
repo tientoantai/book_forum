@@ -1,10 +1,9 @@
-
 <!DOCTYPE html>
 <!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
 <!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
 <!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
 <head>
-	<title>Product Details | Unify - Responsive Website Template</title>
+	<title>Registration | Unify - Responsive Website Template</title>
 
 	<!-- Meta -->
 	<meta charset="utf-8">
@@ -31,11 +30,9 @@
 	<link rel="stylesheet" href="{{asset('plugins/line-icons/line-icons.css')}}">
 	<link rel="stylesheet" href="{{asset('plugins/font-awesome/css/font-awesome.min.css')}}">
 	<link rel="stylesheet" href="{{asset('plugins/scrollbar/css/jquery.mCustomScrollbar.css')}}">
-	<link rel="stylesheet" href="{{asset('plugins/owl-carousel/owl-carousel/owl.carousel.css')}}">
-	<link rel="stylesheet" href="{{asset('plugins/sky-forms-pro/skyforms/css/sky-forms.css')}}">
-	<link rel="stylesheet" href="{{asset('plugins/sky-forms-pro/skyforms/custom/custom-sky-forms.css')}}">
-	<link rel="stylesheet" href="{{asset('plugins/master-slider/masterslider/style/masterslider.css')}}">
-	<link rel='stylesheet' href="{{asset('plugins/master-slider/masterslider/skins/default/style.css')}}">
+
+	<!-- CSS Page Styles -->
+	<link rel="stylesheet" href="{{asset('css/pages/log-reg-v3.css')}}">
 
 	<!-- Style Switcher -->
 	<link rel="stylesheet" href="{{asset('css/plugins/style-switcher.css')}}">
@@ -92,8 +89,8 @@
 						<div class="col-sm-6">
 							<ul class="list-inline right-topbar pull-right">
 								<li><a href="#">Account</a></li>
-								<li><a href="{{route('shop-ui-add-to-cart')}}">Wishlist (0)</a></li>
-								<li><a href="{{route('shop-ui-login')}}">Login</a> | <a href="{{route('shop-ui-register')}}">Register</a></li>
+								<li><a href="{{route('book-add-to-cart')}}">Wishlist (0)</a></li>
+								<li><a href="{{route('book-login')}}">Login</a> | <a href="{{route('book-register')}}">Register</a></li>
 								<li><i class="search fa fa-search search-button"></i></li>
 							</ul>
 						</div>
@@ -156,10 +153,10 @@
 								</div>
 								<div class="row">
 									<div class="col-xs-6">
-										<a href="{{route('shop-ui-inner')}}" class="btn-u btn-brd btn-brd-hover btn-u-sea-shop btn-block">View Cart</a>
+										<a href="{{route('book-inner')}}" class="btn-u btn-brd btn-brd-hover btn-u-sea-shop btn-block">View Cart</a>
 									</div>
 									<div class="col-xs-6">
-										<a href="{{route('shop-ui-add-to-cart')}}" class="btn-u btn-u-sea-shop btn-block">Checkout</a>
+										<a href="{{route('book-add-to-cart')}}" class="btn-u btn-u-sea-shop btn-block">Checkout</a>
 									</div>
 								</div>
 							</div>
@@ -177,13 +174,13 @@
 									Pages
 								</a>
 								<ul class="dropdown-menu">
-									<li><a href="index')}}">Shop UI</a></li>
-									<li class="active"><a href="{{route('shop-ui-inner')}}">Product Page</a></li>
-									<li><a href="{{route('shop-ui-filter-grid')}}">Filter Grid Page</a></li>
-									<li><a href="{{route('shop-ui-filter-list')}}">Filter List Page</a></li>
-									<li><a href="{{route('shop-ui-add-to-cart')}}">Checkout</a></li>
-									<li><a href="{{route('shop-ui-login')}}">Login</a></li>
-									<li><a href="{{route('shop-ui-register')}}">Register</a></li>
+									<li><a href="{{route('index')}}">Shop UI</a></li>
+									<li><a href="{{route('book-inner')}}">Product Page</a></li>
+									<li><a href="{{route('book-filter-grid')}}">Filter Grid Page</a></li>
+									<li><a href="{{route('book-filter-list')}}">Filter List Page</a></li>
+									<li><a href="{{route('book-add-to-cart')}}">Checkout</a></li>
+									<li><a href="{{route('book-login')}}">Login</a></li>
+									<li class="active"><a href="{{route('book-register')}}">Register</a></li>
 								</ul>
 							</li>
 							<!-- End Pages -->
@@ -413,404 +410,151 @@
 		</div>
 		<!--=== End Header v5 ===-->
 
-		<!--=== Shop Product ===-->
-		<div class="shop-product">
-			<!-- Breadcrumbs v5 -->
+		<!--=== Breadcrumbs v4 ===-->
+		<div class="breadcrumbs-v4">
 			<div class="container">
-				<ul class="breadcrumb-v5">
-					<li><a href="{{route('index')}}"><i class="fa fa-home"></i></a></li>
-					<li><a href="#">Products</a></li>
-					<li class="active">New</li>
+				<span class="page-name">Log In</span>
+				<h1>Maecenas <span class="shop-green">enim</span> sapien</h1>
+				<ul class="breadcrumb-v4-in">
+					<li><a href="index')}}">Home</a></li>
+					<li><a href="">Product</a></li>
+					<li class="active">Log In</li>
 				</ul>
-			</div>
-			<!-- End Breadcrumbs v5 -->
+			</div><!--/end container-->
+		</div>
+		<!--=== End Breadcrumbs v4 ===-->
 
+		<!--=== Registre ===-->
+		<div class="log-reg-v3 content-md margin-bottom-30">
 			<div class="container">
 				<div class="row">
-					<div class="col-md-6 md-margin-bottom-50">
-						<div class="ms-showcase2-template">
-							<!-- Master Slider -->
-							<div class="master-slider ms-skin-default" id="masterslider">
-								<div class="ms-slide">
-									<img class="ms-brd" src="{{asset('img/blank.gif')}}" data-src="{{asset('img/blog/28.jpg')}}" alt="lorem ipsum dolor sit">
-									<img class="ms-thumb" src="{{asset('img/blog/28-thumb.jpg')}}" alt="thumb">
-								</div>
-								<div class="ms-slide">
-									<img src="{{asset('img/blank.gif')}}" data-src="img/blog/29.jpg" alt="lorem ipsum dolor sit">
-									<img class="ms-thumb" src="{{asset('img/blog/29-thumb.jpg')}}" alt="thumb">
-								</div>
-								<div class="ms-slide">
-									<img src="{{asset('img/blank.gif')}}" data-src="img/blog/30.jpg" alt="lorem ipsum dolor sit">
-									<img class="ms-thumb" src="{{asset('img/blog/30-thumb.jpg')}}" alt="thumb">
+					<div class="col-md-7 md-margin-bottom-50">
+						<h2 class="welcome-title">Welcome to Unify</h2>
+						<p>Suspendisse et tincidunt ipsum, et dignissim urna. Vestibulum nisl tortor, gravida at magna et, suscipit vehicula massa.</p><br>
+						<div class="row margin-bottom-50">
+							<div class="col-sm-4 md-margin-bottom-20">
+								<div class="site-statistics">
+									<span>20,039</span>
+									<small>Products</small>
 								</div>
 							</div>
-							<!-- End Master Slider -->
+							<div class="col-sm-4 md-margin-bottom-20">
+								<div class="site-statistics">
+									<span>54,283</span>
+									<small>Reviews</small>
+								</div>
+							</div>
+							<div class="col-sm-4">
+								<div class="site-statistics">
+									<span>376k</span>
+									<small>Sale</small>
+								</div>
+							</div>
+						</div>
+						<div class="members-number">
+							<h3>Join more than <span class="shop-green">13,000</span> members worldwide</h3>
+							<img class="img-responsive" src="{{asset('img/map.png')}}" alt="">
 						</div>
 					</div>
 
-					<div class="col-md-6">
-						<div class="shop-product-heading">
-							<h2>Corinna Foley</h2>
-							<ul class="list-inline shop-product-social">
-								<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-								<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-								<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-								<li><a href="#"><i class="fa fa-pinterest"></i></a></li>
-							</ul>
-						</div><!--/end shop product social-->
+					<div class="col-md-5">
+						<form id="sky-form4" class="log-reg-block sky-form">
+							<h2>Create New Account</h2>
 
-						<ul class="list-inline product-ratings margin-bottom-30">
-							<li><i class="rating-selected fa fa-star"></i></li>
-							<li><i class="rating-selected fa fa-star"></i></li>
-							<li><i class="rating-selected fa fa-star"></i></li>
-							<li><i class="rating fa fa-star"></i></li>
-							<li><i class="rating fa fa-star"></i></li>
-							<li class="product-review-list">
-								<span>(1) <a href="#">Review</a> | <a href="#"> Add Review</a></span>
-							</li>
-						</ul><!--/end shop product ratings-->
-
-						<p>Integer <strong>dapibus ut elit</strong> non volutpat. Integer auctor purus a lectus suscipit fermentum. Vivamus lobortis nec erat consectetur elementum.</p><br>
-
-						<ul class="list-inline shop-product-prices margin-bottom-30">
-							<li class="shop-red">$57.00</li>
-							<li class="line-through">$70.00</li>
-							<li><small class="shop-bg-red time-day-left">4 days left</small></li>
-						</ul><!--/end shop product prices-->
-
-						<h3 class="shop-product-title">Size</h3>
-						<ul class="list-inline product-size margin-bottom-30">
-							<li>
-								<input type="radio" id="size-1" name="size">
-								<label for="size-1">S</label>
-							</li>
-							<li>
-								<input type="radio" id="size-2" name="size">
-								<label for="size-2">M</label>
-							</li>
-							<li>
-								<input type="radio" id="size-3" name="size" checked>
-								<label for="size-3">L</label>
-							</li>
-							<li>
-								<input type="radio" id="size-4" name="size">
-								<label for="size-4">XL</label>
-							</li>
-						</ul><!--/end product size-->
-
-						<h3 class="shop-product-title">Color</h3>
-						<ul class="list-inline product-color margin-bottom-30">
-							<li>
-								<input type="radio" id="color-1" name="color">
-								<label class="color-one" for="color-1"></label>
-							</li>
-							<li>
-								<input type="radio" id="color-2" name="color" checked>
-								<label class="color-two" for="color-2"></label>
-							</li>
-							<li>
-								<input type="radio" id="color-3" name="color">
-								<label class="color-three" for="color-3"></label>
-							</li>
-						</ul><!--/end product color-->
-
-						<h3 class="shop-product-title">Quantity</h3>
-						<div class="margin-bottom-40">
-							<form name="f1" class="product-quantity sm-margin-bottom-20">
-								<button type='button' class="quantity-button" name='subtract' onclick='javascript: subtractQty();' value='-'>-</button>
-								<input type='text' class="quantity-field" name='qty' value="1" id='qty'/>
-								<button type='button' class="quantity-button" name='add' onclick='javascript: document.getElementById("qty").value++;' value='+'>+</button>
-							</form>
-							<button type="button" class="btn-u btn-u-sea-shop btn-u-lg">Add to Cart</button>
-						</div><!--/end product quantity-->
-
-						<ul class="list-inline add-to-wishlist add-to-wishlist-brd">
-							<li class="wishlist-in">
-								<i class="fa fa-heart"></i>
-								<a href="#">Add to Wishlist</a>
-							</li>
-							<li class="compare-in">
-								<i class="fa fa-exchange"></i>
-								<a href="#">Add to Compare</a>
-							</li>
-						</ul>
-						<p class="wishlist-category"><strong>Categories:</strong> <a href="#">Clothing,</a> <a href="#">Shoes</a></p>
-					</div>
-				</div><!--/end row-->
-			</div>
-		</div>
-		<!--=== End Shop Product ===-->
-
-		<!--=== Content Medium ===-->
-		<div class="content-md container">
-			<!--=== Product Service ===-->
-			<div class="row margin-bottom-60">
-				<div class="col-md-4 product-service md-margin-bottom-30">
-					<div class="product-service-heading">
-						<i class="fa fa-truck"></i>
-					</div>
-					<div class="product-service-in">
-						<h3>Free Delivery</h3>
-						<p>Integer mattis lacinia felis vel molestie. Ut eu euismod erat, tincidunt pulvinar semper veliUt porta, leo...</p>
-						<a href="#">+Read More</a>
-					</div>
-				</div>
-				<div class="col-md-4 product-service md-margin-bottom-30">
-					<div class="product-service-heading">
-						<i class="icon-earphones-alt"></i>
-					</div>
-					<div class="product-service-in">
-						<h3>Customer Service</h3>
-						<p>Integer mattis lacinia felis vel molestie. Ut eu euismod erat, tincidunt pulvinar semper veliUt porta, leo...</p>
-						<a href="#">+Read More</a>
-					</div>
-				</div>
-				<div class="col-md-4 product-service">
-					<div class="product-service-heading">
-						<i class="icon-refresh"></i>
-					</div>
-					<div class="product-service-in">
-						<h3>Free Returns</h3>
-						<p>Integer mattis lacinia felis vel molestie. Ut eu euismod erat, tincidunt pulvinar semper veliUt porta, leo...</p>
-						<a href="#">+Read More</a>
-					</div>
-				</div>
-			</div><!--/end row-->
-			<!--=== End Product Service ===-->
-
-			<div class="tab-v6">
-				<ul class="nav nav-tabs" role="tablist">
-					<li class="active"><a href="#description" role="tab" data-toggle="tab">Description</a></li>
-					<li><a href="#reviews" role="tab" data-toggle="tab">Reviews (1)</a></li>
-				</ul>
-
-				<div class="tab-content">
-					<!-- Description -->
-					<div class="tab-pane fade in active" id="description">
-						<div class="row">
-							<div class="col-md-7">
-								<p>Morbi non semper est, eget tincidunt turpis. Vivamus sollicitudin sodales nisi, et venenatis turpis Vivamus sollicitudin ultricies eget. Fusce vitae neque blandit lectus faucibus aliquet nec vel ipsum. Integer mattis lacinia felis vel sollicitudin molestie.</p><br>
-
-								<h3 class="heading-md margin-bottom-20">Specifies</h3>
+							<div class="login-input reg-input">
 								<div class="row">
 									<div class="col-sm-6">
-										<ul class="list-unstyled specifies-list">
-											<li><i class="fa fa-caret-right"></i>Brand Name: <span>Lacoste</span></li>
-											<li><i class="fa fa-caret-right"></i>Technics: <span>Computer</span> Knitted</li>
-											<li><i class="fa fa-caret-right"></i>Sleeve Length: <span>Full</span></li>
-											<li><i class="fa fa-caret-right"></i>Sleeve Style: <span>Regular</span></li>
-											<li><i class="fa fa-caret-right"></i>Pattern Type: <span>PAID</span></li>
-											<li><i class="fa fa-caret-right"></i>Style: <span>Casual</span></li>
-										</ul>
+										<section>
+											<label class="input">
+												<input type="text" name="firstname" placeholder="First name" class="form-control">
+											</label>
+										</section>
 									</div>
 									<div class="col-sm-6">
-										<ul class="list-unstyled specifies-list">
-											<li><i class="fa fa-caret-right"></i>Material: <span>Cotton,Nylon</span></li>
-											<li><i class="fa fa-caret-right"></i>Item Type: <span>Pullovers</span></li>
-											<li><i class="fa fa-caret-right"></i>Thickness: <span>Thin</span></li>
-											<li><i class="fa fa-caret-right"></i>Model Number: <span>TM-11013 </span></li>
-											<li><i class="fa fa-caret-right"></i>Gender: <span>Men</span></li>
-											<li><i class="fa fa-caret-right"></i>MATERIAL: <span>80%COTTON+10%NYLON</span></li>
-										</ul>
+										<section>
+											<label class="input">
+												<input type="text" name="lastname" placeholder="Last name" class="form-control">
+											</label>
+										</section>
 									</div>
 								</div>
-							</div>
-							<div class="col-md-5">
-								<div class="responsive-video">
-									<iframe src="//player.vimeo.com/video/72343553" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+								<label class="select margin-bottom-15">
+									<select name="gender" class="form-control">
+										<option value="0" selected disabled>Gender</option>
+										<option value="1">Male</option>
+										<option value="2">Female</option>
+										<option value="3">Other</option>
+									</select>
+								</label>
+								<div class="row margin-bottom-10">
+									<div class="col-xs-6">
+										<label class="select">
+											<select name="month" class="form-control">
+												<option disabled="" selected="" value="0">Month</option>
+												<option>January</option>
+												<option>February</option>
+												<option>March</option>
+												<option>April</option>
+												<option>May</option>
+												<option>June</option>
+												<option>July</option>
+												<option>August</option>
+												<option>September</option>
+												<option>October</option>
+												<option>November</option>
+												<option>December</option>
+											</select>
+										</label>
+									</div>
+									<div class="col-xs-3">
+										<input type="text" name="day" placeholder="Day" class="form-control">
+									</div>
+									<div class="col-xs-3">
+										<input type="text" name="year" placeholder="Year" class="form-control">
+									</div>
 								</div>
-							</div>
-						</div>
-					</div>
-					<!-- End Description -->
-
-					<!-- Reviews -->
-					<div class="tab-pane fade" id="reviews">
-						<div class="product-comment margin-bottom-40">
-							<div class="product-comment-in">
-								<img class="product-comment-img rounded-x" src="{{asset('img/team/01.jpg')}}" alt="">
-								<div class="product-comment-dtl">
-									<h4>Mickel <small>22 days ago</small></h4>
-									<p>I like the green colour, it's very likeable and reminds me of Hollister. A little loose though but I am very skinny</p>
-									<ul class="list-inline product-ratings">
-										<li class="reply"><a href="#">Reply</a></li>
-										<li class="pull-right">
-											<ul class="list-inline">
-												<li><i class="rating-selected fa fa-star"></i></li>
-												<li><i class="rating-selected fa fa-star"></i></li>
-												<li><i class="rating-selected fa fa-star"></i></li>
-												<li><i class="rating fa fa-star"></i></li>
-												<li><i class="rating fa fa-star"></i></li>
-											</ul>
-										</li>
-									</ul>
-								</div>
-							</div>
-						</div>
-						<h3 class="heading-md margin-bottom-30">Add a review</h3>
-						<form action="{{asset('php/demo-contacts-process.php')}}" method="post" id="sky-form3" class="sky-form sky-changes-4">
-							<fieldset>
-								<div class="margin-bottom-30">
-									<label class="label-v2">Name</label>
+								<section>
 									<label class="input">
-										<input type="text" name="name" id="name">
+										<input type="text" name="username" placeholder="Username" class="form-control">
 									</label>
-								</div>
-
-								<div class="margin-bottom-30">
-									<label class="label-v2">Email</label>
+								</section>
+								<section>
 									<label class="input">
-										<input type="email" name="email" id="email">
+										<input type="email" name="email" placeholder="Email address" class="form-control">
 									</label>
-								</div>
-
-								<div class="margin-bottom-30">
-									<label class="label-v2">Review</label>
-									<label class="textarea">
-										<textarea rows="7" name="message" id="message"></textarea>
+								</section>
+								<section>
+									<label class="input">
+										<input type="password" name="password" placeholder="Password" id="password" class="form-control">
 									</label>
-								</div>
-							</fieldset>
+								</section>
+								<section>
+									<label class="input">
+										<input type="password" name="passwordConfirm" placeholder="Confirm password" class="form-control">
+									</label>
+								</section>
+							</div>
 
-							<footer class="review-submit">
-								<label class="label-v2">Review</label>
-								<div class="stars-ratings">
-									<input type="radio" name="stars-rating" id="stars-rating-5">
-									<label for="stars-rating-5"><i class="fa fa-star"></i></label>
-									<input type="radio" name="stars-rating" id="stars-rating-4">
-									<label for="stars-rating-4"><i class="fa fa-star"></i></label>
-									<input type="radio" name="stars-rating" id="stars-rating-3">
-									<label for="stars-rating-3"><i class="fa fa-star"></i></label>
-									<input type="radio" name="stars-rating" id="stars-rating-2">
-									<label for="stars-rating-2"><i class="fa fa-star"></i></label>
-									<input type="radio" name="stars-rating" id="stars-rating-1">
-									<label for="stars-rating-1"><i class="fa fa-star"></i></label>
-								</div>
-								<button type="button" class="btn-u btn-u-sea-shop btn-u-sm pull-right">Submit</button>
-							</footer>
+							<label class="checkbox margin-bottom-10">
+								<input type="checkbox" name="checkbox"/>
+								<i></i>
+								Subscribe to our newsletter to get the latest offers
+							</label>
+							<label class="checkbox margin-bottom-20">
+								<input type="checkbox" name="checkbox"/>
+								<i></i>
+								I have read agreed with the <a href="#">terms &amp; conditions</a>
+							</label>
+							<button class="btn-u btn-u-sea-shop btn-block margin-bottom-20" type="submit">Create Account</button>
 						</form>
+
+						<div class="margin-bottom-20"></div>
+						<p class="text-center">Already you have an account? <a href="{{route('book-login')}}">Sign In</a></p>
 					</div>
-					<!-- End Reviews -->
-				</div>
-			</div>
-		</div><!--/end container-->
-		<!--=== End Content Medium ===-->
-
-		<!--=== Illustration v2 ===-->
-		<div class="container">
-			<div class="heading heading-v1 margin-bottom-20">
-				<h2>Product you may like</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed odio elit, ultrices vel cursus sed, placerat ut leo. Phasellus in magna erat. Etiam gravida convallis augue non tincidunt. Nunc lobortis dapibus neque quis lacinia. Nam dapibus tellus sit amet odio venenatis</p>
-			</div>
-
-			<div class="illustration-v2 margin-bottom-60">
-				<div class="customNavigation margin-bottom-25">
-					<a class="owl-btn prev rounded-x"><i class="fa fa-angle-left"></i></a>
-					<a class="owl-btn next rounded-x"><i class="fa fa-angle-right"></i></a>
-				</div>
-
-				<ul class="list-inline owl-slider-v4">
-					<li class="item">
-						<a href="#"><img class="img-responsive" src="{{asset('img/thumb/09.jpg')}}" alt=""></a>
-						<div class="product-description-v2">
-							<div class="margin-bottom-5">
-								<h4 class="title-price"><a href="#">Double-breasted</a></h4>
-								<span class="title-price">$95.00</span>
-							</div>
-							<ul class="list-inline product-ratings">
-								<li><i class="rating-selected fa fa-star"></i></li>
-								<li><i class="rating-selected fa fa-star"></i></li>
-								<li><i class="rating-selected fa fa-star"></i></li>
-								<li><i class="rating fa fa-star"></i></li>
-								<li><i class="rating fa fa-star"></i></li>
-							</ul>
-						</div>
-					</li>
-					<li class="item">
-						<a href="#"><img class="img-responsive" src="{{asset('img/thumb/07.jpg')}}" alt=""></a>
-						<div class="product-description-v2">
-							<div class="margin-bottom-5">
-								<h4 class="title-price"><a href="#">Double-breasted</a></h4>
-								<span class="title-price">$60.00</span>
-								<span class="title-price line-through">$95.00</span>
-							</div>
-							<ul class="list-inline product-ratings">
-								<li><i class="rating-selected fa fa-star"></i></li>
-								<li><i class="rating-selected fa fa-star"></i></li>
-								<li><i class="rating-selected fa fa-star"></i></li>
-								<li><i class="rating fa fa-star"></i></li>
-								<li><i class="rating fa fa-star"></i></li>
-							</ul>
-						</div>
-					</li>
-					<li class="item">
-						<a href="#"><img class="img-responsive" src="{{asset('img/thumb/08.jpg')}}" alt=""></a>
-						<div class="product-description-v2">
-							<div class="margin-bottom-5">
-								<h4 class="title-price"><a href="#">Double-breasted</a></h4>
-								<span class="title-price">$95.00</span>
-							</div>
-							<ul class="list-inline product-ratings">
-								<li><i class="rating-selected fa fa-star"></i></li>
-								<li><i class="rating-selected fa fa-star"></i></li>
-								<li><i class="rating-selected fa fa-star"></i></li>
-								<li><i class="rating fa fa-star"></i></li>
-								<li><i class="rating fa fa-star"></i></li>
-							</ul>
-						</div>
-					</li>
-					<li class="item">
-						<a href="#"><img class="img-responsive" src="{{asset('img/thumb/06.jpg')}}" alt=""></a>
-						<div class="product-description-v2">
-							<div class="margin-bottom-5">
-								<h4 class="title-price"><a href="#">Double-breasted</a></h4>
-								<span class="title-price">$95.00</span>
-							</div>
-							<ul class="list-inline product-ratings">
-								<li><i class="rating-selected fa fa-star"></i></li>
-								<li><i class="rating-selected fa fa-star"></i></li>
-								<li><i class="rating-selected fa fa-star"></i></li>
-								<li><i class="rating fa fa-star"></i></li>
-								<li><i class="rating fa fa-star"></i></li>
-							</ul>
-						</div>
-					</li>
-					<li class="item">
-						<a href="#"><img class="img-responsive" src="{{asset('img/thumb/04.jpg')}}" alt=""></a>
-						<div class="product-description-v2">
-							<div class="margin-bottom-5">
-								<h4 class="title-price"><a href="#">Double-breasted</a></h4>
-								<span class="title-price">$95.00</span>
-							</div>
-							<ul class="list-inline product-ratings">
-								<li><i class="rating-selected fa fa-star"></i></li>
-								<li><i class="rating-selected fa fa-star"></i></li>
-								<li><i class="rating-selected fa fa-star"></i></li>
-								<li><i class="rating fa fa-star"></i></li>
-								<li><i class="rating fa fa-star"></i></li>
-							</ul>
-						</div>
-					</li>
-					<li class="item">
-						<a href="#"><img class="img-responsive" src="{{asset('img/thumb/03.jpg')}}" alt=""></a>
-						<div class="product-description-v2">
-							<div class="margin-bottom-5">
-								<h4 class="title-price"><a href="#">Double-breasted</a></h4>
-								<span class="title-price">$95.00</span>
-							</div>
-							<ul class="list-inline product-ratings">
-								<li><i class="rating-selected fa fa-star"></i></li>
-								<li><i class="rating-selected fa fa-star"></i></li>
-								<li><i class="rating-selected fa fa-star"></i></li>
-								<li><i class="rating fa fa-star"></i></li>
-								<li><i class="rating fa fa-star"></i></li>
-							</ul>
-						</div>
-					</li>
-				</ul>
-			</div>
+				</div><!--/end row-->
+			</div><!--/end container-->
 		</div>
-		<!--=== End Illustration v2 ===-->
+		<!--=== End Registre ===-->
 
 		<!--=== Shop Suvbscribe ===-->
 		<div class="shop-subscribe">
@@ -986,35 +730,27 @@
 		<!--=== End Footer v4 ===-->
 	</div><!--/wrapper-->
 
-	<!-- Wait Block -->
-	<div class="g-popup-wrapper">
-		<div class="g-popup g-popup--discount">
-			<p class="margin-bottom-5">Enter your email and get</p>
-			<h3>20% off </h3>
-			<p class="margin-bottom-40">your first purchase</p>
-			<form action="#" class="sky-form">
-				<label class="input margin-bottom-20">
-					<input type="email" placeholder="Your email address" class="form-control">
-				</label>
-				<label class="input">
-					<button class="btn btn-default" type="button">Subscribe</button>
-				</label>
-			</form>
-
-			<a href="javascript:void(0);" class="g-popup__close g-popup--discount__close"><span class="icon-close" aria-hidden="true"></span></a>
-		</div>
-	</div>
-	<!-- End Wait Block -->
-
 	<!-- JS Global Compulsory -->
-	
+	<script src="{{asset('plugins/jquery/jquery.min.js"></script>
+	<script src="{{asset('plugins/jquery/jquery-migrate.min.js"></script>
+	<script src="{{asset('plugins/bootstrap/js/bootstrap.min.js"></script>
+	<!-- JS Implementing Plugins -->
+	<script src="{{asset('plugins/back-to-top.js"></script>
+	<script src="{{asset('plugins/smoothScroll.js"></script>
+	<script src="{{asset('plugins/sky-forms-pro/skyforms/js/jquery.validate.min.js"></script>
+	<script src="{{asset('plugins/scrollbar/js/jquery.mCustomScrollbar.concat.min.js"></script>
+	<!-- JS Customization -->
+	<script src="{{asset('js/custom.js"></script>
+	<!-- JS Page Level -->
+	<script src="{{asset('js/shop.app.js"></script>
+	<script src="{{asset('js/plugins/style-switcher.js"></script>
+	<script src="{{asset('js/forms/page_registration.js"></script>
 	<script>
 		jQuery(document).ready(function() {
 			App.init();
 			App.initScrollBar();
-			OwlCarousel.initOwlCarousel();
+			Registration.initRegistration();
 			StyleSwitcher.initStyleSwitcher();
-			MasterSliderShowcase2.initMasterSliderShowcase2();
 		});
 	</script>
 
@@ -1022,6 +758,10 @@
 	<script src="{{asset('plugins/respond.js"></script>
 	<script src="{{asset('plugins/html5shiv.js"></script>
 	<script src="{{asset('js/plugins/placeholder-IE-fixes.js"></script>
+	<script src="{{asset('plugins/sky-forms-pro/skyforms/js/sky-forms-ie8.js"></script>
+	<![endif]-->
+<!--[if lt IE 10]>
+	<script src="{{asset('plugins/sky-forms-pro/skyforms/js/jquery.placeholder.min.js"></script>
 	<![endif]-->
 
 </body>

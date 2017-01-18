@@ -17,6 +17,7 @@
                                 <tr>
                                     <th>Title</th>
                                     <th>Price</th>
+                                    <th>Genre</th>
                                     <th>Author</th>
                                     <th>Publisher</th>
                                     <th>Action</th>
@@ -32,6 +33,7 @@
                                             </div>
                                         </td>
                                         <td>{{$book->price}}</td>
+                                         <td>{{$book->genre}}</td>
                                         <td>
                                             {{$book->author}}
                                         </td>

@@ -87,8 +87,8 @@
 						<div class="col-sm-6">
 							<ul class="list-inline right-topbar pull-right">
 								<li><a href="#">Account</a></li>
-								<li><a href="{{route('shop-ui-add-to-cart')}}">Wishlist (0)</a></li>
-								<li><a href="{{route('shop-ui-login')}}">Login</a> | <a href="{{route('shop-ui-register')}}">Register</a></li>
+								<li><a href="{{route('book-add-to-cart')}}">Wishlist (0)</a></li>
+								<li><a href="{{route('book-login')}}">Login</a> | <a href="{{route('book-register')}}">Register</a></li>
 								<li><i class="search fa fa-search search-button"></i></li>
 							</ul>
 						</div>
@@ -151,10 +151,10 @@
 								</div>
 								<div class="row">
 									<div class="col-xs-6">
-										<a href="{{route('shop-ui-inner')}}" class="btn-u btn-brd btn-brd-hover btn-u-sea-shop btn-block">View Cart</a>
+										<a href="{{route('book-inner')}}" class="btn-u btn-brd btn-brd-hover btn-u-sea-shop btn-block">View Cart</a>
 									</div>
 									<div class="col-xs-6">
-										<a href="{{route('shop-ui-add-to-cart')}}" class="btn-u btn-u-sea-shop btn-block">Checkout</a>
+										<a href="{{route('book-add-to-cart')}}" class="btn-u btn-u-sea-shop btn-block">Checkout</a>
 									</div>
 								</div>
 							</div>
@@ -173,12 +173,12 @@
 								</a>
 								<ul class="dropdown-menu">
 									<li><a href="index')}}">Shop UI</a></li>
-									<li><a href="{{route('shop-ui-inner')}}">Product Page</a></li>
-									<li><a href="{{route('shop-ui-filter-grid')}}">Filter Grid Page</a></li>
-									<li class="active"><a href="{{route('shop-ui-filter-list')}}">Filter List Page</a></li>
-									<li><a href="{{route('shop-ui-add-to-cart')}}">Checkout</a></li>
-									<li><a href="{{route('shop-ui-login')}}">Login</a></li>
-									<li><a href="{{route('shop-ui-register')}}">Register</a></li>
+									<li><a href="{{route('book-inner')}}">Product Page</a></li>
+									<li><a href="{{route('book-filter-grid')}}">Filter Grid Page</a></li>
+									<li class="active"><a href="{{route('book-filter-list')}}">Filter List Page</a></li>
+									<li><a href="{{route('book-add-to-cart')}}">Checkout</a></li>
+									<li><a href="{{route('book-login')}}">Login</a></li>
+									<li><a href="{{route('book-register')}}">Register</a></li>
 								</ul>
 							</li>
 							<!-- End Pages -->
@@ -186,7 +186,7 @@
 							<!-- Promotion -->
 							<li class="dropdown">
 								<a href="javascript:void(0);" class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown">
-									Promotion
+									Publishers
 								</a>
 								<ul class="dropdown-menu">
 									<li class="dropdown-submenu">
@@ -668,8 +668,8 @@
 						<div class="col-sm-8">
 							<ul class="list-inline clear-both">
 								<li class="grid-list-icons">
-									<a href="{{route('shop-ui-filter-list')}}"><i class="fa fa-th-list"></i></a>
-									<a href="{{route('shop-ui-filter-grid')}}"><i class="fa fa-th"></i></a>
+									<a href="{{route('book-filter-list')}}"><i class="fa fa-th-list"></i></a>
+									<a href="{{route('book-filter-grid')}}"><i class="fa fa-th"></i></a>
 								</li>
 								<li class="sort-list-btn">
 									<h3>Sort By :</h3>
@@ -707,12 +707,12 @@
 						<div class="list-product-description product-description-brd margin-bottom-30">
 							<div class="row">
 								<div class="col-sm-4">
-									<a href="{{route('shop-ui-inner')}}"><img class="img-responsive sm-margin-bottom-20" src="{{asset('img/blog/16.jpg')}}" alt=""></a>
+									<a href="{{route('book-inner')}}"><img class="img-responsive sm-margin-bottom-20" src="{{asset('img/blog/16.jpg')}}" alt=""></a>
 								</div>
 								<div class="col-sm-8 product-description">
 									<div class="overflow-h margin-bottom-5">
 										<ul class="list-inline overflow-h">
-											<li><h4 class="title-price"><a href="{{route('shop-ui-inner')}}">Double-breasted</a></h4></li>
+											<li><h4 class="title-price"><a href="{{route('book-inner')}}">Double-breasted</a></h4></li>
 											<li><span class="gender text-uppercase">Men</span></li>
 											<li class="pull-right">
 												<ul class="list-inline product-ratings">
@@ -748,12 +748,12 @@
 						<div class="list-product-description product-description-brd margin-bottom-30">
 							<div class="row">
 								<div class="col-sm-4">
-									<a href="{{route('shop-ui-inner')}}"><img class="img-responsive sm-margin-bottom-20" src="{{asset('img/blog/17.jpg')}}" alt=""></a>
+									<a href="{{route('book-inner')}}"><img class="img-responsive sm-margin-bottom-20" src="{{asset('img/blog/17.jpg')}}" alt=""></a>
 								</div>
 								<div class="col-sm-8 product-description">
 									<div class="overflow-h margin-bottom-5">
 										<ul class="list-inline overflow-h">
-											<li><h4 class="title-price"><a href="{{route('shop-ui-inner')}}">Double-breasted</a></h4></li>
+											<li><h4 class="title-price"><a href="{{route('book-inner')}}">Double-breasted</a></h4></li>
 											<li><span class="gender text-uppercase">Men</span></li>
 											<li class="pull-right">
 												<ul class="list-inline product-ratings">
@@ -789,12 +789,12 @@
 						<div class="list-product-description product-description-brd margin-bottom-30">
 							<div class="row">
 								<div class="col-sm-4">
-									<a href="{{route('shop-ui-inner')}}"><img class="img-responsive sm-margin-bottom-20" src="{{asset('img/blog/21.jpg')}}" alt=""></a>
+									<a href="{{route('book-inner')}}"><img class="img-responsive sm-margin-bottom-20" src="{{asset('img/blog/21.jpg')}}" alt=""></a>
 								</div>
 								<div class="col-sm-8 product-description">
 									<div class="overflow-h margin-bottom-5">
 										<ul class="list-inline overflow-h">
-											<li><h4 class="title-price"><a href="{{route('shop-ui-inner')}}">Double-breasted</a></h4></li>
+											<li><h4 class="title-price"><a href="{{route('book-inner')}}">Double-breasted</a></h4></li>
 											<li><span class="gender text-uppercase">Men</span></li>
 											<li class="pull-right">
 												<ul class="list-inline product-ratings">
@@ -830,12 +830,12 @@
 						<div class="list-product-description product-description-brd margin-bottom-30">
 							<div class="row">
 								<div class="col-sm-4">
-									<a href="{{route('shop-ui-inner')}}"><img class="img-responsive sm-margin-bottom-20" src="{{asset('img/blog/22.jpg')}}" alt=""></a>
+									<a href="{{route('book-inner')}}"><img class="img-responsive sm-margin-bottom-20" src="{{asset('img/blog/22.jpg')}}" alt=""></a>
 								</div>
 								<div class="col-sm-8 product-description">
 									<div class="overflow-h margin-bottom-5">
 										<ul class="list-inline overflow-h">
-											<li><h4 class="title-price"><a href="{{route('shop-ui-inner')}}">Double-breasted</a></h4></li>
+											<li><h4 class="title-price"><a href="{{route('book-inner')}}">Double-breasted</a></h4></li>
 											<li><span class="gender text-uppercase">Men</span></li>
 											<li class="pull-right">
 												<ul class="list-inline product-ratings">
@@ -871,12 +871,12 @@
 						<div class="list-product-description product-description-brd">
 							<div class="row">
 								<div class="col-sm-4">
-									<a href="{{route('shop-ui-inner')}}"><img class="img-responsive sm-margin-bottom-20" src="{{asset('img/blog/23.jpg')}}" alt=""></a>
+									<a href="{{route('book-inner')}}"><img class="img-responsive sm-margin-bottom-20" src="{{asset('img/blog/23.jpg')}}" alt=""></a>
 								</div>
 								<div class="col-sm-8 product-description">
 									<div class="overflow-h margin-bottom-5">
 										<ul class="list-inline overflow-h">
-											<li><h4 class="title-price"><a href="{{route('shop-ui-inner')}}">Double-breasted</a></h4></li>
+											<li><h4 class="title-price"><a href="{{route('book-inner')}}">Double-breasted</a></h4></li>
 											<li><span class="gender text-uppercase">Men</span></li>
 											<li class="pull-right">
 												<ul class="list-inline product-ratings">
