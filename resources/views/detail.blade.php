@@ -12,7 +12,7 @@
     <meta name="author" content="">
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="shortcut icon" href="">
 
     <!-- Web Fonts -->
     <link rel='stylesheet' type='text/css' href='//fonts.googleapis.com/css?family=Open+Sans:400,300,600&amp;subset=cyrillic,latin'>
@@ -91,8 +91,9 @@
                     <div class="col-sm-6">
                         <ul class="list-inline right-topbar pull-right">
                             <li><a href="#">Account</a></li>
-                            <li><a href="shop-ui-add-to-cart.html">Wishlist (0)</a></li>
-                            <li><a href="shop-ui-login.html">Login</a> | <a href="shop-ui-register.html">Register</a></li>
+                            <li><a href="{{route('shop-ui-add-to-cart')}}">Wishlist (0)</a></li>
+
+                            <li><a href="{{route('login')}}">Login</a> | <a href="{{route('shop-ui-register')}}">Register</a></li>
                             <li><i class="search fa fa-search search-button"></i></li>
                         </ul>
                     </div>
@@ -112,7 +113,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="index.html">
+                    <a class="navbar-brand" href="">
                         <img id="logo-header" src="{{asset('img/logo.png')}}" alt="Logo">
                     </a>
                 </div>
@@ -155,10 +156,10 @@
                             </div>
                             <div class="row">
                                 <div class="col-xs-6">
-                                    <a href="shop-ui-inner.html" class="btn-u btn-brd btn-brd-hover btn-u-sea-shop btn-block">View Cart</a>
+                                    <a href="" class="btn-u btn-brd btn-brd-hover btn-u-sea-shop btn-block">View Cart</a>
                                 </div>
                                 <div class="col-xs-6">
-                                    <a href="shop-ui-add-to-cart.html" class="btn-u btn-u-sea-shop btn-block">Checkout</a>
+                                    <a href="" class="btn-u btn-u-sea-shop btn-block">Checkout</a>
                                 </div>
                             </div>
                         </div>
@@ -176,9 +177,9 @@
                                 Pages
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a href="index.html">Shop UI</a></li>
-                                <li class="active"><a href="shop-ui-inner.html">Product Page</a></li>
-                                <li><a href="shop-ui-filter-grid.html">Filter Grid Page</a></li>
+                                <li><a href="">Shop UI</a></li>
+                                <li class="active"><a href="">Product Page</a></li>
+                                <li><a href="">Filter Grid Page</a></li>
                                 <li><a href="shop-ui-filter-list.html">Filter List Page</a></li>
                                 <li><a href="shop-ui-add-to-cart.html">Checkout</a></li>
                                 <li><a href="shop-ui-login.html">Login</a></li>
@@ -401,7 +402,7 @@
                         <!-- End Clothes -->
 
                         <!-- Main Demo -->
-                        <li><a href="../index.html">Main Demo</a></li>
+                        <li><a href="{{route('home')}}">Main Demo</a></li>
                         <!-- Main Demo -->
                     </ul>
                     <!-- End Nav Menu -->
@@ -416,7 +417,7 @@
         <!-- Breadcrumbs v5 -->
         <div class="container">
             <ul class="breadcrumb-v5">
-                <li><a href="index.html"><i class="fa fa-home"></i></a></li>
+                <li><a href="{{route('home)}}"><i class="fa fa-home"></i></a></li>
                 <li><a href="#">Products</a></li>
                 <li class="active">New</li>
             </ul>
@@ -557,7 +558,7 @@
                         </div>
                         <div class="col-md-5">
                             <div class="responsive-video">
-                                <iframe src="//player.vimeo.com/video/72343553" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+                                <iframe src="//player.vimeo.com/video/72343553" frameborder="0" ></iframe>
                             </div>
                         </div>
                     </div>
@@ -779,7 +780,7 @@
                 <div class="row">
                     <!-- About -->
                     <div class="col-md-4 md-margin-bottom-40">
-                        <a href="index.html"><img class="footer-logo" src="{{asset('img/logo-2.png')}}" alt=""></a>
+                        <a href="{{route('home')}}"><img class="footer-logo" src="{{asset('img/logo-2.png')}}" alt=""></a>
                         <p>About Unify dolor sit amet, consectetur adipiscing elit. Maecenas eget nisl id libero tincidunt sodales.</p>
                         <br>
                         <ul class="list-unstyled address-list margin-bottom-20">
@@ -947,7 +948,10 @@
 <!-- End Wait Block -->
 
 <!-- JS Global Compulsory -->
-
+<script
+        src="//code.jquery.com/jquery-3.1.1.min.js"
+        integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+        crossorigin="anonymous"></script>
 <script>
     jQuery(document).ready(function() {
         App.init();
@@ -957,12 +961,5 @@
         MasterSliderShowcase2.initMasterSliderShowcase2();
     });
 </script>
-
-<!--[if lt IE 9]>
-<script src="{{asset('plugins/respond.js')}}"></script>
-<script src="{{asset('plugins/html5shiv.js')}}"></script>
-<script src="{{asset('js/plugins/placeholder-IE-fixes.js')}}"></script>
-<![endif]-->
-
 </body>
 </html>

@@ -29,16 +29,17 @@ class LoginController extends Controller
      */
     public function login(Request $request)
     {
+
         $username = $request->get('username');
         $password = $request->get('password');
-        $credential = $this->authenticator->authenticate($request->get('username'), $request->get('password'));
+        $credential = $this->authenticator->authenticate($username, $password);
         if($credential instanceof LoginFailMessage)
         {
             //todo
             return view('login')
-                ->with('message', $credential->failMessage('username hoac password k ton tai'))
+                ->with('message', $credential->failMessage('username or password is not correct'))
                 ->with('name', $username)
-                ->with('pasword', $password);
+                ->with('password', $password);
         }
         else{
             request()->session()->put('credential', $credential);

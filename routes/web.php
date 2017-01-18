@@ -79,13 +79,38 @@ Route::get('/advanceSearch', 'SearchingController@advanceSearch')
 		->name('searchs.advanceSearch')
 		->middleware('create.condition')
 ;
-Route::get('/books', 'BookController@listBook');
-Route::get('/delete/{id}', 'BookController@delete');
+Route::get('/books', 'BookController@listBook')
+    ->name('listBook');
+
+Route::get('/delete/{id}', 'BookController@delete')
+    ->name('deleteBook');
+
 Route::get('/detail/{id}', 'BookController@detail');
-Route::get('/insert', 'BookController@insertform');
+
+Route::get('/insert', 'BookController@insertform')
+    ->name('insert');
+
 Route::post('/insert', 'BookController@insert');
-Route::get('/update/{id}', 'BookController@updateform');
-Route::get('/update/{id}', 'BookController@update');
-Route::get('/login','LoginController@formlogin');
-Route::post('/login','LoginController@login');
-Route::get('/logout','LogoutController@logout');
+
+Route::get('/update/{id}', 'BookController@updateform')
+    ->name('updateBook');
+
+Route::post('/update/{id}', 'BookController@update');
+
+Route::get('/login','LoginController@formlogin')
+        ->name('login')
+;
+Route::post('/login','LoginController@login')
+    ->middleware('user')
+;
+Route::get('/logout','LogoutController@logout')
+    ->name('logout');
+
+Route::get('/home','BookController@listbookhome')
+->name('home');
+
+Route::get('/about', function (){
+    return view('index');
+})
+    ->name('about')
+;

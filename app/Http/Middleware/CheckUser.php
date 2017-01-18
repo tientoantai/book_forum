@@ -3,7 +3,8 @@
 namespace App\Http\Middleware;
 
 use Closure;
-use Illuminate\Validation\Validator;
+use Validator;
+
 
 class CheckUser
 {
@@ -17,18 +18,21 @@ class CheckUser
      */
     public function handle($request, Closure $next)
     {
-        $validator = Validator::make($request->all(), [
+        $credentialInfo = $request->all();
+        $validator = Validator::make($credentialInfo, [
             'username' => 'required',
-            'password' => '
-                required|
-                min:6|
-                regex:/^.*(?=.{3,})(?=.*[a-zA-Z])(?=.*[0-9])(?=.*[\d\X])(?=.*[!$#%]).*$/|
-                confirmed',
+            'password' => 'required'
         ]);
         if($validator->fails())
         {
             $errors = $validator->errors();
-            dd($errors);
+            $errorMessages = $errors->getMessages();
+            return response()->view('login', [
+                'errorName' => $credentialInfo['username'],
+                'errorPassword'=> $credentialInfo['password'],
+                'errorMessages'=> $errorMessages])
+                ;
+
         }
         return $next($request);
 
