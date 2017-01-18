@@ -1,4 +1,4 @@
-@extends('layout')
+@extends('books.layout')
 @section('title','Insert Book')
 @section('content')
     <!--=== Breadcrumbs v4 ===-->
@@ -48,8 +48,18 @@
                     </div>
                 </div>
 
+                @if (count($errors) > 0)
+                    <div class="col-md-5 alert alert-danger">
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
+
                 <div class="col-md-5">
-                    <form id="sky-form4" class="log-reg-block sky-form" method="post" action="">
+                    <form id="sky-form4" class="log-reg-block sky-form" method="post" action="{{route('insertBook')}}" enctype="multipart/form-data">
                         <h2>Insert Books</h2>
                         <div class="login-input reg-input">
 
@@ -60,7 +70,7 @@
                             </section>
                             <section>
                                 <label class="input">
-                                    <input type="text" name="price" placeholder="Price" class="form-control">
+                                    <input type="text" name="genre" placeholder="Genre" class="form-control">
                                 </label>
                             </section>
                             <section>
@@ -73,18 +83,18 @@
                                     <input type="text" name="publisher" placeholder="Publisher" class="form-control">
                                 </label>
                             </section>
-                        </div>
+                            <section>
+                                <label class="input">
+                                    <input type="text" name="price" placeholder="Price" class="form-control">
+                                </label>
+                            </section>
+                            <section>
 
-                        <label class="checkbox margin-bottom-10">
-                            <input type="checkbox" name="checkbox"/>
-                            <i></i>
-                            Subscribe to our newsletter to get the latest offers
-                        </label>
-                        <label class="checkbox margin-bottom-20">
-                            <input type="checkbox" name="checkbox"/>
-                            <i></i>
-                            I have read agreed with the <a href="#">terms &amp; conditions</a>
-                        </label>
+                                <label class="input">
+                                    <input type="file" name="image" class="btn-u btn-u-sea-shop btn-block margin-bottom-20">
+                                </label>
+                            </section>
+                        </div>
                         <button class="btn-u btn-u-sea-shop btn-block margin-bottom-20" type="submit">Add</button>
                     </form>
 

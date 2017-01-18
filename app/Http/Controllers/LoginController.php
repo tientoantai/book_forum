@@ -20,7 +20,7 @@ class LoginController extends Controller
 
     public function formlogin()
     {
-        return view('login');
+        return view('books.login');
     }
 
     /**
@@ -36,7 +36,7 @@ class LoginController extends Controller
         if($credential instanceof LoginFailMessage)
         {
             //todo
-            return view('login')
+            return view('books.login')
                 ->with('message', $credential->failMessage('username or password is not correct'))
                 ->with('name', $username)
                 ->with('password', $password);

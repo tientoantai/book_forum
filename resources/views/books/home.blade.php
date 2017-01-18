@@ -1,5 +1,5 @@
-@extends('layout')
-
+@extends('books.layout')
+@section('title', 'Home')
 @section('content')
 
     <!--=== Product Content ===-->

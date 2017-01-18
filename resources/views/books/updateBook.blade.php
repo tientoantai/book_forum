@@ -1,4 +1,4 @@
-@extends('layout')
+@extends('books.layout')
 @section('title', 'Edit Book')
 @section('content')
     <div class="breadcrumbs-v4">
@@ -47,8 +47,18 @@
                     </div>
                 </div>
 
+                @if (count($errors) > 0)
+                    <div class="col-md-5 alert alert-danger">
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
+
                 <div class="col-md-5">
-                    <form id="sky-form4" class="log-reg-block sky-form mystyle" method="post" action="">
+                    <form id="sky-form4" class="log-reg-block sky-form mystyle" method="post" action="{{route('updateBook',['id'=> $book->id])}}" enctype="multipart/form-data">
                         <h2>Edit Books</h2>
                         <div class="login-input reg-input">
 
@@ -72,18 +82,13 @@
                                     <input type="text" name="publisher" placeholder="Publisher" class="form-control" value="{{$book->publisher}}">
                                 </label>
                             </section>
+                            <section>
+                                <label class="input">
+                                    <img class="img-responsive" src="{{asset($book->image)}}" alt="" style="width:30%">
+                                    <input type="file" name="image" class="btn-u btn-u-sea-shop btn-block margin-bottom-20">
+                                </label>
+                            </section>
                         </div>
-
-                        <label class="checkbox margin-bottom-10">
-                            <input type="checkbox" name="checkbox"/>
-                            <i></i>
-                            Subscribe to our newsletter to get the latest offers
-                        </label>
-                        <label class="checkbox margin-bottom-20">
-                            <input type="checkbox" name="checkbox"/>
-                            <i></i>
-                            I have read agreed with the <a href="#">terms &amp; conditions</a>
-                        </label>
                         <button class="btn-u btn-u-sea-shop btn-block margin-bottom-20" type="submit">Update</button>
                     </form>
 

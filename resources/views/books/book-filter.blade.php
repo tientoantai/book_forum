@@ -243,7 +243,7 @@
  							</div>
  							<div id="collapseOne" class="panel-collapse collapse in">
  								<div class="panel-body">
-	 								<input type="text" name="title" class="form-control" placeholder="fill title">
+	 								<input type="text" name="title" class="form-control" placeholder="fill title" value="{{$request->title}}">
  								</div>
  							</div>
  						</div>
@@ -261,7 +261,7 @@
  							</div>
  							<div id="collapseTwo" class="panel-collapse collapse in">
  								<div class="panel-body">
- 									<input type="text" name="author" placeholder="fill author" value="{{old('author')}}">
+ 									<input type="text" name="author" placeholder="fill author" value="{{ $request->author }}">
  								</div>
  							</div>
  						</div>
@@ -283,7 +283,9 @@
  										@foreach($books as $book)
 	 										<li>
 	 											<label class="checkbox">
-	 												<input type="checkbox" name="publisher[]" value="{{$book->publisher}}"/>
+	 												<input type="checkbox" name="publisher[]" value="{{$book->publisher}}" 
+	 													{{ ($request->publisher) == ($book->publisher) ? 'checked' : '' }}
+	 												>
 	 												<i></i>
 	 												{{$book->publisher}}
 	 											</label>
@@ -294,29 +296,7 @@
  							</div>
  						</div>
  					</div><!--/end panel group-->
- 					
- 					<div class="panel-group" id="accordion-v4">
- 						<div class="panel panel-default">
- 							<div class="panel-heading">
- 								<h2 class="panel-title">
- 									<a data-toggle="collapse" data-parent="#accordion-v4" href="#collapseFour">
- 										Price
- 										<i class="fa fa-angle-down"></i>
- 									</a>
- 								</h2>
- 							</div>
- 							<div id="collapseFour" class="panel-collapse collapse in">
- 								<div class="panel-body">
- 									<div class="slider-snap" id="slider-price"></div>
- 									<p class="slider-snap-text">
- 										<span class="slider-snap-value-lower"></span>
- 										<span class="slider-snap-value-upper"></span>
- 									</p>
- 								</div>
- 							</div>
- 						</div>
- 					</div><!--/end panel group-->
- 					<input type="submit" name="search" class="btn-success" value="search">
+ 					<input type="submit" name="search" class="btn-u btn-u-sea-shop btn-block" value="search">
  					</form>
  				</div>
 
@@ -373,7 +353,7 @@
  								<div class="product-description product-description-brd margin-bottom-30">
  									<div class="overflow-h margin-bottom-5">
  										<div class="pull-left">
- 											<h4 class="title-price"><a href="{{route('book-inner')}}">{{$book->title}}</a></h4>
+ 											<h4 class="title-price"><a href="{{route('books.detail',['id'=>$book->id])}}">{{$book->title}}</a></h4>
  											<span class="gender text-uppercase">{{$book->publisher}}</span>
  											<span class="gender">{{$book->genre}}</span>
  										</div>

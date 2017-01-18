@@ -11,11 +11,8 @@
 |
 */
 use App\BookForum\Book\Book;
+use Illuminate\Http\Request;
 
-
-Route::get('/', function () {
-    return view('welcome');
-});
 Route::get('/index', function () {
     return view('index');
 })
@@ -88,14 +85,18 @@ Route::get('/delete/{id}', 'BookController@delete')
 Route::get('/detail/{id}', 'BookController@detail');
 
 Route::get('/insert', 'BookController@insertform')
-    ->name('insert');
+    ->name('insertBook');
 
-Route::post('/insert', 'BookController@insert');
+Route::post('/insert', 'BookController@insert')
+         ->middleware('validator.image', 'create.image')
+;
 
 Route::get('/update/{id}', 'BookController@updateform')
     ->name('updateBook');
 
-Route::post('/update/{id}', 'BookController@update');
+Route::post('/update/{id}', 'BookController@update')
+        ->middleware('validator.image', 'create.image')
+;
 
 Route::get('/login','LoginController@formlogin')
         ->name('login')
@@ -110,7 +111,7 @@ Route::get('/home','BookController@listbookhome')
 ->name('home');
 
 Route::get('/about', function (){
-    return view('index');
+    return view('books.about-us');
 })
     ->name('about')
 ;

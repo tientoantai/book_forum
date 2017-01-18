@@ -1,4 +1,4 @@
-@extends('layout')
+@extends('books.layout')
 @section('title', 'List Books')
 @section('content')
 
@@ -10,7 +10,7 @@
                     <section>
                         <div class="table-responsive">
                             <div class="btn btn-success">
-                                <a href="{{route('insert')}}"><i class="glyphicon glyphicon-plus"></i></a>
+                                <a href="{{route('insertBook')}}"><i class="glyphicon glyphicon-plus"></i></a>
                             </div>
                             <table class="table table-striped">
                                 <thead>
