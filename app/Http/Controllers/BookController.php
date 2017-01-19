@@ -19,8 +19,8 @@ class BookController extends Controller
     }
     public function delete($id)
     {
-        $book = Book::where('id', '=', $id)->delete();
-        return redirect('/books');
+        Book::where('id', '=', $id)->delete();
+//        return redirect('/books');
     }
     public function detail($id)
     {

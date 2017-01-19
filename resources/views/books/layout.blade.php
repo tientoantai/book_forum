@@ -368,6 +368,7 @@
 <script src="{{asset('plugins/jquery/jquery.min.js')}}"></script>
 <script src="{{asset('plugins/jquery/jquery-migrate.min.js')}}"></script>
 <script src="{{asset('plugins/bootstrap/js/bootstrap.min.js')}}"></script>
+
 <!-- JS Implementing Plugins -->
 <script src="{{asset('plugins/back-to-top.js')}}"></script>
 <script src="{{asset('plugins/smoothScroll.js')}}"></script>
@@ -392,6 +393,7 @@
         RevolutionSlider.initRSfullWidth();
         StyleSwitcher.initStyleSwitcher();
     });
+
 </script>
 @yield('js')
 </body>
