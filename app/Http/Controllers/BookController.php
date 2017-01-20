@@ -8,9 +8,8 @@ use Illuminate\Support\Facades\Session;
 
 class BookController extends Controller
 {
+
     public function listBook(){
-       // dd(request()->session());
-        //dd(Book::all());
         return view('books.listbook')->with('booklist', Book::all());
     }
     public function listbookhome()
@@ -31,50 +30,24 @@ class BookController extends Controller
     {
         return view('books.insertBook');
     }
-    public  function insert()
+    public function insert(Book $book)
     {
-        $book = new Book;
-        $book->author = request('author');
-        $book->price = request('price');
-        $book->publisher = request('publisher');
-        $book->title = request('title');
-        $book->image = request()->get('image');
-
-        if($book->image){
-            $book->save();
-
-            return redirect('/books');
-        }else{
-            $book->image = 'https://www.pinterest.com/pin/391742867571469416/';
-            $book->save();
-
-            return redirect('/books');
-        }
-
+        $book->save();
+        return redirect('/books');
     }
     public  function updateform($id)
     {
         $book = Book::where('id', '=', $id)->first();
         return view('books.updateBook')->with('book', $book);
     }
-    public function update($id)
+
+    /**
+     * @param Book $book
+     * @return \Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
+     */
+    public function update(Book $book)
     {
-        $book = Book::where('id', '=', $id)->first();
-        //dd($book);
-        $book->author = request('author');
-        $book->price = request('price');
-        $book->publisher = request('publisher');
-        $book->title = request('title');
-        $book->image = request()->get('image');
-
-
-        if($book->image){
-            $book->save();
-            return redirect('/books');
-        }else{
-            $book->image = 'https://www.pinterest.com/pin/391742867571469416/';
-            $book->save();
-            return redirect('/books');
-        }
+        $book->save();
+        return redirect('/detail/'.$book->id);
     }
 }

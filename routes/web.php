@@ -88,14 +88,14 @@ Route::get('/insert', 'BookController@insertform')
     ->name('insertBook');
 
 Route::post('/insert', 'BookController@insert')
-         ->middleware('validator.image', 'create.image')
+         ->middleware('validator.image', 'create.image', 'book.provider')
 ;
 
 Route::get('/update/{id}', 'BookController@updateform')
     ->name('updateBook');
 
 Route::post('/update/{id}', 'BookController@update')
-        ->middleware('validator.image', 'create.image')
+        ->middleware('book.provider')
 ;
 
 Route::get('/login','LoginController@formlogin')

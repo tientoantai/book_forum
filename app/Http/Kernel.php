@@ -57,5 +57,6 @@ class Kernel extends HttpKernel
         'validator.image' => \App\Http\Middleware\ImageValidator::class,
         'create.condition' => \App\Http\Middleware\CreateCondition::class,
         'create.image' => \App\Http\Middleware\CreateImage::class,
+        'book.provider' => \App\Http\Middleware\BookProvider::class,
     ];
 }
