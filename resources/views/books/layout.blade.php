@@ -89,6 +89,11 @@
                                 Book
                             </a>
                         </li>
+                        <li class="dropdown mega-menu-fullwidth">
+                            <a href="{{route('book-filter')}}">
+                                Publisher
+                            </a>
+                        </li>
                     </ul>
                     <!-- End Nav Menu -->
                 </div>
