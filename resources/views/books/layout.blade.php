@@ -26,6 +26,7 @@
     <!-- CSS Customization -->
     <link rel="stylesheet" href="{{asset('css/custom.css')}}">
 
+    <link rel="stylesheet" href="{{asset('css/book.css')}}">
     @yield('css')
 </head>
 
@@ -49,7 +50,7 @@
                     </div>
                     <div class="col-sm-6">
                         <ul class="list-inline right-topbar pull-right">
-                            <li><a href="{{route('login')}}">Login</a> | <a href="{{route('shop-ui-register')}}">Register</a></li>
+                            <li><a href="{{route('login')}}">Login</a> | <a href="">Register</a></li>
                             <li><i class="search fa fa-search search-button"></i></li>
                         </ul>
                     </div>
@@ -74,58 +75,6 @@
                         <img id="logo-header" src="{{asset('img/logo.png')}}" alt="Logo">
                     </a>
                 </div>
-
-                <!-- Shopping Cart -->
-                <div class="shop-badge badge-icons pull-right">
-                    <a href="#"><i class="fa fa-shopping-cart"></i></a>
-                    <span class="badge badge-sea rounded-x">3</span>
-                    <div class="badge-open">
-                        <ul class="list-unstyled mCustomScrollbar" data-mcs-theme="minimal-dark">
-                            <li>
-                                <img src="{{asset('img/thumb/05.jpg')}}" alt="">
-                                <button type="button" class="close">×</button>
-                                <div class="overflow-h">
-                                    <span>Black Glasses</span>
-                                    <small>1 x $400.00</small>
-                                </div>
-                            </li>
-                            <li>
-                                <img src="{{asset('img/thumb/02.jpg')}}" alt="">
-                                <button type="button" class="close">×</button>
-                                <div class="overflow-h">
-                                    <span>Black Glasses</span>
-                                    <small>1 x $400.00</small>
-                                </div>
-                            </li>
-                            <li>
-                                <img src="{{asset('img/thumb/03.jpg')}}" alt="">
-                                <button type="button" class="close">×</button>
-                                <div class="overflow-h">
-                                    <span>Black Glasses</span>
-                                    <small>1 x $400.00</small>
-                                </div>
-                            </li>
-                        </ul>
-                        <div class="subtotal">
-                            <div class="overflow-h margin-bottom-10">
-                                <span>Subtotal</span>
-                                <span class="pull-right subtotal-cost">$1200.00</span>
-                            </div>
-                            <div class="row">
-                                <div class="col-xs-6">
-                                    <a href="{{route('shop-ui-inner')}}"
-                                       class="btn-u btn-brd btn-brd-hover btn-u-sea-shop btn-block">View Cart</a>
-                                </div>
-                                <div class="col-xs-6">
-                                    <a href="{{route('shop-ui-add-to-cart')}}"
-                                       class="btn-u btn-u-sea-shop btn-block">Checkout</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- End Shopping Cart -->
-
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse navbar-responsive-collapse">
                     <!-- Nav Menu -->
@@ -134,69 +83,11 @@
                             <a href="{{route('about')}}" >
                                 About Us
                             </a>
-                            <ul class="dropdown-menu">
-                                <li>
-                                    <div class="mega-menu-content">
-                                        <div class="container">
-                                            <div class="row">
-                                                <div class="col-md-3 col-sm-12 col-xs-12 md-margin-bottom-30">
-                                                    <h3 class="mega-menu-heading">Pellentes que nec diam lectus</h3>
-                                                    <p>Proin pulvinar libero quis auctor pharet ra. Aenean fermentum met
-                                                        us orci, sedf eugiat augue pulvina r vitae. Nulla dolor nisl,
-                                                        molestie nec aliquam vitae, gravida sodals dolor...</p>
-                                                    <button type="button" class="btn-u btn-u-dark">Read More</button>
-                                                </div>
-                                                <div class="col-md-3 col-sm-4 col-xs-4 md-margin-bottom-30">
-                                                    <a href="#"><img class="product-offers img-responsive"
-                                                                     src="{{asset('img/blog/01.jpg')}}" alt=""></a>
-                                                </div>
-                                                <div class="col-md-3 col-sm-4 col-xs-4 sm-margin-bottom-30">
-                                                    <a href="#"><img class="product-offers img-responsive"
-                                                                     src="{{asset('img/blog/02.jpg')}}" alt=""></a>
-                                                </div>
-                                                <div class="col-md-3 col-sm-4 col-xs-4">
-                                                    <a href="#"><img class="product-offers img-responsive"
-                                                                     src="{{asset('img/blog/03.jpg')}}" alt=""></a>
-                                                </div>
-                                            </div><!--/end row-->
-                                        </div><!--/end container-->
-                                    </div><!--/end mega menu content-->
-                                </li>
-                            </ul><!--/end dropdown-menu-->
                         </li>
                         <li class="dropdown mega-menu-fullwidth">
-                            <a href="{{route('home')}}">
-                                Page
+                            <a href="{{route('book-filter')}}">
+                                Book
                             </a>
-                            <ul class="dropdown-menu">
-                                <li>
-                                    <div class="mega-menu-content">
-                                        <div class="container">
-                                            <div class="row">
-                                                <div class="col-md-3 col-sm-12 col-xs-12 md-margin-bottom-30">
-                                                    <h3 class="mega-menu-heading">Pellentes que nec diam lectus</h3>
-                                                    <p>Proin pulvinar libero quis auctor pharet ra. Aenean fermentum met
-                                                        us orci, sedf eugiat augue pulvina r vitae. Nulla dolor nisl,
-                                                        molestie nec aliquam vitae, gravida sodals dolor...</p>
-                                                    <button type="button" class="btn-u btn-u-dark">Read More</button>
-                                                </div>
-                                                <div class="col-md-3 col-sm-4 col-xs-4 md-margin-bottom-30">
-                                                    <a href="#"><img class="product-offers img-responsive"
-                                                                     src="{{asset('img/blog/01.jpg')}}" alt=""></a>
-                                                </div>
-                                                <div class="col-md-3 col-sm-4 col-xs-4 sm-margin-bottom-30">
-                                                    <a href="#"><img class="product-offers img-responsive"
-                                                                     src="{{asset('img/blog/02.jpg')}}" alt=""></a>
-                                                </div>
-                                                <div class="col-md-3 col-sm-4 col-xs-4">
-                                                    <a href="#"><img class="product-offers img-responsive"
-                                                                     src="{{asset('img/blog/03.jpg')}}" alt=""></a>
-                                                </div>
-                                            </div><!--/end row-->
-                                        </div><!--/end container-->
-                                    </div><!--/end mega menu content-->
-                                </li>
-                            </ul><!--/end dropdown-menu-->
                         </li>
                     </ul>
                     <!-- End Nav Menu -->
@@ -368,7 +259,6 @@
 <script src="{{asset('plugins/jquery/jquery.min.js')}}"></script>
 <script src="{{asset('plugins/jquery/jquery-migrate.min.js')}}"></script>
 <script src="{{asset('plugins/bootstrap/js/bootstrap.min.js')}}"></script>
-
 <!-- JS Implementing Plugins -->
 <script src="{{asset('plugins/back-to-top.js')}}"></script>
 <script src="{{asset('plugins/smoothScroll.js')}}"></script>
@@ -393,7 +283,6 @@
         RevolutionSlider.initRSfullWidth();
         StyleSwitcher.initStyleSwitcher();
     });
-
 </script>
 @yield('js')
 </body>

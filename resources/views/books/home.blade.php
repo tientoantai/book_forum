@@ -6,7 +6,7 @@
     <div class="container content-md">
 
         <div class="heading heading-v1 margin-bottom-20">
-            <h2>Featured products</h2>
+            <h2>Featured Books</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed odio elit, ultrices vel cursus sed, placerat
                 ut leo. Phasellus in magna erat. Etiam gravida convallis augue non tincidunt. Nunc lobortis dapibus
                 neque quis lacinia. Nam dapibus tellus sit amet odio venenatis</p>
@@ -23,20 +23,19 @@
                 @foreach($booklist as $books)
                     <li class="item">
                         <div class="product-img">
-                            <a href=""><img class="full-width img-responsive" src="{{$books->image}}"
+                            <a href="{{route('books.detail', ['id'=>$books->id])}}"><img class="full-width img-responsive" src="{{$books->image}}"
                                                               alt=""></a>
-                            <a class="product-review" href="">Quick review</a>
-                            <a class="add-to-cart" href="#"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                            <a class="product-review" href="{{route('books.detail', ['id'=>$books->id])}}">Quick review</a>
                         </div>
                         <div class="product-description product-description-brd">
                             <div class="overflow-h margin-bottom-5">
                                 <div class="pull-left">
-                                    <h4 class="title-price"><a href="">{{$books->title}}</a></h4>
+                                    <h4 class="title-price"><a href="{{route('books.detail', ['id'=>$books->id])}}">{{$books->title}}</a></h4>
                                     <span class="gender text-uppercase">{{$books->author}}</span>
                                     <span class="gender">{{$books->publisher}}</span>
                                 </div>
                                 <div class="product-price">
-                                    <span class="title-price">${{$books->price}}</span>
+                                    <span class="title-price">{{$books->price}}</span>
                                 </div>
                             </div>
                             <ul class="list-inline product-ratings">
@@ -63,22 +62,20 @@
         <!--=== Illustration v2 ===-->
         <div class="row illustration-v2">
             @foreach($booklist as $book)
-                <div class="col-md-3 col-sm-6 md-margin-bottom-30">
-                    <div class="product-img">
-                        <a href=""><img class="full-width img-responsive" src="{{$book->image}}"
-                                                          alt=""></a>
-                        <a class="product-review" href="">Quick review</a>
-                        <a class="add-to-cart" href="#"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                <div class="col-md-3 col-sm-6 md-margin-bottom-30 wrap-book-item">
+                    <div class="product-img book-image">
+                        <a href="{{route('books.detail', ['id'=>$book->id])}}"><img class="full-width img-responsive" src="{{$book->image}}" alt=""></a>
+                        <a class="product-review" href="{{route('books.detail', ['id'=>$book->id])}}">Quick review</a>
                     </div>
-                    <div class="product-description product-description-brd">
+                    <div class="product-description product-description-brd book-description">
                         <div class="overflow-h margin-bottom-5">
                             <div class="pull-left">
                                 <h4 class="title-price"><a href="">{{$book->title}}</a></h4>
                                 <span class="gender text-uppercase">{{$book->author}}</span>
                                 <span class="gender">{{$book->publisher}}</span>
                             </div>
-                            <div class="product-price">
-                                <span class="title-price">${{$book->price}}</span>
+                            <div class="product-price pull-right clear-both">
+                                <span class="title-price">{{$book->price}}</span>
                             </div>
                         </div>
                         <ul class="list-inline product-ratings">
