@@ -24,7 +24,7 @@ class CreateImage
     public function handle($request, Closure $next)
     {
         $uploadingProvider = new UploadingProvider();
-        $image             = $uploadingProvider->providerFile($request);
+        $image             = $uploadingProvider->provide($request);
 
         $request->attributes->add([
             'image'=>$image,
