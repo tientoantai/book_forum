@@ -95,7 +95,7 @@ Route::get('/update/{id}', 'BookController@updateform')
     ->name('updateBook');
 
 Route::post('/update/{id}', 'BookController@update')
-        ->middleware('book.provider')
+        ->middleware('create.image', 'book.provider')
 ;
 
 Route::get('/login','LoginController@formlogin')
