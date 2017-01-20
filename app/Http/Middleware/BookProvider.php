@@ -29,7 +29,7 @@ class BookProvider
         $bookRaw['image'] = $request->get('image');
         //dd($bookRaw);
         $book = $this->bookFactory->factory($bookRaw);
-        app()->bind('Book', function () use ($book) {
+        app()->bind(get_class($book), function () use ($book) {
             return $book;
         });
         return $next($request);
