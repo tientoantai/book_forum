@@ -84,6 +84,11 @@
                             </section>
                             <section>
                                 <label class="input">
+                                    <input type="text" name="genre" placeholder="Genre" class="form-control" value="{{$book->genre}}">
+                                </label>
+                            </section>
+                            <section>
+                                <label class="input">
                                     <img class="img-responsive" src="{{asset($book->image)}}" alt="" style="width:30%">
                                     <input type="file" name="image" class="btn-u btn-u-sea-shop btn-block margin-bottom-20">
                                 </label>
