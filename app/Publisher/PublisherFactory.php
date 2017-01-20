@@ -9,7 +9,6 @@ class PublisherFactory
 
 		$publisher->setName($publisherData['name']);
 		$publisher->setAddress($publisherData['address']);
-		$publisher->setRate($publisherData['rate']);
 		
 		return $publisher;
 	}

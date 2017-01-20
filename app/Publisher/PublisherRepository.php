@@ -28,7 +28,6 @@ class PublisherRepository
 			->insert([
 				'name' 	  => $publisher->getName(),
 				'address' => $publisher->getAddress(),
-				'rate'    => $publisher->getRate(),
 		]);
 	}
 
