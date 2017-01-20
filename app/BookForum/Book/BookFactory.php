@@ -21,6 +21,7 @@ class BookFactory
         $book->price = $rawData['price'];
         $book->publisher = $rawData['publisher'];
         $book->author = $rawData['author'];
+        $book->genre = $rawData['genre'];
         if ($rawData['image']){
             $book->image = $rawData['image'];
         }
