@@ -25,7 +25,7 @@
 										<td>{{$value->address}}</td>
 										<td>
 											<a href="{{route('updatePublisher', ['id' => $value->id])}}" class="btn btn-primary btn-xs"><i class="glyphicon glyphicon-pencil"></i></a>
-											<a class="btn btn-danger btn-xs" data-toggle="modal" data-target="#myModal" ><i class="glyphicon glyphicon-trash"></i></a>
+											<a class="btn btn-danger btn-xs" data-publisher-id="{{$value->id}}" data-toggle="modal" data-target="#myModal" ><i class="glyphicon glyphicon-trash"></i></a>
 										</td>
 									</tr>
 								@endforeach
@@ -58,32 +58,29 @@
 						<button class="btn btn-default" data-dismiss="modal">Cancel</button>
 					</div>
 				</div>
-
 			</div>
 		</div>
-
 	</div>
-
-
 
 @endsection
 @section('js')
 	<script>
-        $(document).ready(function() {
-            $('[data-book-id]').click( function(){
-                var bookId = $(this).data('book-id');
-                $('.btn-delete').attr('data-delete-id', bookId);
+		$(document).ready(function () {
+			$('[data-publisher-id]').click(function () {
+				var publisherId = $(this).data('publisher-id');
+				$('.btn-delete').attr('data-delete-id', publisherId);
             });
-            $('.btn-delete').click( function(){
-                var deleteAjax = $.ajax({
-                    url: '/delete/' + $(this).data('delete-id'),
-                    method: 'GET'
-                });
-                deleteAjax.then(function(){
-                    alert ('Deleted!');
-                    window.location.reload();
-                });
 
+			$('.btn-delete').click(function () {
+				var deleteAjax = $.ajax({
+				    	url : '/delete/Publisher/' + $(this).data('delete-id'),
+				    	method: 'GET'
+				});
+
+				deleteAjax.then(function () {
+					alert('Successful');
+					window.location.reload();
+                })
             });
         });
 	</script>

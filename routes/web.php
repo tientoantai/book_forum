@@ -91,3 +91,5 @@ Route::get('/update/Publisher/{id}', 'PublisherController@updatePublisherForm')
 Route::post('update/Publisher/{id}', 'PublisherController@updatePublisher')
     ->middleware('publisher.provider');
 
+Route::get('delete/Publisher/{id}', 'PublisherController@deletePublisher')
+    ->name('deletePublisher');

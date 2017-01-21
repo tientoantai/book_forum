@@ -37,4 +37,9 @@ class PublisherController extends Controller
 
     }
 
+    public function deletePublisher($id)
+    {
+        Publisher::find($id)->delete();
+    }
+
 }
