@@ -13,7 +13,14 @@ class PublisherFactory
 {
     public function factory($dataPublisher)
     {
-        $publisher = new Publisher();
+        if ($dataPublisher['id'])
+        {
+            $publisher = Publisher::find($dataPublisher['id']);
+        }else
+        {
+            $publisher = new Publisher();
+        }
+
         $publisher->name = $dataPublisher['name'];
         $publisher->address = $dataPublisher['address'];
         return $publisher;

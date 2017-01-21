@@ -81,6 +81,13 @@ Route::get('/publisher', 'PublisherController@listPublisher')
 Route::get('/insert/Publisher', 'PublisherController@insertPublisherForm')
     ->name('insertPublisher')
 ;
-Route::post('insert/Publisher', 'PublisherController@insertPublisher')
+Route::post('/insert/Publisher', 'PublisherController@insertPublisher')
     ->middleware('publisher.provider')
 ;
+
+Route::get('/update/Publisher/{id}', 'PublisherController@updatePublisherForm')
+    ->name('updatePublisher');
+
+Route::post('update/Publisher/{id}', 'PublisherController@updatePublisher')
+    ->middleware('publisher.provider');
+

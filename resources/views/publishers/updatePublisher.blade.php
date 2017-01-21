@@ -1,6 +1,7 @@
 @extends('books.layout')
-@section('title', 'Edit Book')
+@section('title','Update Publisher')
 @section('content')
+    <!--=== Breadcrumbs v4 ===-->
     <div class="breadcrumbs-v4">
         <div class="container">
             <span class="page-name">Log In</span>
@@ -47,59 +48,30 @@
                     </div>
                 </div>
 
-                @if (count($errors) > 0)
-                    <div class="col-md-5 alert alert-danger">
-                        <ul>
-                            @foreach ($errors->all() as $error)
-                                <li>{{ $error }}</li>
-                            @endforeach
-                        </ul>
-                    </div>
-                @endif
-
+                @foreach($publisher as $value)
                 <div class="col-md-5">
-                    <form id="sky-form4" class="log-reg-block sky-form mystyle" method="post" action="{{route('updateBook',['id'=> $book->id])}}" enctype="multipart/form-data">
-                        <h2>Edit Books</h2>
+                    <form id="sky-form4" class="log-reg-block sky-form" method="post" action="{{route('updatePublisher', ['id' => $publisher->id])}}" enctype="multipart/form-data">
+                        <h2>Update Publisher</h2>
                         <div class="login-input reg-input">
 
                             <section>
                                 <label class="input">
-                                    <input type="text" name="title" placeholder="Title" class="form-control" value="{{$book->title}}">
+                                    <input type="text" name="name" placeholder="Name" class="form-control" value="{{$publisher->name}}">
                                 </label>
                             </section>
                             <section>
                                 <label class="input">
-                                    <input type="text" name="price" placeholder="Price" class="form-control" value="{{$book->price}}">
-                                </label>
-                            </section>
-                            <section>
-                                <label class="input">
-                                    <input type="text" name="author" placeholder="Author" id="password" class="form-control" value="{{$book->author}}">
-                                </label>
-                            </section>
-                            <section>
-                                <label class="input">
-                                    <input type="text" name="publisher" placeholder="Publisher" class="form-control" value="{{$book->publisher}}">
-                                </label>
-                            </section>
-                            <section>
-                                <label class="input">
-                                    <input type="text" name="genre" placeholder="Genre" class="form-control" value="{{$book->genre}}">
-                                </label>
-                            </section>
-                            <section>
-                                <label class="input">
-                                    <img class="img-responsive" src="{{asset($book->image)}}" alt="" style="width:30%">
-                                    <input type="file" name="image" class="btn-u btn-u-sea-shop btn-block margin-bottom-20">
+                                    <input type="text" name="address" placeholder="Address" class="form-control" value="{{$publisher->address}}">
                                 </label>
                             </section>
                         </div>
-                        <button class="btn-u btn-u-sea-shop btn-block margin-bottom-20" type="submit">Update</button>
+                        <button class="btn-u btn-u-sea-shop btn-block margin-bottom-20" type="submit">Add</button>
                     </form>
 
                     <div class="margin-bottom-20"></div>
                     <p class="text-center">Already you have an account? <a href="">Sign In</a></p>
                 </div>
+                    @endforeach
             </div><!--/end row-->
         </div><!--/end container-->
     </div>
@@ -123,4 +95,5 @@
             </div>
         </div><!--/end container-->
     </div>
+    <!--=== End Shop Suvbscribe ===-->
 @endsection

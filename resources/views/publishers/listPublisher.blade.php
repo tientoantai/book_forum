@@ -24,7 +24,7 @@
 										<td>{{$value->name}}</td>
 										<td>{{$value->address}}</td>
 										<td>
-											<a href="" class="btn btn-primary btn-xs"><i class="glyphicon glyphicon-pencil"></i></a>
+											<a href="{{route('updatePublisher', ['id' => $value->id])}}" class="btn btn-primary btn-xs"><i class="glyphicon glyphicon-pencil"></i></a>
 											<a class="btn btn-danger btn-xs" data-toggle="modal" data-target="#myModal" ><i class="glyphicon glyphicon-trash"></i></a>
 										</td>
 									</tr>

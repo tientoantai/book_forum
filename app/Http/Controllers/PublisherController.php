@@ -24,4 +24,17 @@ class PublisherController extends Controller
         return redirect('/publisher');
     }
 
+    public function updatePublisherForm($id)
+    {
+        $publisherFirst = Publisher::find($id);
+        return view('publishers.updatePublisher')->with('publisher', $publisherFirst);
+    }
+
+    public function updatePublisher(Publisher $publisher)
+    {
+        $publisher->save();
+        return redirect(route('publisher'));
+
+    }
+
 }
