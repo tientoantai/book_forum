@@ -58,5 +58,6 @@ class Kernel extends HttpKernel
         'create.condition' => \App\Http\Middleware\CreateCondition::class,
         'create.image' => \App\Http\Middleware\CreateImage::class,
         'book.provider' => \App\Http\Middleware\BookProvider::class,
+        'publisher.provider' => \App\Http\Middleware\PublisherProvider::class,
     ];
 }

@@ -78,4 +78,9 @@ Route::get('/about', function (){
 Route::get('/publisher', 'PublisherController@listPublisher')
     ->name('publisher')
     ;
-
+Route::get('/insert/Publisher', 'PublisherController@insertPublisherForm')
+    ->name('insertPublisher')
+;
+Route::post('insert/Publisher', 'PublisherController@insertPublisher')
+    ->middleware('publisher.provider')
+;

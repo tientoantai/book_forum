@@ -1,5 +1,5 @@
 @extends('books.layout')
-@section('title', 'List Books')
+@section('title', 'List Publisher')
 @section('content')
 
 	<div class="content-md margin-bottom-30">
@@ -8,7 +8,7 @@
 				<div>
 					<section>
 						<div class="table-responsive">
-								<a href="" class="btn btn-primary"><i class="glyphicon glyphicon-plus"></i></a>
+								<a href="{{route('insertPublisher')}}" class="btn btn-primary"><i class="glyphicon glyphicon-plus"></i></a>
 							<table class="table table-striped">
 								<thead>
 								<tr>
