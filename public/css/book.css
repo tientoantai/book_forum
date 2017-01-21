@@ -1,0 +1,24 @@
+.wrap-book-item{
+	height: 400px; 
+	margin-bottom: 15%;
+}
+
+.product-img .book-image{
+	width:100%;
+}
+
+.book-description{
+	width:100%; 
+}
+
+.book-img{
+	float: left;
+	width: 100%;
+	height: 100px;	
+	background-size: cover;
+	background-position: center;
+}
+
+.clear-both {
+	clear: both;
+}

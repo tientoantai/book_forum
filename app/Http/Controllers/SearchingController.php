@@ -22,7 +22,7 @@ class SearchingController extends Controller
         $condition  = $request->get('advanceCondition');
         $bookResult = $this->bookFinder->find($condition);
 
-        return view('book-filter')
+        return view('books.book-filter')
                 ->with(['books'=> $bookResult,
                         'request'=>$request
                     ])
@@ -35,7 +35,7 @@ class SearchingController extends Controller
         $condition  = $request->get('quickCondition');
         $bookResult = $this->bookFinder->find($condition);
 
-        return view('book-filter')
+        return view('books.book-filter')
                 ->with('books', $bookResult)
         ;
     }

@@ -4,12 +4,10 @@
     <!--=== Breadcrumbs v4 ===-->
     <div class="breadcrumbs-v4">
         <div class="container">
-            <span class="page-name">Log In</span>
-            <h1>Maecenas <span class="shop-green">enim</span> sapien</h1>
             <ul class="breadcrumb-v4-in">
                 <li><a href="{{route('home')}}">Home</a></li>
-                <li><a href="">Product</a></li>
-                <li class="active">Log In</li>
+                <li><a href="{{route('listBook')}}">Book Manager</a></li>
+                <li class="active">Insert Book</li>
             </ul>
         </div><!--/end container-->
     </div>
