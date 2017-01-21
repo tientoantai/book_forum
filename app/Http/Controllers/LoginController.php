@@ -3,11 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\BookForum\AuthenticatorService\LoginFailMessage;
-use App\BookForum\AuthenticatorService\LoginFailMessagge;
 use Illuminate\Http\Request;
-
 use App\BookForum\AuthenticatorService\Authenticator;
-use Illuminate\Support\Facades\Session;
 class LoginController extends Controller
 {
 
@@ -43,8 +40,8 @@ class LoginController extends Controller
         }
         else{
             request()->session()->put('credential', $credential);
-            //dd( request()->session());
             return response()->redirectTo('books');
+
         }
 
     }

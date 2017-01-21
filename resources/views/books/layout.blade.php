@@ -47,12 +47,22 @@
                 <div class="row">
                     <div class="col-sm-6">
                     </div>
+                    @if(Session::exists('credential'))
                     <div class="col-sm-6">
                         <ul class="list-inline right-topbar pull-right">
-                            <li><a href="{{route('login')}}">Login</a> | <a href="{{route('shop-ui-register')}}">Register</a></li>
+                            <li><a href="">{{Session::get('credential')['username']}}</a> | <a href="{{route('logout')}}">Logout</a></li>
                             <li><i class="search fa fa-search search-button"></i></li>
                         </ul>
                     </div>
+
+                    @else
+                        <div class="col-sm-6">
+                            <ul class="list-inline right-topbar pull-right">
+                                <li><a href="{{route('login')}}">Login</a> | <a href="{{route('shop-ui-register')}}">Register</a></li>
+                                <li><i class="search fa fa-search search-button"></i></li>
+                            </ul>
+                        </div>
+                    @endif
                 </div>
             </div><!--/container-->
         </div>
@@ -124,9 +134,7 @@
                         </div>
                     </div>
                 </div>
-                <!-- End Shopping Cart -->
-
-                <!-- Collect the nav links, forms, and other content for toggling -->
+                @if(session())
                 <div class="collapse navbar-collapse navbar-responsive-collapse">
                     <!-- Nav Menu -->
                     <ul class="nav navbar-nav">
@@ -198,9 +206,46 @@
                                 </li>
                             </ul><!--/end dropdown-menu-->
                         </li>
+                        @if(Session::exists('credential'))
+                        <li class="dropdown mega-menu-fullwidth">
+                            <a href="{{route('publisher')}}" >
+                                Publisher
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <div class="mega-menu-content">
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="col-md-3 col-sm-12 col-xs-12 md-margin-bottom-30">
+                                                    <h3 class="mega-menu-heading">Pellentes que nec diam lectus</h3>
+                                                    <p>Proin pulvinar libero quis auctor pharet ra. Aenean fermentum met
+                                                        us orci, sedf eugiat augue pulvina r vitae. Nulla dolor nisl,
+                                                        molestie nec aliquam vitae, gravida sodals dolor...</p>
+                                                    <button type="button" class="btn-u btn-u-dark">Read More</button>
+                                                </div>
+                                                <div class="col-md-3 col-sm-4 col-xs-4 md-margin-bottom-30">
+                                                    <a href="#"><img class="product-offers img-responsive"
+                                                                     src="{{asset('img/blog/01.jpg')}}" alt=""></a>
+                                                </div>
+                                                <div class="col-md-3 col-sm-4 col-xs-4 sm-margin-bottom-30">
+                                                    <a href="#"><img class="product-offers img-responsive"
+                                                                     src="{{asset('img/blog/02.jpg')}}" alt=""></a>
+                                                </div>
+                                                <div class="col-md-3 col-sm-4 col-xs-4">
+                                                    <a href="#"><img class="product-offers img-responsive"
+                                                                     src="{{asset('img/blog/03.jpg')}}" alt=""></a>
+                                                </div>
+                                            </div><!--/end row-->
+                                        </div><!--/end container-->
+                                    </div><!--/end mega menu content-->
+                                </li>
+                            </ul><!--/end dropdown-menu-->
+                        </li>
+                            @endif
                     </ul>
                     <!-- End Nav Menu -->
                 </div>
+                    @endif
             </div>
         </div>
         <!-- End Navbar -->

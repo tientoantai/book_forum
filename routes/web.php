@@ -115,3 +115,8 @@ Route::get('/about', function (){
 })
     ->name('about')
 ;
+
+Route::get('/publisher', 'PublisherController@list')
+    ->name('publisher')
+    ;
+
