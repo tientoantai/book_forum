@@ -8,9 +8,7 @@
 				<div>
 					<section>
 						<div class="table-responsive">
-							<div class="btn btn-success">
-								<a href=""><i class="glyphicon glyphicon-plus"></i></a>
-							</div>
+								<a href="" class="btn btn-primary"><i class="glyphicon glyphicon-plus"></i></a>
 							<table class="table table-striped">
 								<thead>
 								<tr>
@@ -24,7 +22,7 @@
 									<tr>
 
 										<td>{{$value->name}}</td>
-										<td>{{$value->adress}}</td>
+										<td>{{$value->address}}</td>
 										<td>
 											<a href="" class="btn btn-primary btn-xs"><i class="glyphicon glyphicon-pencil"></i></a>
 											<a class="btn btn-danger btn-xs" data-toggle="modal" data-target="#myModal" ><i class="glyphicon glyphicon-trash"></i></a>

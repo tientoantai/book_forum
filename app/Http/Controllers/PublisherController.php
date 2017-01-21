@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 
 class PublisherController extends Controller
 {
-    public function list()
+    public function listPublisher()
     {
         $publisher = Publisher::all();
         return view('publishers.listPublisher')

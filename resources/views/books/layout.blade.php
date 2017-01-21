@@ -123,11 +123,11 @@
                             </div>
                             <div class="row">
                                 <div class="col-xs-6">
-                                    <a href="{{route('shop-ui-inner')}}"
+                                    <a href=""
                                        class="btn-u btn-brd btn-brd-hover btn-u-sea-shop btn-block">View Cart</a>
                                 </div>
                                 <div class="col-xs-6">
-                                    <a href="{{route('shop-ui-add-to-cart')}}"
+                                    <a href=""
                                        class="btn-u btn-u-sea-shop btn-block">Checkout</a>
                                 </div>
                             </div>

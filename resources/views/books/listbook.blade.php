@@ -8,9 +8,7 @@
                 <div>
                     <section>
                         <div class="table-responsive">
-                            <div class="btn btn-success">
-                                <a href="{{route('insertBook')}}"><i class="glyphicon glyphicon-plus"></i></a>
-                            </div>
+                                <a href="{{route('insertBook')}}" class="btn btn-primary"><i class="glyphicon glyphicon-plus"></i></a>
                             <table class="table table-striped">
                                 <thead>
                                 <tr>
