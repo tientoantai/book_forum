@@ -67,9 +67,6 @@
                         </div>
                         <button class="btn-u btn-u-sea-shop btn-block margin-bottom-20" type="submit">Add</button>
                     </form>
-
-                    <div class="margin-bottom-20"></div>
-                    <p class="text-center">Already you have an account? <a href="">Sign In</a></p>
                 </div>
             </div><!--/end row-->
         </div><!--/end container-->

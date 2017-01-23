@@ -25,6 +25,17 @@
 
     <!-- CSS Customization -->
     <link rel="stylesheet" href="{{asset('css/custom.css')}}">
+    <style>
+        section{
+            margin-bottom: 20px;
+        }
+
+        .btn-css{
+            background: darkgrey;
+        }
+
+    </style>
+
 
     @yield('css')
 </head>

@@ -44,6 +44,7 @@ Route::get('/detail/{id}', 'BookController@detail')
 ;
 
 Route::get('/insert', 'BookController@insertform')
+
     ->name('insertBook');
 
 Route::post('/insert', 'BookController@insert')

@@ -56,35 +56,38 @@
                     </div>
                 @endif
 
-                <div class="col-md-5">
+                <div class="col-md-5 btn-css">
                     <form id="sky-form4" class="log-reg-block sky-form" method="post" action="{{route('insertBook')}}" enctype="multipart/form-data">
                         <h2>Insert Books</h2>
                         <div class="login-input reg-input">
 
                             <section>
-                                <label class="input">
+
                                     <input type="text" name="title" placeholder="Title" class="form-control">
-                                </label>
+
                             </section>
                             <section>
-                                <label class="input">
+
                                     <input type="text" name="genre" placeholder="Genre" class="form-control">
-                                </label>
+
                             </section>
                             <section>
-                                <label class="input">
+
                                     <input type="text" name="author" placeholder="Author" id="password" class="form-control">
-                                </label>
+
                             </section>
                             <section>
-                                <label class="input">
-                                    <input type="text" name="publisher" placeholder="Publisher" class="form-control">
-                                </label>
+                                    <select class ='form-control'>
+                                        <option>Publisher</option>
+                                        @foreach($publishers as $values)
+                                        <option>{{$values->name}}</option>
+                                        @endforeach
+                                    </select>
                             </section>
                             <section>
-                                <label class="input">
+
                                     <input type="text" name="price" placeholder="Price" class="form-control">
-                                </label>
+
                             </section>
                             <section>
 
@@ -95,9 +98,6 @@
                         </div>
                         <button class="btn-u btn-u-sea-shop btn-block margin-bottom-20" type="submit">Add</button>
                     </form>
-
-                    <div class="margin-bottom-20"></div>
-                    <p class="text-center">Already you have an account? <a href="">Sign In</a></p>
                 </div>
             </div><!--/end row-->
         </div><!--/end container-->

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\BookForum\PublisherService\Publisher;
 use Illuminate\Http\Request;
 use App\BookForum\Book\Book;
 use Illuminate\Support\Facades\Session;
@@ -28,7 +29,10 @@ class BookController extends Controller
     }
     public function insertform()
     {
-        return view('books.insertBook');
+        $publishers = Publisher::all();
+        return view('books.insertBook')
+            ->with('publishers', $publishers);
+
     }
     public function insert(Book $book)
     {
@@ -38,7 +42,11 @@ class BookController extends Controller
     public  function updateform($id)
     {
         $book = Book::where('id', '=', $id)->first();
-        return view('books.updateBook')->with('book', $book);
+        $publishers = Publisher::all();
+        return view('books.updateBook')
+            ->with('book', $book)
+            ->with('publishers', $publishers);
+
     }
 
     /**

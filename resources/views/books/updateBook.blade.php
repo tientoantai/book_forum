@@ -55,48 +55,37 @@
                     </div>
                 @endif
 
-                <div class="col-md-5">
+                <div class="col-md-5 btn-css">
                     <form id="sky-form4" class="log-reg-block sky-form mystyle" method="post" action="{{route('updateBook',['id'=> $book->id])}}" enctype="multipart/form-data">
                         <h2>Edit Books</h2>
                         <div class="login-input reg-input">
-
                             <section>
-                                <label class="input">
                                     <input type="text" name="title" placeholder="Title" class="form-control" value="{{$book->title}}">
-                                </label>
                             </section>
                             <section>
-                                <label class="input">
                                     <input type="text" name="price" placeholder="Price" class="form-control" value="{{$book->price}}">
-                                </label>
                             </section>
                             <section>
-                                <label class="input">
                                     <input type="text" name="author" placeholder="Author" id="password" class="form-control" value="{{$book->author}}">
-                                </label>
                             </section>
                             <section>
-                                <label class="input">
-                                    <input type="text" name="publisher" placeholder="Publisher" class="form-control" value="{{$book->publisher}}">
-                                </label>
+                                <select class="form-control">
+                                    <option >{{$book->publisher}}</option>
+                                    @foreach($publishers as $values)
+                                    <option>{{$values->name}}</option>
+                                        @endforeach
+                                </select>
                             </section>
                             <section>
-                                <label class="input">
                                     <input type="text" name="genre" placeholder="Genre" class="form-control" value="{{$book->genre}}">
-                                </label>
                             </section>
                             <section>
-                                <label class="input">
                                     <img class="img-responsive" src="{{asset($book->image)}}" alt="" style="width:30%">
                                     <input type="file" name="image" class="btn-u btn-u-sea-shop btn-block margin-bottom-20">
-                                </label>
                             </section>
                         </div>
                         <button class="btn-u btn-u-sea-shop btn-block margin-bottom-20" type="submit">Update</button>
                     </form>
-
-                    <div class="margin-bottom-20"></div>
-                    <p class="text-center">Already you have an account? <a href="">Sign In</a></p>
                 </div>
             </div><!--/end row-->
         </div><!--/end container-->
