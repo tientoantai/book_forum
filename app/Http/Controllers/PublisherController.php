@@ -2,44 +2,88 @@
 
 namespace App\Http\Controllers;
 
-use App\BookForum\PublisherService\Publisher;
+use Illuminate\Http\Request;
+use App\Publisher\PublisherRepository;
 
 class PublisherController extends Controller
 {
-    public function listPublisher()
+    protected $publisherRepository;
+
+    public function __construct(PublisherRepository $publisherRepository)
     {
-        $publisher = Publisher::all();
-        return view('publishers.listPublisher')
-            ->with('publisher', $publisher);
+        $this->publisherRepository = $publisherRepository;
     }
 
-    public function insertPublisherForm()
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function admin()
     {
-        return view('publishers.insertPublisher');
+        return view('publishers.publisher-list')
+                ->with('publishers', $this->publisherRepository->all())
+            ;
     }
 
-    public  function insertPublisher(Publisher $publisher)
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function create()
     {
-        $publisher->save();
-        return redirect('/publisher');
+        return view('publishers.create');
     }
 
-    public function updatePublisherForm($id)
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function store(Request $request)
     {
-        $publisherFirst = Publisher::find($id);
-        return view('publishers.updatePublisher')->with('publisher', $publisherFirst);
+        $this->publisherRepository->add($request->get('publisher'));
+
+        return redirect()->route('publishers.admin');
     }
 
-    public function updatePublisher(Publisher $publisher)
+    public function edit($id)
     {
-        $publisher->save();
-        return redirect(route('publisher'));
+        $publisher = $this->publisherRepository->findById($id);
+
+        return view('publishers.edit')
+                ->with('publisher', $publisher)
+        ;
+    }
+
+    public function update(Request $request)
+    {
+        $this->publisherRepository->update($request->all());
+
+        return redirect()->route('publishers.show',['id'=>$request->id]);
+    }
+
+    public function delete($id)
+    {
+        $publisher = $this->publisherRepository->findById($id);
+        $this->publisherRepository->delete($publisher);
+
+        return redirect()->route('publishers.admin');
 
     }
 
-    public function deletePublisher($id)
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function show($id)
     {
-        Publisher::find($id)->delete();
+        return view('publishers.show')
+            ->with('publisher', $this->publisherRepository->findById($id))
+        ;
     }
-
 }

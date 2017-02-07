@@ -4,7 +4,7 @@
     <div class="breadcrumbs-v4">
         <div class="container">
             <ul class="breadcrumb-v4-in">
-                <li><a href="{{route('home')}}">Home</a></li>
+                <li><a href="{{route('books.index')}}">Home</a></li>
                 <li class="active">Log In</li>
             </ul>
         </div><!--/end container-->
@@ -42,7 +42,7 @@
                 </div>
 
                 <div class="col-md-5">
-                    <form id="sky-form1" class="log-reg-block sky-form" method="post" >
+                    <form id="sky-form1" class="log-reg-block sky-form" method="post" action="{{route('login.authenticate')}}">
                         <h2>Log in to your account</h2>
                         @if (isset($message))
                             <div class="alert alert-danger" role="alert">
@@ -104,4 +104,4 @@
             </div>
         </div><!--/end container-->
     </div>
-            @endsection
+@endsection

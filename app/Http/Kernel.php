@@ -54,10 +54,13 @@ class Kernel extends HttpKernel
         'guest' => \App\Http\Middleware\RedirectIfAuthenticated::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         'user' => \App\Http\Middleware\CheckUser::class,
+        'validator.book'  => \App\Http\Middleware\BookValidator::class,
         'validator.image' => \App\Http\Middleware\ImageValidator::class,
+        'validator.publisher' => \App\Http\Middleware\PublisherValidator::class,
         'create.condition' => \App\Http\Middleware\CreateCondition::class,
         'create.image' => \App\Http\Middleware\CreateImage::class,
+        'create.publisher' => \App\Http\Middleware\CreatePublisher::class,
+        'create.book' => \App\Http\Middleware\CreateBook::class,
         'book.provider' => \App\Http\Middleware\BookProvider::class,
-        'publisher.provider' => \App\Http\Middleware\PublisherProvider::class,
     ];
 }

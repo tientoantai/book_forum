@@ -65,7 +65,7 @@ class AdvanceSearchCondition implements BookFindingCondition
 
 		$searchQuery->where(function ($query) {
 			foreach($this->getPublisher() as $publisher){
-				$query->orwhere('publisher',$publisher);
+				$query->orwhere('publisherID', $publisher);
 			}
 		});
 

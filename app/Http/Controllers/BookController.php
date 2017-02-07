@@ -2,60 +2,90 @@
 
 namespace App\Http\Controllers;
 
-use App\BookForum\PublisherService\Publisher;
 use Illuminate\Http\Request;
-use App\BookForum\Book\Book;
-use Illuminate\Support\Facades\Session;
+use App\BookForum\Book\BookRepository;
+use App\Publisher\PublisherRepository;
 
 class BookController extends Controller
 {
+	protected $publisherRepository;
+	protected $bookRepository;
 
-    public function listBook(){
-        return view('books.listbook')->with('booklist', Book::all());
-    }
-    public function listbookhome()
-    {
-        return view('books.home')->with('booklist', Book::all());
-    }
-    public function delete($id)
-    {
-        Book::where('id', '=', $id)->delete();
-//        return redirect('/books');
-    }
-    public function detail($id)
-    {
-        $book = Book::where('id', '=', $id)->first();
-        return view('books.detailBook')->with('book', $book);
-    }
-    public function insertform()
-    {
-        $publishers = Publisher::all();
-        return view('books.insertBook')
-            ->with('publishers', $publishers);
+	public function __construct(BookRepository $bookRepository, PublisherRepository $publisherRepository)
+	{
+		$this->bookRepository      = $bookRepository;
+		$this->publisherRepository = $publisherRepository;
+	}
 
-    }
-    public function insert(Book $book)
-    {
-        $book->save();
-        return redirect('/books');
-    }
-    public  function updateform($id)
-    {
-        $book = Book::where('id', '=', $id)->first();
-        $publishers = Publisher::all();
-        return view('books.updateBook')
-            ->with('book', $book)
-            ->with('publishers', $publishers);
+	public function index()
+	{
+		return view('books.index')
+				->with('books', $this->bookRepository->all())
+		;
+	}
 
-    }
+	public function admin()
+	{
+		return view('books.list')
+				->with('books', $this->bookRepository->all())
+		;
+	}
 
-    /**
-     * @param Book $book
-     * @return \Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
-     */
-    public function update(Book $book)
-    {
-        $book->save();
-        return redirect('/detail/'.$book->id);
-    }
+	public function create()
+	{
+		return view('books.insert')
+				->with('books', $this->bookRepository->all())
+				->with('publishers', $this->publisherRepository->all())
+		;
+	}
+
+	public function store(Request $request)
+	{
+		$this->bookRepository->add($request->get('book'));
+
+		return redirect()->route('books.admin');
+	}
+
+	public function edit($id)
+	{
+		$book = $this->bookRepository->findById($id);
+
+		return view('books.edit')
+				->with('book', $book)
+				->with('publishers', $this->publisherRepository->all())
+		;
+	}
+
+	public function update(Request $request)
+	{
+		$this->bookRepository->update($request->all());
+
+		return redirect()->route('books.show',['id'=>$request->id]);
+	}
+
+	public function show($id)
+	{
+		return view('books.show')
+				->with('book', $this->bookRepository->findById($id))
+		;
+	}
+
+	public function delete($id)
+	{
+		$book = $this->bookRepository->findById($id);
+		$this->bookRepository->delete($book);
+
+		return redirect()->route('books.admin');
+	}
+
+	public function search(Request $request)
+	{
+		return view('books.filter')
+	        ->with([
+	            'books'      => $this->bookRepository->all(),
+	            'publishers' => $this->publisherRepository->all(),
+	            'request'    => $request,
+   			])
+	    ;
+	}
 }

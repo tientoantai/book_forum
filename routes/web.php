@@ -1,37 +1,15 @@
 <?php
 
-use App\BookForum\Book\Book;
-
-Route::get('/book-filter', function () {
-
-    return view('books.book-filter')
-        ->with([
-            'books'      => Book::all(),
-            'request'    => request(),
-    ]);
-})
-        ->name('book-filter')
-
-;
-
-Route::get('/upload', 'UploadingController@index')
-        ->name('uploads.index')
-        
-;
-Route::post('/upload/store', 'UploadingController@store')
-        ->name('uploads.store')
-        ->middleware('validator.image')
-;
-
-Route::get('/quickSearch', 'SearchingController@quickSearch')
-        ->name('searchs.quickSearch')
-        ->middleware('create.condition')
-;
-
-Route::get('/advanceSearch', 'SearchingController@advanceSearch')
-        ->name('searchs.advanceSearch')
-        ->middleware('create.condition')
-;
+/*
+|--------------------------------------------------------------------------
+| Web Routes
+|--------------------------------------------------------------------------
+|
+| This file is where you may define all of the routes that are handled
+| by your application. Just tell Laravel the URIs it should respond
+| to using a Closure or controller method. Build something great!
+|
+*/
 
 Route::get('/books', 'BookController@listBook')
     ->name('listBook');
@@ -44,7 +22,6 @@ Route::get('/detail/{id}', 'BookController@detail')
 ;
 
 Route::get('/insert', 'BookController@insertform')
-
     ->name('insertBook');
 
 Route::post('/insert', 'BookController@insert')
@@ -58,14 +35,14 @@ Route::post('/update/{id}', 'BookController@update')
         ->middleware('create.image', 'book.provider')
 ;
 
-Route::get('/login','LoginController@formlogin')
-        ->name('login')
-;
-Route::post('/login','LoginController@login')
-    ->middleware('user')
-;
-Route::get('/logout','LogoutController@logout')
-    ->name('logout');
+// Route::get('/login','LoginController@formlogin')
+//         ->name('login')
+// ;
+// Route::post('/login','LoginController@login')
+//     ->middleware('user')
+// ;
+// Route::get('/logout','LogoutController@logout')
+//     ->name('logout');
 
 Route::get('/home','BookController@listbookhome')
 ->name('home');
@@ -76,21 +53,118 @@ Route::get('/about', function (){
     ->name('about')
 ;
 
-Route::get('/publisher', 'PublisherController@listPublisher')
-    ->name('publisher')
-    ;
-Route::get('/insert/Publisher', 'PublisherController@insertPublisherForm')
-    ->name('insertPublisher')
-;
-Route::post('/insert/Publisher', 'PublisherController@insertPublisher')
-    ->middleware('publisher.provider')
+/*
+* Login & Register
+*/
+Route::get('/login', 'LoginController@index')
+    ->name('login.index')
 ;
 
-Route::get('/update/Publisher/{id}', 'PublisherController@updatePublisherForm')
-    ->name('updatePublisher');
+Route::post('/login', 'LoginController@authenticate')
+    ->name('login.authenticate')
+;
+/*
+* Publisher Routes
+*/
 
-Route::post('update/Publisher/{id}', 'PublisherController@updatePublisher')
-    ->middleware('publisher.provider');
+Route::get('/publisher/admin', 'PublisherController@admin')
+    ->name('publishers.admin')
+;
 
-Route::get('delete/Publisher/{id}', 'PublisherController@deletePublisher')
-    ->name('deletePublisher');
+Route::get('/publisher/create', 'PublisherController@create')
+    ->name('publishers.create')
+;
+
+Route::post('/publisher/store', 'PublisherController@store')
+    ->name('publishers.store')
+    ->middleware('validator.publisher', 'create.publisher')
+;
+
+Route::get('/publisher/edit/{id}', 'PublisherController@edit')
+    ->name('publishers.edit')
+;
+
+Route::post('/publisher/update', 'PublisherController@update')
+    ->name('publishers.update')
+    ->middleware('create.publisher')
+    
+;
+
+Route::get('/publisher/show/{id}', 'PublisherController@show')
+    ->name('publishers.show')
+;
+
+Route::get('/publisher/delete/{id}', 'PublisherController@delete')
+    ->name('publishers.delete')
+;
+
+/*
+* Book Routes
+*/
+
+Route::get('/book/admin', 'BookController@admin')
+    ->name('books.admin')
+;
+
+Route::get('/book/create', 'BookController@create')
+    ->name('books.create')
+;
+
+Route::post('/book/store', 'BookController@store')
+    ->name('books.store')
+    ->middleware('create.book', 'validator.book')
+;
+
+Route::get('/book/edit/{id}', 'BookController@edit')
+    ->name('books.edit')
+;
+
+Route::post('/book/update', 'BookController@update')
+    ->name('books.update')
+;
+
+Route::get('/book/show/{id}', 'BookController@show')
+    ->name('books.show')
+;
+
+Route::get('/book/delete/{id}', 'BookController@delete')
+    ->name('books.delete')
+;
+
+Route::get('/book/index', 'BookController@index')
+    ->name('books.index')
+;
+
+Route::get('/book/filter', 'BookController@search')
+        ->name('books.filter')
+;
+
+/*
+* Searching routes
+*/
+Route::get('/quickSearch', 'SearchingController@quickSearch')
+        ->name('searchs.quickSearch')
+        ->middleware('create.condition')
+;
+
+Route::get('/advanceSearch', 'SearchingController@advanceSearch')
+        ->name('searchs.advanceSearch')
+        ->middleware('create.condition')
+;
+
+/*
+* Uploading routes
+*/
+Route::get('/upload', 'UploadingController@index')
+        ->name('uploads.index')
+        
+;
+Route::post('/upload/store', 'UploadingController@store')
+        ->name('uploads.store')
+        ->middleware('validator.image', 'create.image')
+;
+
+
+
+
+
