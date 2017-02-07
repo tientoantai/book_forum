@@ -15,11 +15,6 @@ class QuickSearchCondition implements BookFindingCondition
 		$this->keyword = trim($keyword);
 	}
 
-	// public function getSearchableType($searchType)
- //    {
- //        return $searchType;
- //    }
-
 	public function getQuery()
 	{
 		

@@ -3,7 +3,7 @@ namespace App\Publisher;
 
 class PublisherFactory
 {
-	public function factory($publisherData)
+	public function factoryFromArray($publisherData)
 	{
 		$publisher = new Publisher();
 
@@ -11,5 +11,17 @@ class PublisherFactory
 		$publisher->setAddress($publisherData['address']);
 		
 		return $publisher;
+	}
+
+	public function factoryFromCollection($publisherData)
+	{
+		$publisher = new Publisher();
+
+		$publisher->setId($publisherData->id);
+		$publisher->setName($publisherData->name);
+		$publisher->setAddress($publisherData->address);
+
+		return $publisher;
+
 	}
 }

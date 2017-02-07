@@ -10,39 +10,6 @@
 | to using a Closure or controller method. Build something great!
 |
 */
-use App\BookForum\Book\Book;
-use Illuminate\Http\Request;
-
-Route::get('/book-filter', function () {
-
-    return view('books.book-filter')
-        ->with([
-            'books'      => Book::all(),
-            'request'    => request(),
-    ]);
-})
-        ->name('book-filter')
-
-;
-
-Route::get('/upload', 'UploadingController@index')
-        ->name('uploads.index')
-        
-;
-Route::post('/upload/store', 'UploadingController@store')
-        ->name('uploads.store')
-        ->middleware('validator.image')
-;
-
-Route::get('/quickSearch', 'SearchingController@quickSearch')
-        ->name('searchs.quickSearch')
-        ->middleware('create.condition')
-;
-
-Route::get('/advanceSearch', 'SearchingController@advanceSearch')
-        ->name('searchs.advanceSearch')
-        ->middleware('create.condition')
-;
 
 Route::get('/books', 'BookController@listBook')
     ->name('listBook');
@@ -68,14 +35,14 @@ Route::post('/update/{id}', 'BookController@update')
         ->middleware('create.image', 'book.provider')
 ;
 
-Route::get('/login','LoginController@formlogin')
-        ->name('login')
-;
-Route::post('/login','LoginController@login')
-    ->middleware('user')
-;
-Route::get('/logout','LogoutController@logout')
-    ->name('logout');
+// Route::get('/login','LoginController@formlogin')
+//         ->name('login')
+// ;
+// Route::post('/login','LoginController@login')
+//     ->middleware('user')
+// ;
+// Route::get('/logout','LogoutController@logout')
+//     ->name('logout');
 
 Route::get('/home','BookController@listbookhome')
 ->name('home');
@@ -85,3 +52,119 @@ Route::get('/about', function (){
 })
     ->name('about')
 ;
+
+/*
+* Login & Register
+*/
+Route::get('/login', 'LoginController@index')
+    ->name('login.index')
+;
+
+Route::post('/login', 'LoginController@authenticate')
+    ->name('login.authenticate')
+;
+/*
+* Publisher Routes
+*/
+
+Route::get('/publisher/admin', 'PublisherController@admin')
+    ->name('publishers.admin')
+;
+
+Route::get('/publisher/create', 'PublisherController@create')
+    ->name('publishers.create')
+;
+
+Route::post('/publisher/store', 'PublisherController@store')
+    ->name('publishers.store')
+    ->middleware('validator.publisher', 'create.publisher')
+;
+
+Route::get('/publisher/edit/{id}', 'PublisherController@edit')
+    ->name('publishers.edit')
+;
+
+Route::post('/publisher/update', 'PublisherController@update')
+    ->name('publishers.update')
+    ->middleware('create.publisher')
+    
+;
+
+Route::get('/publisher/show/{id}', 'PublisherController@show')
+    ->name('publishers.show')
+;
+
+Route::get('/publisher/delete/{id}', 'PublisherController@delete')
+    ->name('publishers.delete')
+;
+
+/*
+* Book Routes
+*/
+
+Route::get('/book/admin', 'BookController@admin')
+    ->name('books.admin')
+;
+
+Route::get('/book/create', 'BookController@create')
+    ->name('books.create')
+;
+
+Route::post('/book/store', 'BookController@store')
+    ->name('books.store')
+    ->middleware('create.book', 'validator.book')
+;
+
+Route::get('/book/edit/{id}', 'BookController@edit')
+    ->name('books.edit')
+;
+
+Route::post('/book/update', 'BookController@update')
+    ->name('books.update')
+;
+
+Route::get('/book/show/{id}', 'BookController@show')
+    ->name('books.show')
+;
+
+Route::get('/book/delete/{id}', 'BookController@delete')
+    ->name('books.delete')
+;
+
+Route::get('/book/index', 'BookController@index')
+    ->name('books.index')
+;
+
+Route::get('/book/filter', 'BookController@search')
+        ->name('books.filter')
+;
+
+/*
+* Searching routes
+*/
+Route::get('/quickSearch', 'SearchingController@quickSearch')
+        ->name('searchs.quickSearch')
+        ->middleware('create.condition')
+;
+
+Route::get('/advanceSearch', 'SearchingController@advanceSearch')
+        ->name('searchs.advanceSearch')
+        ->middleware('create.condition')
+;
+
+/*
+* Uploading routes
+*/
+Route::get('/upload', 'UploadingController@index')
+        ->name('uploads.index')
+        
+;
+Route::post('/upload/store', 'UploadingController@store')
+        ->name('uploads.store')
+        ->middleware('validator.image', 'create.image')
+;
+
+
+
+
+

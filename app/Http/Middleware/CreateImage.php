@@ -23,11 +23,10 @@ class CreateImage
      */
     public function handle($request, Closure $next)
     {
-        $uploadingProvider = new UploadingProvider();
-        $image             = $uploadingProvider->providerFile($request);
+        $image = $this->uploadingProvider->providerFile($request);
 
         $request->attributes->add([
-            'image'=>$image,
+            'image'=>asset($image),
         ]);
 
         return $next($request);

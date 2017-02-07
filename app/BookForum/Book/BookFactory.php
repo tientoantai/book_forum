@@ -1,32 +1,47 @@
 <?php
 namespace App\BookForum\Book;
 
-use App\BookForum\Book\Book;
+use App\Publisher\PublisherRepository;
 
 class BookFactory
 {
-    /**
-     * @param array $rawData
-     * @return Book
-     */
-    public function factory($rawData)
-    {
-        if ($rawData['id']){
-            $book = Book::find($rawData['id']);
-        }else{
-            $book = new Book();
-        }
-        //dd($rawData);
-        $book->title = $rawData['title'];
-        $book->price = $rawData['price'];
-        $book->publisher = $rawData['publisher'];
-        $book->author = $rawData['author'];
-        $book->genre = $rawData['genre'];
-        if ($rawData['image']){
-            $book->image = $rawData['image'];
-        }
+	protected $publisherRepository;
 
-        //dd($book);
-        return $book;
-    }
+	public function __construct(PublisherRepository $publisherRepository)
+	{
+		$this->publisherRepository = $publisherRepository;
+	}
+
+	public function factoryFromArray($bookArray)
+	{
+		$book = new Book();
+
+		$book->setTitle($bookArray['title']);
+		$book->setPrice($bookArray['price']);
+		$book->setAuthor($bookArray['author']);
+		$book->setGenre($bookArray['genre']);
+		$book->setImage($bookArray['image']);
+		$book->setPublisherID($bookArray['publisher']);
+		$book->setPublisherName($this->publisherRepository->findByID($bookArray['publisher'])->getName());
+		
+		return $book;
+	}
+
+	public function factoryFromCollection($bookCollection)
+	{
+		
+		$book = new Book();
+
+		$book->setId($bookCollection->id);
+		$book->setTitle($bookCollection->title);
+		$book->setPrice($bookCollection->price);
+		$book->setAuthor($bookCollection->author);
+		$book->setPublisherName($bookCollection->publisher);
+		$book->setGenre($bookCollection->genre);
+		$book->setImage($bookCollection->image);
+		$book->setPublisherID($bookCollection->publisherID);
+		
+		return $book;
+	}
+
 }

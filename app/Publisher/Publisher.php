@@ -2,12 +2,21 @@
 
 namespace App\Publisher;
 
-use Illuminate\Database\Eloquent\Model;
-
 class Publisher
 {
+    protected $id;
     protected $name;
     protected $address;
+
+    public function id()
+    {
+        return $this->id;
+    }
+
+    public function setId($id)
+    {
+        $this->id = $id;
+    }
 
     public function getName()
     {
@@ -21,7 +30,7 @@ class Publisher
 
     public function setName($name)
     {
-    	$this->Name = $name;
+    	$this->name = $name;
     }
 
     public function setAddress($address)

@@ -8,11 +8,6 @@ use App\UploadService\UniqueFilename;
 
 class UploadingProvider
 {
-	// public function index()
-	// {
-	// 	return view('insert');
-	// }
-
 	public function providerFile(Request $request)
 	{
 		$uniqueFilename = new UniqueFilename();

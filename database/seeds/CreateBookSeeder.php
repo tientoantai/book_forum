@@ -15,12 +15,13 @@ class CreateBookSeeder extends Seeder
 
     	\DB::table('books')->insert([
     		[
-	    		'title'     => 'Fifty Shades of Grey',
-	            'author'    => 'E L James',
-	            'price'     => '$5.99',
-	            'publisher' => 'Vintage Books',
-	            'genre'		=> 'Romance',
-	            'image'     => 'https://images-na.ssl-images-amazon.com/images/I/51sIRjO84oL.jpg',
+	    		'title'      => 'Fifty Shades of Grey',
+	            'author'     => 'E L James',
+	            'price'      => '$5.99',
+	            'publisher'  => 'Vintage Books',
+	            'genre'		 => 'Romance',
+	            'image'      => 'https://images-na.ssl-images-amazon.com/images/I/51sIRjO84oL.jpg',
+	            'publisherID'=> 1,
 	        ],
 	        [
 	        	'title'     => 'The Hunger Games',
@@ -29,6 +30,7 @@ class CreateBookSeeder extends Seeder
 	            'publisher' => 'Scholastic Press',
 	            'genre'		=> 'Romance',
 	            'image'     => 'https://images-na.ssl-images-amazon.com/images/I/41bOj-am1RL._SX331_BO1,204,203,200_.jpg',
+	            'publisherID'=> 2,
 	        ],
 	        [
 	        	'title'     => 'Catching Fire',
@@ -37,6 +39,7 @@ class CreateBookSeeder extends Seeder
 	            'publisher' => 'Scholastic Press',
 	            'genre'		=> 'Romance',
 	            'image'     => 'https://images-na.ssl-images-amazon.com/images/I/51sdYzYGOuL._SX334_BO1,204,203,200_.jpg',
+				'publisherID'=> 3,
 	        ],
 	        [
 	        	'title'     => 'The Last Lecture',
@@ -45,6 +48,7 @@ class CreateBookSeeder extends Seeder
 	            'publisher' => 'Hyperion',
 	            'genre'		=> 'Romance',
 	            'image'     => 'https://images-na.ssl-images-amazon.com/images/I/51hcvGYnnkL._SX353_BO1,204,203,200_.jpg',
+	            'publisherID'=> 4,
 	        ],
 	        [
 	        	'title'     => 'The Glass Castle',
@@ -53,6 +57,7 @@ class CreateBookSeeder extends Seeder
 	            'publisher' => 'Scribner',
 	            'genre'		=> 'Romance',
 	            'image'     => 'https://images-na.ssl-images-amazon.com/images/I/41qFdmnyvxL._SX314_BO1,204,203,200_.jpg',
+	            'publisherID'=> 5,
 	        ],
 	        [
 	        	'title'     => 'The Fault in Our Stars',
@@ -61,6 +66,7 @@ class CreateBookSeeder extends Seeder
 	            'publisher' => 'Katherine Tegen Books',
 	            'genre'		=> 'Romance',
 	            'image'     => 'https://images-na.ssl-images-amazon.com/images/I/51dGX%2BodxcL._SX329_BO1,204,203,200_.jpg',
+	            'publisherID'=> 6,
 	        ],
 	        [
 	        	'title'     => 'Wonder',
@@ -69,6 +75,7 @@ class CreateBookSeeder extends Seeder
 	            'publisher' => 'Knopf Books for Young Readers',
 	            'genre'		=> 'Romance',
 	            'image'     => 'https://images-na.ssl-images-amazon.com/images/I/41NzPGErMYL._SX328_BO1,204,203,200_.jpg',
+	            'publisherID'=> 7,
 	        ],
     	]);
     }
