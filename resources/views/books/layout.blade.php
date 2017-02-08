@@ -50,7 +50,7 @@
                     </div>
                     <div class="col-sm-6">
                         <ul class="list-inline right-topbar pull-right">
-                            <li><a href="{{route('login.index')}}">Login</a> | <a href="">Register</a></li>
+                            <li><a href="{{route('logout')}}">Logout</a> | <a href="">Register</a></li>
                             <li><i class="search fa fa-search search-button"></i></li>
                         </ul>
                     </div>

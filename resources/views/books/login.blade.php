@@ -44,25 +44,16 @@
                 <div class="col-md-5">
                     <form id="sky-form1" class="log-reg-block sky-form" method="post" action="{{route('login.authenticate')}}">
                         <h2>Log in to your account</h2>
-                        @if (isset($message))
+                        @if (isset($messages))
                             <div class="alert alert-danger" role="alert">
-                                {{$message}}
+                                {{$messages}}
                             </div>
                         @endif
-                        @if(isset($errorMessages))
-                            @foreach($errorMessages as $errors)
-                                @foreach($errors as $error)
-                                    <div class="alert alert-danger" role="alert">
-                                    {{$error}}
-                                    </div>
-                                @endforeach
-                            @endforeach
-                        @endif
-                            <section>
+                        <section>
                             <label class="input login-input">
                                 <div class="input-group">
                                     <span class="input-group-addon"><i class="fa fa-user"></i></span>
-                                    <input type="text" placeholder="User Name" name="username" class="form-control" value="@if(isset($errorName)){{$errorName}}@endif">
+                                    <input type="text" placeholder="User Name" name="username" class="form-control" value="@if(isset($username)){{$username}}@endif">
                                 </div>
                             </label>
                         </section>
@@ -70,16 +61,12 @@
                             <label class="input login-input no-border-top">
                                 <div class="input-group">
                                     <span class="input-group-addon"><i class="fa fa-lock"></i></span>
-                                    <input type="password" placeholder="Password" name="password" class="form-control" value="@if(isset($errorPassword)){{$errorPassword}}@endif">
+                                    <input type="password" placeholder="Password" name="password" class="form-control" value="">
                                 </div>
                             </label>
                         </section>
                         <button class="btn-u btn-u-sea-shop btn-block margin-bottom-20" type="submit">Login</button>
-
-
                     </form>
-
-
                 </div>
             </div><!--/end row-->
         </div><!--/end container-->

@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use Illuminate\Contracts\Hashing\Hasher;
 
 class CredentialSeeder extends Seeder
 {
@@ -16,11 +17,11 @@ class CredentialSeeder extends Seeder
     	\DB::table('credentials')->insert([
     		[
     			'username' => 'thaodoremon',
-    			'password' => 'thaodoremon',
+    			'password' => Hash::make('thaodoremon'),
     		],
     		[
     			'username' => 'lawliet',
-    			'password' => '1',
+    			'password' => Hash::make('1'),
     		],
     	]);
     }

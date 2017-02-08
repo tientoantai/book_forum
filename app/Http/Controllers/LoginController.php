@@ -3,7 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
+use App\BookForum\Auth\Authenticator;
+use App\BookForum\Auth\LoginFailMessage;
 
 class LoginController extends Controller
 {
@@ -21,12 +22,31 @@ class LoginController extends Controller
 
 	public function authenticate(Request $request)
 	{
-		$credentials = array(
-            'username' => $request->all()['username'],
-            'password' => $request->all()['password']
-        );
-        
+        $username   = $request->get('username');
+        $password   = $request->get('password');
+        $credential = $this->authenticator->authenticate($username, $password);
 
-        dd($credentials);
+        if($credential instanceof LoginFailMessage)
+        {
+        	return view('books.login')
+        			->with([
+        				'messages' => $credential->toString(),
+        				'username' => $username,
+        			])
+        	;
+        }
+        else
+        {
+        	request()->session()->put('credential', $credential);
+
+        	return response()->redirectToRoute('books.admin');
+        }
+	}
+
+	public function logout(Request $request)
+	{
+		$request->session()->forget('credential');
+            
+        return response()->redirectToRoute('login.index');
 	}
 }
