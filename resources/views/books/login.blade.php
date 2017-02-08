@@ -1,6 +1,37 @@
-@extends('books.layout')
-        @section('title', 'Log in')
-        @section('content')
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Login</title>
+    <link rel='stylesheet' type='text/css'
+          href='//fonts.googleapis.com/css?family=Open+Sans:400,300,600,800&amp;subset=cyrillic,latin'>
+    <link rel="stylesheet" href="{{asset('plugins/bootstrap/css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{asset('css/shop.style.css')}}">
+
+    <link rel="stylesheet" href="{{asset('css/headers/header-v5.css')}}">
+    <link rel="stylesheet" href="{{asset('css/footers/footer-v4.css')}}">
+    <link rel="stylesheet" href="{{asset('plugins/animate.css')}}">
+    <link rel="stylesheet" href="{{asset('plugins/line-icons/line-icons.css')}}">
+    <link rel="stylesheet" href="{{asset('plugins/font-awesome/css/font-awesome.min.css')}}">
+    <link rel="stylesheet" href="{{asset('plugins/scrollbar/css/jquery.mCustomScrollbar.css')}}">
+    <link rel="stylesheet" href="{{asset('plugins/owl-carousel/owl-carousel/owl.carousel.css')}}">
+    <link rel="stylesheet" href="{{asset('plugins/revolution-slider/rs-plugin/css/settings.css')}}">
+
+    <!-- CSS Theme -->
+    <link rel="stylesheet" href="{{asset('css/theme-colors/default.css')}}" id="style_color">
+
+    <!-- CSS Customization -->
+    <link rel="stylesheet" href="{{asset('css/custom.css')}}">
+
+    <link rel="stylesheet" href="{{asset('css/book.css')}}">
+</head>
+
+<body class="header-fixed">
+
+<div class="content">
     <div class="breadcrumbs-v4">
         <div class="container">
             <ul class="breadcrumb-v4-in">
@@ -91,4 +122,3 @@
             </div>
         </div><!--/end container-->
     </div>
-@endsection

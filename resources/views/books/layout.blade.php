@@ -50,8 +50,9 @@
                     </div>
                     <div class="col-sm-6">
                         <ul class="list-inline right-topbar pull-right">
-                            <li><a href="{{route('logout')}}">Logout</a> | <a href="">Register</a></li>
-                            <li><i class="search fa fa-search search-button"></i></li>
+                            @yield('login')
+                            @yield('search')
+                            
                         </ul>
                     </div>
                 </div>
@@ -79,20 +80,12 @@
                 <div class="collapse navbar-collapse navbar-responsive-collapse">
                     <!-- Nav Menu -->
                     <ul class="nav navbar-nav">
+                        @yield('about')
                         <li class="dropdown mega-menu-fullwidth">
-                            <a href="{{route('about')}}" >
-                                About Us
-                            </a>
+                            @yield('book')
                         </li>
                         <li class="dropdown mega-menu-fullwidth">
-                            <a href="{{route('books.filter')}}">
-                                Book
-                            </a>
-                        </li>
-                        <li class="dropdown mega-menu-fullwidth">
-                            <a href="{{route('books.filter')}}">
-                                Publisher
-                            </a>
+                            @yield('publisher')
                         </li>
                     </ul>
                     <!-- End Nav Menu -->

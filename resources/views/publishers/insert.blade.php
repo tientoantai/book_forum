@@ -1,15 +1,13 @@
-@extends('books.layout')
-@section('title','Update Publisher')
+@extends('publishers.layout')
+@section('title','Add Publisher')
 @section('content')
     <!--=== Breadcrumbs v4 ===-->
     <div class="breadcrumbs-v4">
         <div class="container">
-            <span class="page-name">Log In</span>
-            <h1>Maecenas <span class="shop-green">enim</span> sapien</h1>
             <ul class="breadcrumb-v4-in">
-                <li><a href="{{route('home')}}">Home</a></li>
-                <li><a href="">Product</a></li>
-                <li class="active">Log In</li>
+                <li><a href="{{route('books.index')}}">Home</a></li>
+                <li><a href="{{route('publishers.admin')}}">Publisher Manager</a></li>
+                <li class="active">Add Publisher</li>
             </ul>
         </div><!--/end container-->
     </div>
@@ -48,20 +46,28 @@
                     </div>
                 </div>
 
-                @foreach($publisher as $value)
-                <div class="col-md-5">
-                    <form id="sky-form4" class="log-reg-block sky-form" method="post" action="{{route('updatePublisher', ['id' => $publisher->id])}}" enctype="multipart/form-data">
-                        <h2>Update Publisher</h2>
-                        <div class="login-input reg-input">
+                @if (count($errors) > 0)
+                    <div class="col-md-5 alert alert-danger">
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
 
+                <div class="col-md-5">
+                    <form id="sky-form4" class="log-reg-block sky-form" method="post" action="{{route('publishers.store')}}" enctype="multipart/form-data">
+                        <h2>Add Publisher</h2>
+                        <div class="login-input reg-input">
                             <section>
                                 <label class="input">
-                                    <input type="text" name="name" placeholder="Name" class="form-control" value="{{$publisher->name}}">
+                                    <input type="text" name="name" placeholder="Name" class="form-control">
                                 </label>
                             </section>
                             <section>
                                 <label class="input">
-                                    <input type="text" name="address" placeholder="Address" class="form-control" value="{{$publisher->address}}">
+                                    <input type="text" name="address" placeholder="Address" class="form-control">
                                 </label>
                             </section>
                         </div>
@@ -71,7 +77,6 @@
                     <div class="margin-bottom-20"></div>
                     <p class="text-center">Already you have an account? <a href="">Sign In</a></p>
                 </div>
-                    @endforeach
             </div><!--/end row-->
         </div><!--/end container-->
     </div>
@@ -96,4 +101,4 @@
         </div><!--/end container-->
     </div>
     <!--=== End Shop Suvbscribe ===-->
-@endsection
+   @endsection

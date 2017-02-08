@@ -21,7 +21,7 @@ class PublisherController extends Controller
      */
     public function admin()
     {
-        return view('publishers.publisher-list')
+        return view('publishers.admin')
                 ->with('publishers', $this->publisherRepository->all())
             ;
     }
@@ -33,7 +33,7 @@ class PublisherController extends Controller
      */
     public function create()
     {
-        return view('publishers.create');
+        return view('publishers.insert');
     }
 
     /**

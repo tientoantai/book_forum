@@ -1,7 +1,19 @@
 @extends('books.layout')
 @section('title', 'List Books')
+@section('login')
+    <li><a href="{{route('logout')}}">Logout</a>
+    </li>
+@endsection
+@section('search')
+    <li><i class="search fa fa-search search-button"></i></li>
+@endsection
+@section('book')
+    <a href="{{route('books.admin')}}">Book</a>
+@endsection
+@section('publisher')
+    <a href="{{route('publishers.admin')}}">Publisher</a>
+@endsection
 @section('content')
-
     <div class="content-md margin-bottom-30">
         <div class="container">
             <form class="shopping-cart" action="#">

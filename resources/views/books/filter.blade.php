@@ -1,5 +1,11 @@
 @extends('books.layout')
 @section('title', 'Book Filter')
+@section('login')
+    <li><a href="{{route('login.index')}}">Login</a> | <a href="">Register</a></li>
+@endsection
+@section('search')
+    <li><i class="search fa fa-search search-button"></i></li>
+@endsection
 @section('content')
  		<!--=== Breadcrumbs v4 ===-->
  		<div class="breadcrumbs-v4">

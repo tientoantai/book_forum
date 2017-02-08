@@ -3,7 +3,7 @@
         @section('content')
         <div class="container">
             <ul class="breadcrumb-v5">
-                <li><a href="{{route('home')}}"><i class="fa fa-home"></i></a></li>
+                <li><a href="{{route('books.index')}}"><i class="fa fa-home"></i></a></li>
                 <li><a href="#">Products</a></li>
                 <li class="active">New</li>
             </ul>

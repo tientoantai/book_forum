@@ -1,5 +1,21 @@
 @extends('books.layout')
 @section('title', 'Home')
+@section('login')
+    <li><a href="{{route('login.index')}}">Login</a> | <a href="">Register</a></li>
+@endsection
+@section('search')
+    <li><i class="search fa fa-search search-button"></i></li>
+@endsection
+@section('about')
+    <li class="dropdown mega-menu-fullwidth">
+        <a href="{{route('about')}}" >
+            About Us
+        </a>
+    </li>
+@endsection
+@section('book')
+    <a href="{{route('books.filter')}}">Book</a>
+@endsection
 @section('content')
 
     <!--=== Product Content ===-->

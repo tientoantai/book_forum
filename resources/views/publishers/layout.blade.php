@@ -50,7 +50,7 @@
                     </div>
                     <div class="col-sm-6">
                         <ul class="list-inline right-topbar pull-right">
-                            <li><a href="{{route('login')}}">Login</a> | <a href="">Register</a></li>
+                            <li><a href="{{route('login.index')}}">Login</a> | <a href="">Register</a></li>
                             <li><i class="search fa fa-search search-button"></i></li>
                         </ul>
                     </div>
@@ -71,7 +71,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="{{route('home')}}">
+                    <a class="navbar-brand" href="{{route('books.admin')}}">
                         <img id="logo-header" src="{{asset('img/logo.png')}}" alt="Logo">
                     </a>
                 </div>
@@ -85,12 +85,12 @@
                             </a>
                         </li>
                         <li class="dropdown mega-menu-fullwidth">
-                            <a href="{{route('book-filter')}}">
+                            <a href="{{route('books.filter')}}">
                                 Book
                             </a>
                         </li>
                         <li class="dropdown mega-menu-fullwidth">
-                            <a href="{{route('book-filter')}}">
+                            <a href="{{route('books.filter')}}">
                                 Publisher
                             </a>
                         </li>
@@ -111,7 +111,7 @@
                 <div class="row">
                     <!-- About -->
                     <div class="col-md-4 md-margin-bottom-40">
-                        <a href="{{route('home')}}"><img class="footer-logo" src="{{asset('img/logo-2.png')}}" alt=""></a>
+                        <a href="{{route('books.index')}}"><img class="footer-logo" src="{{asset('img/logo-2.png')}}" alt=""></a>
                         <p>About Unify dolor sit amet, consectetur adipiscing elit. Maecenas eget nisl id libero
                             tincidunt sodales.</p>
                         <br>

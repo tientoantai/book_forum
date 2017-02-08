@@ -4,8 +4,8 @@
     <div class="breadcrumbs-v4">
         <div class="container">
             <ul class="breadcrumb-v4-in">
-                <li><a href="{{route('home')}}">Home</a></li>
-                <li><a href="{{route('listBook')}}">Publisher Manager</a></li>
+                <li><a href="{{route('books.index')}}">Home</a></li>
+                <li><a href="{{route('books.admin')}}">Publisher Manager</a></li>
                 <li class="active">Update Publisher</li>
             </ul>
         </div><!--/end container-->
