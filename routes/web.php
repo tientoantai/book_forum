@@ -116,12 +116,12 @@ Route::get('/book/filter', 'BookController@search')
 */
 Route::get('/quickSearch', 'SearchingController@quickSearch')
         ->name('searchs.quickSearch')
-        ->middleware('create.condition')
+        ->middleware('create.quickCondition')
 ;
 
 Route::get('/advanceSearch', 'SearchingController@advanceSearch')
         ->name('searchs.advanceSearch')
-        ->middleware('create.condition')
+        ->middleware('create.advanceCondition')
 ;
 
 /*

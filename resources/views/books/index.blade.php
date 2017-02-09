@@ -9,7 +9,7 @@
 @section('about')
     <li class="dropdown mega-menu-fullwidth">
         <a href="{{route('about')}}" >
-            About Us
+            About
         </a>
     </li>
 @endsection

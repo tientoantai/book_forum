@@ -1,9 +1,41 @@
 @extends('books.layout')
 @section('title', 'About Us')
+@section('login')
+    <li><a href="{{route('login.index')}}">Login</a> | <a href="">Register</a></li>
+@endsection
+@section('search')
+    <li><i class="search fa fa-search search-button"></i></li>
+@endsection
+@section('about')
+    <li class="dropdown mega-menu-fullwidth">
+        <a href="{{route('about')}}" >
+            About
+        </a>
+    </li>
+@endsection
+@section('book')
+    <a href="{{route('books.filter')}}">Book</a>
+@endsection
 @section('content')
     <div class="container">
-        <div class="row col-md-12">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti dolor eius enim eos est maxime, modi molestiae officiis possimus qui, quibusdam recusandae voluptate voluptatem. Alias assumenda cum excepturi explicabo nam quas? Accusamus animi deleniti deserunt doloremque, excepturi itaque placeat quo sequi sit veritatis. Adipisci alias distinctio doloremque earum eveniet impedit ipsam magni maxime modi neque nihil nostrum numquam omnis perferendis possimus quas quidem quod ratione recusandae sequi similique tempora unde, voluptatum! Commodi deserunt expedita fuga laboriosam, maxime totam voluptas. Ab, alias dicta dolore, dolorem doloremque dolores ducimus eos explicabo facere illo laboriosam maiores mollitia non quasi quibusdam reiciendis similique temporibus totam voluptatem, voluptatibus? Ab at beatae consectetur, debitis delectus earum eos esse et explicabo fugit id inventore odit officia provident quia quis tempora, ut velit veritatis vitae? A cumque dicta dignissimos dolore ducimus expedita maiores, nemo nihil possimus sequi. Accusantium aperiam architecto aspernatur consequuntur debitis ducimus ea eaque earum eos eveniet excepturi exercitationem expedita itaque iusto laboriosam laborum minima molestiae neque nulla obcaecati officiis omnis optio perspiciatis, placeat quasi quod quos ratione reiciendis rem repudiandae similique tempora totam velit veritatis voluptas voluptatibus voluptatum. Architecto aspernatur atque blanditiis, corporis cumque deserunt dicta ducimus ea eos eum expedita facilis id, labore laboriosam natus odio officia perspiciatis provident quibusdam quidem, quisquam reiciendis repellendus sit sunt suscipit tempore ullam velit voluptas voluptate voluptatibus. Ab alias debitis minus nemo perferendis, veritatis. Cum cupiditate dolorem doloribus, ducimus ipsum laborum libero, molestias nihil nisi placeat quaerat qui quibusdam sapiente suscipit temporibus veniam vero voluptate. Accusantium ad alias aliquam at autem, cumque cupiditate dolore et minima nemo non praesentium reiciendis unde? Ad assumenda beatae dolor dolorem dolorum earum eligendi esse, exercitationem facilis inventore ipsa labore modi mollitia praesentium qui quos rerum tempora unde vero vitae! A accusantium commodi consectetur, dolorem dolorum eius error esse est ex labore maxime non nulla officia omnis reiciendis rem reprehenderit sed tempora temporibus vero voluptate voluptates voluptatum? Fugit iste molestiae nisi, odio velit vero. A cum cupiditate deserunt doloremque ea, itaque neque non omnis recusandae repudiandae. Amet, assumenda, modi. Aliquid doloremque libero odit pariatur quasi quia saepe sequi ut! Dignissimos doloremque eveniet excepturi explicabo, fuga itaque nobis, nulla odit officiis quisquam soluta voluptas. Aspernatur autem consectetur earum eligendi perspiciatis quidem similique unde? Accusantium aperiam asperiores atque cumque deleniti dolore doloremque dolorum ducimus eaque, eius excepturi facilis fugit illum, ipsa ipsum laborum molestiae natus nesciunt nisi odio, pariatur perferendis quasi quisquam quo quod ratione reiciendis repudiandae ullam velit veritatis. Asperiores aspernatur dolorem doloremque quae? Amet aspernatur beatae consectetur consequatur corporis cum cumque dolores dolorum harum illum impedit in libero maiores, omnis, pariatur, porro reiciendis repellat reprehenderit saepe sequi sint soluta velit? A blanditiis commodi consectetur delectus deserunt dolorem, ducimus eos eum hic incidunt ipsa, iste iure magni minus nisi nulla obcaecati officiis optio provident quam quasi sapiente sit soluta suscipit tempore ut vel voluptates. Adipisci assumenda atque autem cupiditate debitis eaque eligendi et ex excepturi fugiat hic illum labore laudantium libero, maiores minus nemo optio pariatur perspiciatis praesentium quaerat quas qui repudiandae saepe unde.</p>
+        <div class="row col-md-12" >
+        	<div class="row col-md-5">
+        		<img src="{{asset('img/20989768750fdb557100906ba0bc40bc.jpg')}}" width="90%">
+        		<i>Photo credit: Alan Yarborough</i>
+        	</div>
+        	<div class="row col-md-7">
+        		<p> <strong>Unify Book Store</strong> is a unique and special place to shop—a locally owned, independently run Cambridge landmark since 1932. We are known for our extraordinary selection of new, used, and remaindered books, an award-winning author event series, and a history of innovation—including print-on-demand services, local partnerships, and digital media. On harvard.com customers can browse our shelves, our staff recommendations, and our author events calendar. Sign up for our weekly e-mail newsletter, which includes updates on sales, events, and featured books. Thanks for shopping at Harvard Book Store!
+				</p>
+				<p>
+					<strong>Sell Us Your Books</strong>
+					Online or in stores, we make it easy to turn your books into cash.
+				</p>
+				<p>
+					<strong>Sell Us Your Books Online
+					</strong>
+                    Enter the ISBN of each book you wish to sell, and receive an offer immediately. If you like our bid, just send the books to us (we'll cover the freight) and receive credit to your Powells.com account or payment via PayPal.
+				</p>
+        	</div>
         </div>
     </div>
 @endsection

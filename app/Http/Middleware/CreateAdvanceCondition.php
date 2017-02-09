@@ -5,7 +5,7 @@ namespace App\Http\Middleware;
 use Closure;
 use App\SearchService\FactoryCondition;
 
-class CreateCondition
+class CreateAdvanceCondition
 {
     protected $factoryCondition;
 
@@ -22,14 +22,12 @@ class CreateCondition
      */
     public function handle($request, Closure $next)
     {
-        $quickCondition   = $this->factoryCondition->factoryQuick($request->all());
         $advanceCondition = $this->factoryCondition->factoryAdvance($request->all());
 
-        $request->attributes->add([
-            'quickCondition'   => $quickCondition,
-            'advanceCondition' => $advanceCondition,
-        ]);
-        
+            $request->attributes->add([
+                'advanceCondition' => $advanceCondition,
+            ]);
+
         return $next($request);
     }
 }

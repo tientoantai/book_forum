@@ -18,7 +18,13 @@ class FactoryCondition
 		$advanceSearchCondition = new AdvanceSearchCondition();
 		$advanceSearchCondition ->setTitle($conditionData['title']);
 		$advanceSearchCondition ->setAuthor($conditionData['author']);
-		$advanceSearchCondition ->setPublisher($conditionData['publisher']);
+
+		if(! isset($conditionData['publisher'])){
+			$advanceSearchCondition ->setPublisher(["1"]);
+		}else{
+			$advanceSearchCondition ->setPublisher($conditionData['publisher']);
+		}
+		
 
 		return $advanceSearchCondition;
 	}

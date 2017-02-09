@@ -56,7 +56,10 @@ class SearchingController extends Controller
         }
 
         return view('books.filter')
-                ->with('books', $bookResult)
+                ->with(['books'      => $bookResult,
+                        'publishers' => $this->publisherRepository->all(),
+                        'request'    =>$request,
+                    ])
         ;
     }
 }

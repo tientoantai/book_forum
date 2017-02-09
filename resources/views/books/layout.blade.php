@@ -39,8 +39,11 @@
         <div class="topbar-v3">
             <div class="search-open">
                 <div class="container">
-                    <input type="text" id="search" class="form-control" placeholder="Search">
-                    <div class="search-close"><i class="icon-close"></i></div>
+                    <form method="get" action="{{route('searchs.quickSearch')}}">
+                    <input type="text" name="title" id="search" class="form-control" placeholder="Search">
+                    <div class="search-close"></i>
+                    </form>
+                    </div>
                 </div>
             </div>
 
